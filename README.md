@@ -1,16 +1,16 @@
 # README
 
-##Current Versions
+## Current Versions
 
-Unity:  2020.3.0f1
+**Unity**:  2020.3.0f1
 
-XR Plugin Management: 4.0.7
-
-
-XR Interaction Toolkit: 1.0.0-pre.5
+**XR Plugin Management**: 4.0.7
 
 
-Csound Unity: 3.0.0
+**XR Interaction Toolkit**: 1.0.0-pre.5
+
+
+**Csound Unity**: 3.0.0
 
 
 
@@ -22,20 +22,31 @@ The ‘Template’ Scene located in the ‘Scenes’ folder is a ready-to-use �
 
 
 ### Github
-Let’s try to be as specific as possible with the description of our commits. In the future we could benefit from [Github Issue's System] (https://guides.github.com/features/issues/) to address specific implementation tasks. 
+Let’s try to be as specific as possible with the description of our commits. In the future we could benefit from [Github Issue's System](https://guides.github.com/features/issues/) to address specific implementation tasks. 
 
 
 ### Resources
 
-Csound Unity References:
-[Rory's Repository] (https://github.com/rorywalsh/CsoundUnity), [Pedro's Repository] (https://github.com/peusodre/CsoundUnity_Systems), and [Cabbage Forum on Csound Unity](https://forum.cabbageaudio.com/c/csound-for-games/10)
+**Csound Unity References**:
+[Rory's Repository](https://github.com/rorywalsh/CsoundUnity), [Pedro's Repository](https://github.com/peusodre/CsoundUnity_Systems), and [Cabbage Forum on Csound Unity](https://forum.cabbageaudio.com/c/csound-for-games/10)
 
-Csound References:
+**Csound References**:
 [Csound Documentation](http://www.csounds.com/resources/documentation/), [Csound Web Page](https://csound.com/), [The Canonical Csound Reference Manual](https://csound.com/docs/manual/index.html).
 
-Unity References:
+**Unity References**:
 [Unity's XR Interaction Toolkit Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@0.9/manual/index.html)
-, [Unity's Audio Engine Documentation](https://docs.unity3d.com/Manual/Audio.html), [XR Interaction Toolkit Setup] (https://www.youtube.com/watch?v=ndwJHpxd9Mo).
+, [Unity's Audio Engine Documentation](https://docs.unity3d.com/Manual/Audio.html), [XR Interaction Toolkit Setup](https://www.youtube.com/watch?v=ndwJHpxd9Mo).
+
+
+### Contact
+
+Dr. Richard Boulanger - rboulanger@berklee.edu
+
+Pedro Sodre - psodre@berklee.edu
+
+Mateo Larrea - mlarrea@berklee.edu
+
+
 
 
 
