@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.csound.unity", "com.csound.unity.csproj", "{6472BECF-1006-6056-6D4A-4EC17CA21717}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{568DDEBF-9A88-25A8-49E2-F072C38C508D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.csound.unity.editor", "com.csound.unity.editor.csproj", "{A0A43112-B37C-E993-A64D-6B4D606EBC4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6472BECF-1006-6056-6D4A-4EC17CA21717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6472BECF-1006-6056-6D4A-4EC17CA21717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6472BECF-1006-6056-6D4A-4EC17CA21717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6472BECF-1006-6056-6D4A-4EC17CA21717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{568DDEBF-9A88-25A8-49E2-F072C38C508D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{568DDEBF-9A88-25A8-49E2-F072C38C508D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{568DDEBF-9A88-25A8-49E2-F072C38C508D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{568DDEBF-9A88-25A8-49E2-F072C38C508D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0A43112-B37C-E993-A64D-6B4D606EBC4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A43112-B37C-E993-A64D-6B4D606EBC4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A43112-B37C-E993-A64D-6B4D606EBC4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A43112-B37C-E993-A64D-6B4D606EBC4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
