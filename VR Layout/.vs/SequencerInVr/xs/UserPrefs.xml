@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{0411BA2F-296D-6916-DA9C-87109C61568E}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ObjectManager.cs">
+    <Files>
+      <File FileName="Library/PackageCache/com.unity.xr.interaction.toolkit@0.10.0-preview.7/Runtime/Locomotion/Teleportation/TeleportationProvider.cs" Line="1" Column="1" />
+      <File FileName="Assets/BotMovement.cs" />
+      <File FileName="Assets/ObjectManager.cs" Line="94" Column="27" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1de9c9ee-4308-49bb-aa30-8aaf47e311dd" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
