@@ -18,7 +18,7 @@
 Each one of us has an individual folder for scripts, scenes, and prefabs. In this way we can check out/use what the others are doing in a way that won’t interfere with their work. In order to keep our session organized *we should be very specific with the way we name our objects/scripts/materials/clips/shaders and put every new element in the appropriate folder.* 
 
 ### Template
-The ‘Template’ Scene located in the ‘Scenes’ folder is a ready-to-use ‘teleportation-based’ VR environment that can be a guide in the set-up process and an effective tool for fast-prototyping. 
+The ‘Template’ Scene located in the ‘Scenes’ folder is a ready-to-use ‘teleportation-based’ VR environment that can be a guide in the set-up process and an effective tool for fast-prototyping. [Template Video](https://drive.google.com/file/d/1T5aCQDgDX4aq1mYVvq1vv4VL0XT57XDT/view?usp=sharing) 
 
 
 ### Github
