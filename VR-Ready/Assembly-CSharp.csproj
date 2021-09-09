@@ -58,6 +58,12 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/Mateo/Template/SimpleRotation.cs" />
     <Compile Include="Assets/Scripts/Mateo/Template/WallUI.cs" />
+    <Compile Include="Assets/Scripts/Mateo/Experiments/SizeChanger.cs" />
+    <Compile Include="Assets/Scripts/Mateo/Experiments/CityGenerator.cs" />
+    <Compile Include="Assets/Scripts/Mateo/Experiments/RaycastSelector.cs" />
+    <Compile Include="Assets/Scripts/Mateo/Experiments/Spline.cs" />
+    <Compile Include="Assets/Scripts/Mateo/Experiments/SplineMover.cs" />
+    <Compile Include="Assets/Scripts/Mateo/Experiments/sphereMechanism.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
