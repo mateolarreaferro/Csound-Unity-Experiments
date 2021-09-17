@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Mateo/Test1-ML.unity
+- path: Assets/Scenes/Mateo/Rain.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

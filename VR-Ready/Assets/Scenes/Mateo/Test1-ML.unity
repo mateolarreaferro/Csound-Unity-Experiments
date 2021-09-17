@@ -2543,7 +2543,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1515839449}
   - component: {fileID: 1515839448}
-  - component: {fileID: 1515839447}
   m_Layer: 0
   m_Name: Csound
   m_TagString: Untagged
@@ -2551,35 +2550,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1515839447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515839446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d20258c641c94f0ea3dc32cfe3de904, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logCsoundOutput: 0
-  mute: 0
-  processClipAudio: 0
-  loudVolumeWarning: 1
-  loudWarningThreshold: 10
-  csoundScore: 
-  _csoundFileGUID: 
-  _csoundString: 
-  _csoundFileName: 
-  _csoundAsset: {fileID: 0}
-  _channels: []
-  _availableAudioChannels: []
-  _drawCsoundString: 0
-  _drawTestScore: 0
-  _drawSettings: 0
-  _drawChannels: 0
-  _drawAudioChannels: 0
 --- !u!82 &1515839448
 AudioSource:
   m_ObjectHideFlags: 0

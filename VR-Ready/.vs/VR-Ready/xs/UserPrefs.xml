@@ -1,13 +1,14 @@
-﻿<Properties StartupConfiguration="{568DDEBF-9A88-25A8-49E2-F072C38C508D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Mateo/Experiments/sphereMechanism.cs">
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Mateo/Experiments/Collision.cs">
     <Files>
       <File FileName="Assets/Scripts/Mateo/Template/WallUI.cs" Line="25" Column="1" />
-      <File FileName="Assets/Scripts/Mateo/Experiments/sphereMechanism.cs" Line="50" Column="32" />
+      <File FileName="Assets/Scripts/Mateo/Experiments/sphereMechanism.cs" />
+      <File FileName="Assets/Scripts/Mateo/Experiments/Collision.cs" Line="20" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="29f6c51d-a5a6-4816-a786-d80f3ca6bfcd" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="00adb5f3-498a-4b56-841d-7c5dce3ef1cb" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
