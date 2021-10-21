@@ -1,0 +1,808 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 0ffaa0b7117ba8c47a9d05ae701d4b4d, type: 2}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.0069698775, g: 0.0029264002, b: 0.010093981, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &240542391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 240542394}
+  - component: {fileID: 240542393}
+  - component: {fileID: 240542392}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &240542392
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240542391}
+  m_Enabled: 1
+--- !u!20 &240542393
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240542391}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &240542394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240542391}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &364278628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 364278634}
+  - component: {fileID: 364278633}
+  - component: {fileID: 364278632}
+  - component: {fileID: 364278631}
+  - component: {fileID: 364278630}
+  - component: {fileID: 364278629}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &364278629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364278628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d20258c641c94f0ea3dc32cfe3de904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logCsoundOutput: 0
+  mute: 0
+  processClipAudio: 0
+  loudVolumeWarning: 1
+  loudWarningThreshold: 10
+  csoundScore: 
+  _csoundFileGUID: 2b0db6737e6e24c8cb46c90f27ff9588
+  _csoundString: "<Cabbage> bounds(0, 0, 0, 0)\r\nform caption(\"1to16StepSequencer+\")
+    size(800, 400), guiMode(\"queue\") pluginId(\"def1\")\r\n\r\nbutton  bounds(26,
+    10, 101, 44) channel(\"trigger\") text(\"Trigger\") textColour(\"white\")\r\n\r\nhslider
+    bounds(32, 142, 150, 50) channel(\"maxDur\") range(1, 20, 9, 1, 0.001) text(\"Max
+    Dur\") textColour(\"white\")\r\nhslider bounds(384, 112, 150, 50) channel(\"numNotes\")
+    range(1, 16, 4, 1, 0.001) text(\"Num Notes\") textColour(\"white\")\r\n\r\nhslider
+    bounds(302, 52, 150, 51) channel(\"combLvl\") range(0, 1, .8, 1, 0.001) text(\"Comb
+    Lvl\") textColour(\"white\")\r\nhslider bounds(272, 276, 150, 50) channel(\"combSend\")
+    range(0, 1, .76, 1, 0.001) text(\"Comb Send\") textColour(\"white\")\r\nhslider
+    bounds(446, 276, 150, 50) channel(\"combTime\") range(0, 5.99, 3, 1, 0.001) text(\"Comb
+    Time\") textColour(\"white\")\r\nhslider bounds(614, 272, 150, 50) channel(\"combRate\")
+    range(.01, 4, .5, 1, 0.001) text(\"Comb Rate\") textColour(\"white\")\r\n\r\nhslider
+    bounds(458, 52, 150, 50) channel(\"reverbLvl\") range(0, 1, .7, 1, 0.001) text(\"Rvb
+    Lvl\") textColour(\"white\")\r\nhslider bounds(270, 336, 150, 50) channel(\"rvbSend\")
+    range(0, 1, .45, 1, 0.001) text(\"Rvb Send\") textColour(\"white\")\r\nhslider
+    bounds(450, 330, 150, 50) channel(\"rvbSize\") range(0, 1, .418, 1, 0.001) text(\"Rvb
+    Size\") textColour(\"white\")\r\nhslider bounds(616, 328, 150, 50) channel(\"rvbDamp\")
+    range(0, 1, .4, 1, 0.001) text(\"Rvb Damp\") textColour(\"white\")\r\n\r\nhslider
+    bounds(224, 170, 150, 50) channel(\"filterCut\") range(400, 4400, 800, 1, 0.001)
+    text(\"Cutoff\") textColour(\"white\")\r\nhslider bounds(378, 168, 150, 50) channel(\"filterRes\")
+    range(1, 100, 136, 1, 0.001) text(\"Resonance\") textColour(\"white\")\r\n\r\nhslider
+    bounds(634, 16, 150, 50) channel(\"noise\") range(.1, 6, .1, .5, 0.001) text(\"Noise\")
+    textColour(\"white\")\r\nhslider bounds(70, 302, 150, 50) channel(\"panRate\")
+    range(.01, 2, .15, 1, 0.001) text(\"Pan Rate\") textColour(\"white\")\r\n\r\nhslider
+    bounds(302, 0, 150, 50) channel(\"masterLvl\") range(0, 1, 0.9, 1, 0.001) text(\"Master
+    Lvl\") textColour(\"white\")\r\n\r\nhslider bounds(148, 52, 150, 50) channel(\"synthLvl\")
+    range(0, 1, .9, 1, 0.001) text(\"Synth Lvl\") textColour(\"white\")\r\n\r\n\r\nhslider
+    bounds(228, 114, 150, 50) channel(\"metroRate\") range(.5, 7, 4, 1, 0.001) text(\"Metro
+    Rate\") textColour(\"white\")\r\n\r\ncombobox bounds(628, 116, 100, 25), populate(\"*.snaps\"),
+    channelType(\"string\") automatable(0) channel(\"combo31\") text(\"Preset 1\")
+    value(\"1\")\r\nfilebutton bounds(566, 116, 60, 25), text(\"Save\", \"Save\"),
+    populate(\"*.snaps\", \"test\"), mode(\"named preset\") channel(\"filebutton32\")\r\nfilebutton
+    bounds(566, 146, 60, 25), text(\"Remove\", \"Remove\"), populate(\"*.snaps\",
+    \"test\"), mode(\"remove preset\") channel(\"filebutton33\")\r\n</Cabbage>\r\n<CsoundSynthesizer>\r\n<CsOptions>\r\n-n
+    -dm0\r\n</CsOptions>\r\n<CsInstruments>\r\n; Initialize the global variables.
+    \r\nksmps = 32\r\nnchnls = 2\r\n0dbfs = 1\r\n\r\ngaCombL init 0\r\ngaCombR init
+    0\r\n\r\ngaRvbL init 0\r\ngaRvbR init 0\r\n\r\ngkRate init 5\r\n\r\ngiSaw ftgen 
+    0, 0, 8192, 10, 1, 0.5, 0.3, 0.25, 0.2, 0.167, 0.14, 0.125, .111\r\n\r\ninstr
+    1\r\n  gkMaxDur = chnget:k(\"maxDur\")\r\n    kTrig chnget \"trigger\"\r\n   
+    if changed(kTrig) == 1 then\r\n        event \"i\", \"Sequencer\", 0, gkMaxDur\r\n       
+    event \"i\", \"Synth\", 0, gkMaxDur\r\n    endif\r\nendin\r\n\r\ninstr Sequencer\r\n   
+    gkRate = chnget:k(\"metroRate\")\r\n    gkNumNotes = chnget:k(\"numNotes\")\r\n   
+    gkMetro metro gkRate\r\n    kpattern[] fillarray 30, 37, 52, 44, 64, 53, 35,
+    51, 29, 38, 21, 60, 33, 25,62, 47, 56\r\n    kndex init 0\r\n        if gkMetro
+    == 1 then\r\n            kndex += 1\r\n            gkfreq = cpsmidinn(kpattern[kndex
+    % gkNumNotes])\r\n        endif\r\nendin\r\n\r\ninstr Synth\r\n    kpan lfo .5,
+    chnget:k(\"panRate\"), 0 \r\n    kpan = kpan + .5\r\n    kenv trigExpseg gkMetro,
+    1, .15, .001\r\n    amod poscil kenv, gkfreq*rnd(chnget:k(\"noise\"))\r\n   
+    asig poscil kenv, gkfreq, giSaw\r\n    asig = asig*amod\r\n    aflt rezzy asig,
+    chnget:k(\"filterCut\"), chnget:k(\"filterRes\")\r\n    aL, aR pan2 aflt, kpan\r\n\r\n 
+    outs  aL*chnget:k(\"masterLvl\")*chnget:k(\"synthLvl\"), aR*chnget:k(\"masterLvl\")*chnget:k(\"synthLvl\")\r\n\r\n   
+    vincr gaCombL, aL * chnget:k(\"combSend\")\r\n    vincr gaCombR, aR * chnget:k(\"combSend\")\r\n\r\n   
+    vincr gaRvbL, aL * chnget:k(\"rvbSend\")\r\n    vincr gaRvbR, aR * chnget:k(\"rvbSend\")\r\nendin\r\n\r\ninstr
+    Comb \r\n    denorm gaCombL, gaCombR\r\n    gkRvt init 6\r\n    gkLpt init 2\r\n   
+    gkRvt =  chnget:k(\"combTime\")\r\n    gkLpt =  chnget:k(\"combRate\")\r\n   
+    aL\tvcomb gaCombL, gkRvt, gkLpt, 6\r\n    aR\tvcomb gaCombR, gkRvt, gkLpt*1.01,
+    6\r\n       outs  aL*chnget:k(\"masterLvl\")*chnget:k(\"combLvl\"), aR*chnget:k(\"masterLvl\")*chnget:k(\"combLvl\")\r\n   
+    clear gaCombL, gaCombR\t\r\nendin\r\n\r\n\r\ninstr Reverb                     
+    \r\n            denorm gaRvbL, gaRvbR\r\n    aL, aR  freeverb gaRvbL, gaRvbR,
+    chnget:k(\"rvbSize\"), chnget:k(\"rvbDamp\")\r\n            outs  aL*chnget:k(\"masterLvl\")*chnget:k(\"reverbLvl\"),
+    aR*chnget:k(\"masterLvl\")*chnget:k(\"reverbLvl\")\r\n            clear\tgaRvbL,
+    gaRvbR\r\nendin\r\n\r\n</CsInstruments>\r\n<CsScore>\r\n;causes Csound to run
+    for about 7000 years...\r\nf0 z\r\n;starts instrument 1 and runs it for a week\r\ni1
+    0 [60*60*24*7] \r\ni \"Comb\" 0 [60*60*24*7]\r\ni \"Reverb\" 0 [60*60*24*7] 
+    \r\n</CsScore>\r\n</CsoundSynthesizer>"
+  _csoundFileName: 1to16stepSequencer+RMsynth_withRezzy,Vcomb&Verb 1.csd
+  _csoundAsset: {fileID: 102900000, guid: 2b0db6737e6e24c8cb46c90f27ff9588, type: 3}
+  _channels:
+  - type: form
+    channel: 
+    text: 
+    caption: 1to16StepSequencer+
+    min: 0
+    max: 0
+    value: 0
+    skew: 0
+    increment: 0
+    options: []
+  - type: button
+    channel: trigger
+    text: 
+    caption: 
+    min: 0
+    max: 0
+    value: 0
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: maxDur
+    text: 
+    caption: 
+    min: 1
+    max: 20
+    value: 9
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: numNotes
+    text: 
+    caption: 
+    min: 1
+    max: 16
+    value: 4
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: combLvl
+    text: 
+    caption: 
+    min: 0
+    max: 1
+    value: 0.8
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: combSend
+    text: 
+    caption: 
+    min: 0
+    max: 1
+    value: 0.76
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: combTime
+    text: 
+    caption: 
+    min: 0
+    max: 5.99
+    value: 3
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: combRate
+    text: 
+    caption: 
+    min: 0.01
+    max: 4
+    value: 0.5
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: reverbLvl
+    text: 
+    caption: 
+    min: 0
+    max: 1
+    value: 0.7
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: rvbSend
+    text: 
+    caption: 
+    min: 0
+    max: 1
+    value: 0.45
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: rvbSize
+    text: 
+    caption: 
+    min: 0
+    max: 1
+    value: 0.418
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: rvbDamp
+    text: 
+    caption: 
+    min: 0
+    max: 1
+    value: 0.4
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: filterCut
+    text: 
+    caption: 
+    min: 400
+    max: 4400
+    value: 800
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: filterRes
+    text: 
+    caption: 
+    min: 1
+    max: 100
+    value: 136
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: noise
+    text: 
+    caption: 
+    min: 0.1
+    max: 6
+    value: 0.1
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: panRate
+    text: 
+    caption: 
+    min: 0.01
+    max: 2
+    value: 0.15
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: masterLvl
+    text: 
+    caption: 
+    min: 0
+    max: 1
+    value: 0.9
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: synthLvl
+    text: 
+    caption: 
+    min: 0
+    max: 1
+    value: 0.9
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: metroRate
+    text: 
+    caption: 
+    min: 0.5
+    max: 7
+    value: 4
+    skew: 0
+    increment: 0
+    options: []
+  - type: combobox
+    channel: combo31
+    text: 
+    caption: 
+    min: 1
+    max: 1
+    value: 0
+    skew: 0
+    increment: 0
+    options:
+    - Preset1
+  - type: filebutton
+    channel: filebutton32
+    text: 
+    caption: 
+    min: 0
+    max: 0
+    value: 0
+    skew: 0
+    increment: 0
+    options: []
+  - type: filebutton
+    channel: filebutton33
+    text: 
+    caption: 
+    min: 0
+    max: 0
+    value: 0
+    skew: 0
+    increment: 0
+    options: []
+  _availableAudioChannels: []
+  _drawCsoundString: 0
+  _drawTestScore: 0
+  _drawSettings: 0
+  _drawChannels: 0
+  _drawAudioChannels: 0
+--- !u!82 &364278630
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364278628}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!65 &364278631
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364278628}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &364278632
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364278628}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a39a3ba1d1c254e46a20f59db22d8cac, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &364278633
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364278628}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &364278634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364278628}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &513627435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513627437}
+  - component: {fileID: 513627436}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &513627436
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513627435}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &513627437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513627435}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}

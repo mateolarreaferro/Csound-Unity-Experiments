@@ -1,0 +1,455 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5615829842772779984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5615829842772779988}
+  - component: {fileID: 5615829842772779987}
+  - component: {fileID: 5615829842772779986}
+  - component: {fileID: 5615829842772779985}
+  - component: {fileID: 5615829842772779990}
+  - component: {fileID: 5615829842772779989}
+  - component: {fileID: 7118428762029856968}
+  - component: {fileID: 2820256190491255759}
+  - component: {fileID: 3917161384549233501}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5615829842772779988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5615829842772779984}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.20526361, y: 1.6421804, z: -1.2074499}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5615829842772779987
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5615829842772779984}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &5615829842772779986
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5615829842772779984}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e17f87e9db8d44baa8c8dfac7a53513c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &5615829842772779985
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5615829842772779984}
+  m_Material: {fileID: 13400000, guid: b4e20fa2628324514a0db03e67e70c45, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &5615829842772779990
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5615829842772779984}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &5615829842772779989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5615829842772779984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_AttachTransform: {fileID: 0}
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 2
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 5
+  m_TightenPosition: 0.5
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 5
+  m_TightenRotation: 0.5
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
+--- !u!82 &7118428762029856968
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5615829842772779984}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2820256190491255759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5615829842772779984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d20258c641c94f0ea3dc32cfe3de904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logCsoundOutput: 0
+  mute: 0
+  processClipAudio: 0
+  loudVolumeWarning: 1
+  loudWarningThreshold: 10
+  csoundScore: 
+  _csoundFileGUID: 4925d41c8b930469aa9df8cfe34969ed
+  _csoundString: "<Cabbage> bounds(0, 0, 0, 0)\r\nform caption(\"HitSoundSlider4Del\")
+    size(400, 300), guiMode(\"queue\") pluginId(\"def1\")\r\n\r\nbutton  bounds(32,
+    22, 80, 40)   channel(\"trigger\")\r\n\r\nhslider bounds(140, 18, 150, 50) channel(\"freq\")
+    range(400, 6000, 1100, 1, 0.001)\r\nhslider bounds(32, 70, 150, 50)  channel(\"tapl\")
+    range(0.1, .9, .19, 1, 0.001)\r\nhslider bounds(32, 124, 150, 50) channel(\"tapm\")
+    range(0.1, .9, .39, 1, 0.001)\r\nhslider bounds(32, 180, 150, 50) channel(\"tapr\")
+    range(0.1, .9, .35, 1, 0.001)\r\n\r\nhslider bounds(206, 94, 150, 50) channel(\"feedback\")
+    range(.8, .978, .926, 1, 0.001)\r\n</Cabbage>\r\n<CsoundSynthesizer>\r\n<CsOptions>\r\n-n
+    -d\r\n</CsOptions>\r\n<CsInstruments>\r\n; Initialize the global variables. \r\nksmps
+    = 32\r\nnchnls = 2\r\n0dbfs = 1\r\n\r\ngaDelayL init 0\r\ngaDelayR init 0\r\n\r\ngiMaxDel
+    init .005\r\n\r\n\r\ninstr 1\r\n    kTrig chnget \"trigger\"\r\n    if changed(kTrig)
+    == 1 then\r\n        event \"i\", 1000, 0, 0.5\r\n    endif\r\nendin\r\n\r\ninstr
+    1000\n    \r\n    iDry = 0.25\n    iDel = 0.24\n  \r\n    giTapL = chnget:i(\"tapl\")\n   
+    giTapM = chnget:i(\"tapm\")\n    giTapR = chnget:i(\"tapr\")\n    giFeedback
+    = chnget:i(\"feedback\")\r\n          \r\n    aEnv expon 1, p3, 0.001\r\n   
+    aSigL oscili aEnv, chnget:i(\"freq\")*aEnv\n    aSigR oscili aEnv, chnget:i(\"freq\")*(1-aEnv)
+    \r\n     \r\n    outs aSigL*iDry, aSigR*iDry\r\n    \r\n    vincr gaDelayL, aSigL*iDel\r\n   
+    vincr gaDelayR, aSigR*iDel  \r\nendin\r\n\r\ninstr Delay\r\n        denorm gaDelayL,
+    gaDelayR\r\niGain   =       .76\r\naBuf1\tdelayr\tgiMaxDel\r\naTapL \tdeltap3\tgiTapL\t\t\r\naTapM
+    \tdeltap3\tgiTapM\t\t\r\n\tdelayw\tgaDelayL + (aTapL * giFeedback)\r\n\r\naBuf2\tdelayr\tgiMaxDel\r\naTapR
+    \tdeltap3 giTapR\r\n\tdelayw\tgaDelayR + (aTapR * giFeedback)\r\n                                         
+    \t\r\n\touts (aTapL + aTapM) * iGain, (aTapR + aTapM) * iGain   \r\n    clear
+    gaDelayL, gaDelayR\r\nendin  \r\n\r\n</CsInstruments>\r\n<CsScore>\r\n;causes
+    Csound to run for about 7000 years...\r\nf0 z\r\n;starts instrument 1 and runs
+    it for a week\r\ni1 0 [60*60*24*7] \r\ni \"Delay\" 0 [60*60*24*7] \r\n</CsScore>\r\n</CsoundSynthesizer>\r\n"
+  _csoundFileName: HitSoundSlider4Del.csd
+  _csoundAsset: {fileID: 102900000, guid: 4925d41c8b930469aa9df8cfe34969ed, type: 3}
+  _channels:
+  - type: form
+    channel: 
+    text: 
+    caption: HitSoundSlider4Del
+    min: 0
+    max: 0
+    value: 0
+    skew: 0
+    increment: 0
+    options: []
+  - type: button
+    channel: trigger
+    text: 
+    caption: 
+    min: 0
+    max: 0
+    value: 0
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: freq
+    text: 
+    caption: 
+    min: 400
+    max: 6000
+    value: 1100
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: tapl
+    text: 
+    caption: 
+    min: 0.1
+    max: 0.9
+    value: 0.19
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: tapm
+    text: 
+    caption: 
+    min: 0.1
+    max: 0.9
+    value: 0.39
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: tapr
+    text: 
+    caption: 
+    min: 0.1
+    max: 0.9
+    value: 0.35
+    skew: 0
+    increment: 0
+    options: []
+  - type: hslider
+    channel: feedback
+    text: 
+    caption: 
+    min: 0.8
+    max: 0.978
+    value: 0.926
+    skew: 0
+    increment: 0
+    options: []
+  _availableAudioChannels: []
+  _drawCsoundString: 0
+  _drawTestScore: 0
+  _drawSettings: 0
+  _drawChannels: 0
+  _drawAudioChannels: 0
+--- !u!114 &3917161384549233501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5615829842772779984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d956d2ebd2ef49af869444df2aeb67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
