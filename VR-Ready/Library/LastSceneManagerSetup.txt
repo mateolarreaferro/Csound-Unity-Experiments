@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Mateo/Scenes/RT-WSP.unity
+- path: Assets/Mateo/Scenes/AI Agents.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

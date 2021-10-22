@@ -101,12 +101,12 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Fresnel: 9.511449
+    - _Fresnel: 9.763134
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0.81
-    - _Noise: 47.34011
+    - _Noise: 48.710396
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
