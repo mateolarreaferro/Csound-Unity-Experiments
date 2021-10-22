@@ -50,49 +50,49 @@ public class LocationBasedSynth : MonoBehaviour
 
         csoundUnity.SetChannel("datrigger", 1); //cambiar para abrir gate
 
-        csoundUnity.SetChannel("numInstrs", Map(_distances[0], 1.0, 20f, 10.0, 200.0f));
+        csoundUnity.SetChannel("numInstrs", (float) Map(_distances[0], 1.0, 20f, 10.0, 200.0f));
 
-        csoundUnity.SetChannel("1frqLow", Map(_distances[0], 1.0, 20f, 40.0, 4000.0f));
+        csoundUnity.SetChannel("1frqLow", (float) Map(_distances[0], 1.0, 20f, 40.0, 4000.0f));
 
-        csoundUnity.SetChannel("1frqHi", Map(_distances[0], 1.0, 20f, 40.0, 4000.0f));
+        csoundUnity.SetChannel("1frqHi", (float) Map(_distances[0], 1.0, 20f, 40.0, 4000.0f));
 
-        csoundUnity.SetChannel("2frqLow", Map(_distances[0], 1.0, 20f, 650.0, 2750.0f));
+        csoundUnity.SetChannel("2frqLow", (float)Map(_distances[0], 1.0, 20f, 650.0, 2750.0f));
 
-        csoundUnity.SetChannel("2frqHi", Map(_distances[0], 1.0, 20f, 800.0, 4000.0f));
+        csoundUnity.SetChannel("2frqHi", (float)Map(_distances[0], 1.0, 20f, 800.0, 4000.0f));
 
-        csoundUnity.SetChannel("1durLow", Map(_distances[0], 1.0, 20f, 0.8, 2.0f));
+        csoundUnity.SetChannel("1durLow", (float)Map(_distances[0], 1.0, 20f, 0.8, 2.0f));
 
-        csoundUnity.SetChannel("1durHi", Map(_distances[0], 1.0, 20f, 1f, 8.0f));
+        csoundUnity.SetChannel("1durHi", (float)Map(_distances[0], 1.0, 20f, 1f, 8.0f));
 
-        csoundUnity.SetChannel("2durLow", Map(_distances[0], 1.0, 20f, 0.3f, 1.0f));
+        csoundUnity.SetChannel("2durLow", (float)Map(_distances[0], 1.0, 20f, 0.3f, 1.0f));
 
-        csoundUnity.SetChannel("2durHi", Map(_distances[0], 1.0, 20f, 0.9f, 4000.0f));
+        csoundUnity.SetChannel("2durHi", (float)Map(_distances[0], 1.0, 20f, 0.9f, 4000.0f));
 
-        csoundUnity.SetChannel("3frqLow", Map(_distances[0], 1.0, 20f, 40f, 4000.0f));
+        csoundUnity.SetChannel("3frqLow", (float)Map(_distances[0], 1.0, 20f, 40f, 4000.0f));
 
-        csoundUnity.SetChannel("3fqrHi", Map(_distances[0], 1.0, 20f, 80f, 4000.0f));
+        csoundUnity.SetChannel("3fqrHi", (float)Map(_distances[0], 1.0, 20f, 80f, 4000.0f));
 
-        csoundUnity.SetChannel("4frqLow", Map(_distances[0], 1.0, 20f, 1200f, 4000.0f));
+        csoundUnity.SetChannel("4frqLow", (float)Map(_distances[0], 1.0, 20f, 1200f, 4000.0f));
 
-        csoundUnity.SetChannel("4frqHi", Map(_distances[0], 1.0, 20f, 1490f, 200.0f));
+        csoundUnity.SetChannel("4frqHi", (float)Map(_distances[0], 1.0, 20f, 1490f, 200.0f));
 
-        csoundUnity.SetChannel("3durLow", Map(_distances[0], 1.0, 20f, 0.4f, 4000.0f));
+        csoundUnity.SetChannel("3durLow", (float)Map(_distances[0], 1.0, 20f, 0.4f, 4000.0f));
 
-        csoundUnity.SetChannel("3durHi", Map(_distances[0], 1.0, 20f, 0.4f, 4000.0f));
+        csoundUnity.SetChannel("3durHi", (float)Map(_distances[0], 1.0, 20f, 0.4f, 4000.0f));
 
-        csoundUnity.SetChannel("4durLow", Map(_distances[0], 1.0, 20f, 0.3f, 4000.0f));
+        csoundUnity.SetChannel("4durLow", (float)Map(_distances[0], 1.0, 20f, 0.3f, 4000.0f));
 
-        csoundUnity.SetChannel("4durHi", Map(_distances[0], 1.0, 20f, 40.0, 4000.0f));
+        csoundUnity.SetChannel("4durHi", (float)Map(_distances[0], 1.0, 20f, 40.0, 4000.0f));
 
-        csoundUnity.SetChannel("transpose", Map(_distances[0], 1.0, 20f, 40.0, 4000.0f));
+        csoundUnity.SetChannel("transpose", (float)Map(_distances[0], 1.0, 20f, 40.0, 4000.0f));
 
-        csoundUnity.SetChannel("pan", Map(_distances[0], 1.0, 20f, 40.0, 4000.0f));
+        csoundUnity.SetChannel("pan", (float)Map(_distances[0], 1.0, 20f, 40.0, 4000.0f));
 
-        csoundUnity.SetChannel("volume", Map(_distances[0], 1.0, 20f, 0.0f, 1.0f));
+        csoundUnity.SetChannel("volume", (float) Map(_distances[0], 1.0, 20f, 0.0f, 1.0f));
 
-        csoundUnity.SetChannel("chorus", Map(_distances[0], 1.0, 20f, 0f, 1.0f));
+        csoundUnity.SetChannel("chorus", (float)Map(_distances[0], 1.0, 20f, 0f, 1.0f));
 
-        csoundUnity.SetChannel("reverb", Map(_distances[0], 1.0, 20f, 0f, 1.0f));
+        csoundUnity.SetChannel("reverb", (float)Map(_distances[0], 1.0, 20f, 0f, 1.0f));
 
         //csoundUnity.SetChannel("datrigger", 0);
 

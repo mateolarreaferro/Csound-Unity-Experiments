@@ -14,6 +14,13 @@ TagManager:
   - CLS
   - Trigger
   - Sensor
+  - amnesia
+  - immortal
+  - trapped
+  - orthogonal
+  - enlightened
+  - paradox
+  - Gravity Field
   layers:
   - Default
   - TransparentFX

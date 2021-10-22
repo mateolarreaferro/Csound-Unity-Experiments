@@ -24,8 +24,8 @@ public class Cube : MonoBehaviour
         if (other.gameObject.CompareTag("CLS"))
         {
             Debug.Log("Collision detected!");
-            csoundUnity.SetChannel("freq", Map(distanceToSphere, 0, 1.8, 400.0, 6000.0));
-            csoundUnity.SetChannel("feedback", Map(distanceToSphere, 0.5, 1.3, 0.8, 0.978));
+            csoundUnity.SetChannel("freq", (float) Map(distanceToSphere, 0, 1.8, 400.0, 6000.0));
+            csoundUnity.SetChannel("feedback", (float) Map(distanceToSphere, 0.5, 1.3, 0.8, 0.978));
             csoundUnity.SendScoreEvent("i 1000 0.0 10.9"); //remember format
         }
        
