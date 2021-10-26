@@ -27,6 +27,8 @@ Let’s try to be as specific as possible with the description of our commits. I
 
 ### Resources
 
+[**General Setup**](https://docs.google.com/document/d/1BNMPTBUtYkU1vpVhJm5mNDmsK5zea1AcQwM7IDez2Y4/edit?usp=sharing)
+
 **Csound Unity References**:
 [CsoundUnity Documentation](https://rorywalsh.github.io/CsoundUnity/#/), [Rory's Repository](https://github.com/rorywalsh/CsoundUnity), [Pedro's Repository](https://github.com/peusodre/CsoundUnity_Systems), [Cabbage Forum on Csound Unity](https://forum.cabbageaudio.com/c/csound-for-games/10)
 
