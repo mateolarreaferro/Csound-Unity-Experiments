@@ -57,7 +57,10 @@
     <Compile Include="Assets/Mateo/Scripts/Experiments/ArtGeneration.cs" />
     <Compile Include="Assets/Mateo/Template/SimpleRotation.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/sphereMechanism.cs" />
+    <Compile Include="Assets/Caio/Scripts/ControllerInputValues.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/RaycastSelector.cs" />
+    <Compile Include="Assets/Caio/Scripts/EventBroker.cs" />
+    <Compile Include="Assets/Caio/Scripts/GranuleraController.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/LocationBasedSynth.cs" />
     <Compile Include="Assets/Mateo/Scripts/Real-Time Word Sound Processing/GravityField.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/Cube.cs" />
@@ -65,14 +68,14 @@
     <Compile Include="Assets/Mateo/Scripts/Real-Time Word Sound Processing/LogicTable.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/UICLS.cs" />
     <Compile Include="Assets/Mateo/Template/WallUI.cs" />
+    <Compile Include="Assets/Caio/Scripts/CsoundToggleTrigger.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/SizeChanger.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/CityGenerator.cs" />
-    <Compile Include="Assets/Mateo/Scripts/Experiments/RandomCollision.cs" />
     <Compile Include="Assets/Mateo/Scripts/Real-Time Word Sound Processing/UITable.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/Spline.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/CharacterMovement.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/SimpleUI.cs" />
-    <Compile Include="Assets/Mateo/Scripts/Experiments/BasicInstrument.cs" />
+    <Compile Include="Assets/Caio/Scripts/HandPresence.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -310,12 +313,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>/Applications/Unity/Hub/Editor/2020.3.0f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>/Applications/Unity/Hub/Editor/2020.3.0f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
