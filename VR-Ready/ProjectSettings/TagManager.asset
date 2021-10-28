@@ -21,6 +21,7 @@ TagManager:
   - enlightened
   - paradox
   - Gravity Field
+  - change size
   layers:
   - Default
   - TransparentFX
