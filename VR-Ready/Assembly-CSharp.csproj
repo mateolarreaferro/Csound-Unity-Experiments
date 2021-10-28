@@ -57,25 +57,25 @@
     <Compile Include="Assets/Mateo/Scripts/Experiments/ArtGeneration.cs" />
     <Compile Include="Assets/Mateo/Template/SimpleRotation.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/sphereMechanism.cs" />
-    <Compile Include="Assets/Mateo/Scripts/Experiments/ControllerInputValues.cs" />
+    <Compile Include="Assets/Caio/Scripts/ControllerInputValues.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/RaycastSelector.cs" />
-    <Compile Include="Assets/Mateo/Scripts/Experiments/EventBroker.cs" />
-    <Compile Include="Assets/Mateo/Scripts/Experiments/GranuleraController.cs" />
+    <Compile Include="Assets/Caio/Scripts/EventBroker.cs" />
+    <Compile Include="Assets/Caio/Scripts/GranuleraController.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/LocationBasedSynth.cs" />
-    <Compile Include="Assets/Caio/Scripts/HandPresence.cs" />
     <Compile Include="Assets/Mateo/Scripts/Real-Time Word Sound Processing/GravityField.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/Cube.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/sensor.cs" />
     <Compile Include="Assets/Mateo/Scripts/Real-Time Word Sound Processing/LogicTable.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/UICLS.cs" />
     <Compile Include="Assets/Mateo/Template/WallUI.cs" />
-    <Compile Include="Assets/Mateo/Scripts/Experiments/CsoundToggleTrigger.cs" />
+    <Compile Include="Assets/Caio/Scripts/CsoundToggleTrigger.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/SizeChanger.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/CityGenerator.cs" />
     <Compile Include="Assets/Mateo/Scripts/Real-Time Word Sound Processing/UITable.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/Spline.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/CharacterMovement.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/SimpleUI.cs" />
+    <Compile Include="Assets/Caio/Scripts/HandPresence.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
