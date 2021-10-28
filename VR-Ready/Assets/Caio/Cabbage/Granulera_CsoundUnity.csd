@@ -8,9 +8,9 @@ form caption("Granulera by Caio M. Jiacomini") size(1180,900), guiMode("queue") 
 label bounds(10, 8, 216, 28) fontColour(188, 151, 49, 255) text("G R A N U L E R A") channel("label3")
 label bounds(8, 38, 141, 15) text("by Caio M. Jiacomini") colour(255, 255, 255, 0) fontColour(255, 255, 255, 255) channel("label4")
 
-;combobox bounds(400, 12, 400, 32) channelType("string") populate("*.snaps") fontColour(188, 151, 49, 255) channel("combo10")  value("1")
-;filebutton bounds(328, 12, 64, 32) text("Save", "Save") mode("named preset") channel("filebutton11")
-;filebutton bounds(806, 12, 64, 32) text("Delete", "Delete") mode("remove preset") channel("filebutton12")
+combobox bounds(400, 12, 400, 32) channelType("string") populate("*.snaps") fontColour(188, 151, 49, 255) channel("combo10")  value("1")
+filebutton bounds(328, 12, 64, 32) text("Save", "Save") mode("named preset") channel("filebutton11")
+filebutton bounds(806, 12, 64, 32) text("Delete", "Delete") mode("remove preset") channel("filebutton12")
 
 label bounds(12, 594, 116, 14) channel("label10114") text("Pitch Bend Range") fontColour(255, 255, 255, 255) 
 nslider bounds(160, 588, 55, 26) channel("PitchBend") range(1, 24, 2, 1, 1) colour(0, 0, 0, 255) textColour(188, 151, 49, 255) trackerColour(0, 0, 0, 0) fontColour(188, 151, 49, 255)
@@ -428,7 +428,7 @@ instr Synthesis
         iOsc3Cent = cent(iOsc3Cent)
     
     //Windowing      
-        iWfn = 11 ;chnget:i("WindowingSelection") + 10
+        iWfn = 12 ;chnget:i("WindowingSelection") + 10
         
         kWindowIndex line 0, p3, 1
         kWindowEnv table kWindowIndex, iWfn, 1 
