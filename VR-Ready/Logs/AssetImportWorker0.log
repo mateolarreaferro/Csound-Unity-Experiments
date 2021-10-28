@@ -99,3 +99,35 @@ System memory in use after: 162.2 MB.
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3460.
 Total: 3.617459 ms (FindLiveObjects: 0.548337 ms CreateObjectMapping: 0.180618 ms MarkObjects: 2.869256 ms  DeleteObjects: 0.017886 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 115.812966 seconds.
+  path: Assets/Caio/Scripts
+  artifactKey: Guid(8d0bb26a83ccf488dbeb3fee863db25d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Caio/Scripts using Guid(8d0bb26a83ccf488dbeb3fee863db25d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5baed2edfdee1f860d3787b3f6141309') in 0.001395 seconds
+  Import took 0.008931 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.701131 seconds.
+  path: Assets/Caio/Cabbage
+  artifactKey: Guid(7c7751ad2a2a640e49e31440264d8383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Caio/Cabbage using Guid(7c7751ad2a2a640e49e31440264d8383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd1cd1a63abd08e5c5a4418a6630a631') in 0.002428 seconds
+  Import took 0.010152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.845065 seconds.
+  path: Assets/Caio/Audio Files
+  artifactKey: Guid(b423caea3d44e495a8dff0cdbb9a0f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Caio/Audio Files using Guid(b423caea3d44e495a8dff0cdbb9a0f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7715a582e69df4e4672d58708bb02ee5') in 0.002214 seconds
+  Import took 0.011024 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.342875 seconds.
+  path: Assets/Caio/Shaders
+  artifactKey: Guid(63cb1797bb81a41cba0d3f823adcf584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Caio/Shaders using Guid(63cb1797bb81a41cba0d3f823adcf584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6d6a9df76a503ecb6c0e7de85ecc0ee') in 0.002347 seconds
+  Import took 0.009935 seconds .
+
