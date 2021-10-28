@@ -1,10 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - GravityField
-    - LEDLogic
-    - LogicTable
-    - UITable
+    - BasicInstrument
+    - RandomCollision
+    - SimpleRotation
+    - WallUI
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
@@ -47,14 +47,12 @@ ScriptsOnlyBuild:
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.ShaderGraph.Editor.dll:
-    - UnityEditor.Graphing.GraphObject
     - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    - TMPro.TextMeshProUGUI
     Unity.XR.Interaction.Toolkit.dll:
     - UnityEngine.XR.Interaction.Toolkit.DeviceBasedSnapTurnProvider
     - UnityEngine.XR.Interaction.Toolkit.LocomotionSystem
@@ -96,12 +94,13 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
-    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
+    com.csound.unity.dll:
+    - CsoundUnity
   sceneClasses:
-    Assets/Mateo/Scenes/RT-WSP.unity:
+    Assets/Template Scene 1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -128,147 +127,155 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 1656}
-    - Class: 114
-      Script: {instanceID: 1658}
-    - Class: 114
-      Script: {instanceID: 1660}
-    - Class: 114
-      Script: {instanceID: 1662}
+    - Class: 108
+      Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1666}
     - Class: 114
-      Script: {instanceID: 1796}
+      Script: {instanceID: 1668}
     - Class: 114
-      Script: {instanceID: 1926}
+      Script: {instanceID: 1670}
     - Class: 114
-      Script: {instanceID: 2038}
+      Script: {instanceID: 1672}
     - Class: 114
-      Script: {instanceID: 2168}
+      Script: {instanceID: 1676}
     - Class: 114
-      Script: {instanceID: 2188}
+      Script: {instanceID: 1806}
     - Class: 114
-      Script: {instanceID: 2328}
+      Script: {instanceID: 1936}
     - Class: 114
-      Script: {instanceID: 2408}
+      Script: {instanceID: 2048}
     - Class: 114
-      Script: {instanceID: 2464}
+      Script: {instanceID: 2178}
     - Class: 114
-      Script: {instanceID: 2614}
+      Script: {instanceID: 2198}
     - Class: 114
-      Script: {instanceID: 3040}
+      Script: {instanceID: 2268}
     - Class: 114
-      Script: {instanceID: 3118}
+      Script: {instanceID: 2282}
     - Class: 114
-      Script: {instanceID: 3166}
+      Script: {instanceID: 2338}
     - Class: 114
-      Script: {instanceID: 3188}
+      Script: {instanceID: 2418}
     - Class: 114
-      Script: {instanceID: 3242}
+      Script: {instanceID: 2474}
     - Class: 114
-      Script: {instanceID: 3330}
+      Script: {instanceID: 2624}
     - Class: 114
-      Script: {instanceID: 3346}
+      Script: {instanceID: 3050}
     - Class: 114
-      Script: {instanceID: 3452}
+      Script: {instanceID: 3128}
     - Class: 114
-      Script: {instanceID: 3668}
+      Script: {instanceID: 3176}
     - Class: 114
-      Script: {instanceID: 3722}
+      Script: {instanceID: 3198}
+    - Class: 114
+      Script: {instanceID: 3252}
+    - Class: 114
+      Script: {instanceID: 3340}
+    - Class: 114
+      Script: {instanceID: 3356}
+    - Class: 114
+      Script: {instanceID: 3462}
+    - Class: 114
+      Script: {instanceID: 3678}
     - Class: 114
       Script: {instanceID: 3732}
     - Class: 114
-      Script: {instanceID: 3838}
+      Script: {instanceID: 3742}
     - Class: 114
-      Script: {instanceID: 3946}
+      Script: {instanceID: 3848}
     - Class: 114
-      Script: {instanceID: 3964}
+      Script: {instanceID: 3956}
     - Class: 114
-      Script: {instanceID: 4096}
+      Script: {instanceID: 3974}
     - Class: 114
-      Script: {instanceID: 4182}
+      Script: {instanceID: 4106}
     - Class: 114
-      Script: {instanceID: 4544}
+      Script: {instanceID: 4192}
     - Class: 114
-      Script: {instanceID: 4760}
+      Script: {instanceID: 4554}
     - Class: 114
-      Script: {instanceID: 4816}
+      Script: {instanceID: 4836}
     - Class: 114
-      Script: {instanceID: 4826}
-    - Class: 114
-      Script: {instanceID: 4840}
-    - Class: 114
-      Script: {instanceID: 4890}
+      Script: {instanceID: 4850}
     - Class: 114
       Script: {instanceID: 4900}
     - Class: 114
-      Script: {instanceID: 4938}
+      Script: {instanceID: 4910}
     - Class: 114
-      Script: {instanceID: 5068}
+      Script: {instanceID: 5078}
     - Class: 114
-      Script: {instanceID: 5070}
+      Script: {instanceID: 5080}
     - Class: 114
-      Script: {instanceID: 5088}
+      Script: {instanceID: 5098}
     - Class: 114
-      Script: {instanceID: 5226}
+      Script: {instanceID: 5236}
     - Class: 114
-      Script: {instanceID: 5320}
+      Script: {instanceID: 5330}
     - Class: 114
-      Script: {instanceID: 5430}
+      Script: {instanceID: 5420}
     - Class: 114
-      Script: {instanceID: 5546}
+      Script: {instanceID: 5440}
     - Class: 114
-      Script: {instanceID: 5554}
+      Script: {instanceID: 5556}
     - Class: 114
-      Script: {instanceID: 5602}
+      Script: {instanceID: 5612}
     - Class: 114
-      Script: {instanceID: 5608}
+      Script: {instanceID: 5618}
     - Class: 114
-      Script: {instanceID: 5696}
+      Script: {instanceID: 5706}
     - Class: 114
-      Script: {instanceID: 5732}
-    - Class: 114
-      Script: {instanceID: 5774}
+      Script: {instanceID: 5742}
     - Class: 114
       Script: {instanceID: 5784}
     - Class: 114
-      Script: {instanceID: 5834}
+      Script: {instanceID: 5794}
     - Class: 114
       Script: {instanceID: 5844}
     - Class: 114
-      Script: {instanceID: 5940}
+      Script: {instanceID: 5854}
     - Class: 114
-      Script: {instanceID: 6056}
+      Script: {instanceID: 5950}
     - Class: 114
-      Script: {instanceID: 6164}
+      Script: {instanceID: 6066}
     - Class: 114
-      Script: {instanceID: 6206}
+      Script: {instanceID: 6168}
     - Class: 114
-      Script: {instanceID: 6226}
+      Script: {instanceID: 6174}
     - Class: 114
-      Script: {instanceID: 6332}
+      Script: {instanceID: 6216}
     - Class: 114
-      Script: {instanceID: 6488}
+      Script: {instanceID: 6236}
     - Class: 114
-      Script: {instanceID: 6782}
+      Script: {instanceID: 6498}
     - Class: 114
-      Script: {instanceID: 7040}
+      Script: {instanceID: 6792}
     - Class: 114
-      Script: {instanceID: 7198}
+      Script: {instanceID: 7050}
     - Class: 114
-      Script: {instanceID: 7258}
+      Script: {instanceID: 7208}
     - Class: 114
-      Script: {instanceID: 20796}
+      Script: {instanceID: 7268}
+    - Class: 114
+      Script: {instanceID: 31630}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 134
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -282,9 +289,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    - Class: 258
-      Script: {instanceID: 0}
-    - Class: 850595691
+    - Class: 225
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1627,11 +1632,11 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: c059f0afd39c79f06edd96f6aca46dcf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: LEDLogic
+    className: BasicInstrument
   platform: 13
   scenePathNames:
-  - Assets/Mateo/Scenes/RT-WSP.unity
+  - Assets/Template Scene 1.unity
   playerPath: /Users/mlf/Desktop/CsoundUnity/Csound-Unity-Experiments/VR-Ready/test1.apk

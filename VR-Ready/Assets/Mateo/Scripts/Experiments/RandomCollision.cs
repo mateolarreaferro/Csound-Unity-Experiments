@@ -11,22 +11,28 @@ public class RandomCollision : MonoBehaviour
         csoundUnity = GetComponent<CsoundUnity>();
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Floor"))
-        {
-            Debug.Log("Collision Detected!");
+        float vel = collision.relativeVelocity.magnitude;
+        Debug.Log(vel);
+
+        csoundUnity.SetChannel("freq", Map(vel, 0.1f, 20f, 1f, 4000f)); 
+        csoundUnity.SetChannel("feedback", Map(vel, 0.1f, 20f, 0.8f, 0.98f));
+        csoundUnity.SetChannel("tapl", Map(vel, 0.1f, 20f, 0.1f, 0.9f));
+        csoundUnity.SetChannel("tapm", Map(vel, 0.1f, 20f, 0.1f, 0.9f));
+        csoundUnity.SetChannel("tapr", Map(vel, 0.1f, 20f, 0.1f, 0.9f));
 
 
-            csoundUnity.SetChannel("freq", Random.Range(200f, 1000f));
-            csoundUnity.SetChannel("feedback", Random.Range(0.80000f, 0.987000f));
-            csoundUnity.SetChannel("tapl", Random.Range(0.1f, 0.9f));
-            csoundUnity.SetChannel("tapm", Random.Range(0.1f, 0.9f));
-            csoundUnity.SetChannel("tapr", Random.Range(0.1f, 0.9f));
+        csoundUnity.SendScoreEvent("i 1000 0.0 10.9");
 
-
-            csoundUnity.SendScoreEvent("i 1000 0.0 10.9");
-        }
     }
+
+    // Map Function
+    float Map(float x, float in_min, float in_max, float out_min, float out_max)
+    {
+        return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+    }
+
 
 }

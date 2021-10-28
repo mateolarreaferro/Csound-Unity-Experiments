@@ -279,7 +279,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -454,3 +454,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d956d2ebd2ef49af869444df2aeb67b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ports:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _distances:
+  - 0
+  - 0
+  - 0
+  - 0
