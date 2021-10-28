@@ -54,3 +54,15 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+*.csproj
+*.asset
+VR-Ready/Assembly-CSharp.csproj
+VR-Ready/Library/ArtifactDB
+VR-Ready/Library/SceneVisibilityState.asset
+VR-Ready/Library/ScriptAssemblies/Assembly-CSharp.dll
+VR-Ready/Library/ScriptAssemblies/Assembly-CSharp.pdb
+VR-Ready/Library/ShaderCache/EditorEncounteredVariants
+VR-Ready/Library/SourceAssetDB
+VR-Ready/Library/UIElements/EditorWindows/UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow.pref
+VR-Ready/Logs/AssetImportWorker0-prev.log
+VR-Ready/Logs/AssetImportWorker0.log
