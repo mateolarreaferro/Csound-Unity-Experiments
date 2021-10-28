@@ -12,6 +12,9 @@ public class HandPresence : MonoBehaviour
     private GameObject spawnedHandModel;
     private Animator handAnimator;
 
+    //Error safeguard
+    private bool noController = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +27,18 @@ public class HandPresence : MonoBehaviour
             spawnedHandModel = Instantiate(handModelPrefab, transform);
             handAnimator = spawnedHandModel.GetComponent<Animator>();
         }
+        else
+        {
+            Debug.Log("No controller device detected");
+            noController = true;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (noController) { return; }
         UpdateHandAnimation();
     }
 
