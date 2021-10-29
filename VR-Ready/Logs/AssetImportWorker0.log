@@ -8,418 +8,139 @@ Using pre-set license
 -name
 AssetImportWorker0
 -projectPath
-/Users/mlf/Desktop/CsoundUnity/Csound-Unity-Experiments/VR-Ready
+/Users/caiojiacomini/Documents/_CaioDocs/_Unity/CsoundUnity/Csound-Unity-Experiments/VR-Ready
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51279
-Successfully changed project path to: /Users/mlf/Desktop/CsoundUnity/Csound-Unity-Experiments/VR-Ready
-/Users/mlf/Desktop/CsoundUnity/Csound-Unity-Experiments/VR-Ready
+49253
+Successfully changed project path to: /Users/caiojiacomini/Documents/_CaioDocs/_Unity/CsoundUnity/Csound-Unity-Experiments/VR-Ready
+/Users/caiojiacomini/Documents/_CaioDocs/_Unity/CsoundUnity/Csound-Unity-Experiments/VR-Ready
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 771.87 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 68.72 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path /Users/mlf/Desktop/CsoundUnity/Csound-Unity-Experiments/VR-Ready/Assets
+[Subsystems] Discovering subsystems at path /Users/caiojiacomini/Documents/_CaioDocs/_Unity/CsoundUnity/Csound-Unity-Experiments/VR-Ready/Assets
 GfxDevice: creating device client; threaded=0
-2021-10-27 04:12:12.920 Unity[35941:936591] Color LCD preferred device: Intel(R) Iris(TM) Plus Graphics 650 (low power)
-2021-10-27 04:12:12.920 Unity[35941:936591] Metal devices available: 1
-2021-10-27 04:12:12.920 Unity[35941:936591] 0: Intel(R) Iris(TM) Plus Graphics 650 (low power)
-2021-10-27 04:12:12.921 Unity[35941:936591] Using device Intel(R) Iris(TM) Plus Graphics 650 (low power)
+2021-10-28 15:19:35.810 Unity[555:6074] HP 22cwa preferred device: Intel(R) Iris(TM) Plus Graphics 650 (low power)
+2021-10-28 15:19:35.810 Unity[555:6074] Metal devices available: 1
+2021-10-28 15:19:35.810 Unity[555:6074] 0: Intel(R) Iris(TM) Plus Graphics 650 (low power)
+2021-10-28 15:19:35.810 Unity[555:6074] Using device Intel(R) Iris(TM) Plus Graphics 650 (low power)
 Initializing Metal device caps: Intel(R) Iris(TM) Plus Graphics 650
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56941
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56555
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.001919 seconds.
+Registered in 0.000376 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 96.35 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 62.01 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  6.756 seconds
+- Completed reload, in  2.477 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.012475 seconds.
+Registered in 0.001304 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 80.11 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 63.23 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.906 seconds
+- Completed reload, in  1.383 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launching external process: /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Tools/UnityShaderCompiler
 Launched and connected shader compiler UnityShaderCompiler after 0.04 seconds
-Refreshing native plugins compatible for Editor in 18.94 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3017 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 227.2 MB.
-System memory in use after: 227.4 MB.
+Unloading 3021 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 227.8 MB.
+System memory in use after: 228.0 MB.
 
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3457.
-Total: 7.890667 ms (FindLiveObjects: 1.368256 ms CreateObjectMapping: 0.424656 ms MarkObjects: 5.949220 ms  DeleteObjects: 0.146308 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3461.
+Total: 4.578578 ms (FindLiveObjects: 0.587189 ms CreateObjectMapping: 0.333817 ms MarkObjects: 3.517167 ms  DeleteObjects: 0.138303 ms)
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.020066 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.057 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2877 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 208.1 MB.
-System memory in use after: 208.3 MB.
+Received Import Request.
+  path: Assets/Caio/Scenes/Granulera.unity
+  artifactKey: Guid(c819ae2bc297944b7a41eb7b018ce23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Caio/Scenes/Granulera.unity using Guid(c819ae2bc297944b7a41eb7b018ce23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc0580a81ca0e823aabb98bf3690e158') in 0.018495 seconds
+  Import took 0.025444 seconds .
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3460.
-Total: 17.100498 ms (FindLiveObjects: 0.932802 ms CreateObjectMapping: 0.130818 ms MarkObjects: 15.981390 ms  DeleteObjects: 0.053315 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.019083 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.299 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.57 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2877 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 208.3 MB.
-System memory in use after: 208.6 MB.
+Received Import Request.
+  Time since last request: 2.092935 seconds.
+  path: Assets/Caio/Scenes/ComboboxTest.unity
+  artifactKey: Guid(8c3be521cb84147bfa68c5290c0c66dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Caio/Scenes/ComboboxTest.unity using Guid(8c3be521cb84147bfa68c5290c0c66dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '022a921f94b7866ee1f982eb2c8e5613') in 0.002523 seconds
+  Import took 0.009950 seconds .
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3463.
-Total: 18.201635 ms (FindLiveObjects: 4.938454 ms CreateObjectMapping: 2.339633 ms MarkObjects: 10.840972 ms  DeleteObjects: 0.079659 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.013974 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1.12 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.417 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.62 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2877 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 208.6 MB.
-System memory in use after: 208.8 MB.
+Received Import Request.
+  Time since last request: 42.648020 seconds.
+  path: Assets/Caio/Scenes/Granulera.unity
+  artifactKey: Guid(c819ae2bc297944b7a41eb7b018ce23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Caio/Scenes/Granulera.unity using Guid(c819ae2bc297944b7a41eb7b018ce23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '729ee8878b84e7e1252375fb6f55ea21') in 0.001936 seconds
+  Import took 0.008977 seconds .
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3466.
-Total: 10.782822 ms (FindLiveObjects: 3.296458 ms CreateObjectMapping: 0.571536 ms MarkObjects: 6.772295 ms  DeleteObjects: 0.140728 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008063 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.389 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2877 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 208.9 MB.
-System memory in use after: 209.1 MB.
+Received Import Request.
+  Time since last request: 13.593682 seconds.
+  path: Assets/Caio/Scenes/Granulera.unity
+  artifactKey: Guid(c819ae2bc297944b7a41eb7b018ce23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Caio/Scenes/Granulera.unity using Guid(c819ae2bc297944b7a41eb7b018ce23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0e44536a0ccf03b9918b7a229e2df9c') in 0.003716 seconds
+  Import took 0.011244 seconds .
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3469.
-Total: 24.775061 ms (FindLiveObjects: 2.759106 ms CreateObjectMapping: 0.356949 ms MarkObjects: 21.596944 ms  DeleteObjects: 0.055581 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012189 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.110 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 17.68 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2877 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 209.1 MB.
-System memory in use after: 209.3 MB.
+Received Import Request.
+  Time since last request: 117.140613 seconds.
+  path: Assets/Caio/Scenes/ComboboxTest.unity
+  artifactKey: Guid(8c3be521cb84147bfa68c5290c0c66dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Caio/Scenes/ComboboxTest.unity using Guid(8c3be521cb84147bfa68c5290c0c66dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c14aabc875052e015bb0c39009c6155b') in 0.002757 seconds
+  Import took 0.009581 seconds .
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3472.
-Total: 65.018259 ms (FindLiveObjects: 13.111588 ms CreateObjectMapping: 0.924206 ms MarkObjects: 50.847182 ms  DeleteObjects: 0.130199 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.020519 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.093 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2877 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 209.3 MB.
-System memory in use after: 209.6 MB.
+Received Import Request.
+  Time since last request: 6.939214 seconds.
+  path: Assets/Caio/Scenes/Granulera.unity
+  artifactKey: Guid(c819ae2bc297944b7a41eb7b018ce23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Caio/Scenes/Granulera.unity using Guid(c819ae2bc297944b7a41eb7b018ce23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fc7b16953ea5b4c618fa726505b7e25') in 0.003321 seconds
+  Import took 0.010646 seconds .
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3475.
-Total: 5.020378 ms (FindLiveObjects: 0.972743 ms CreateObjectMapping: 0.230103 ms MarkObjects: 3.757305 ms  DeleteObjects: 0.038874 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.036451 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.885 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 3.20 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2877 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 209.5 MB.
-System memory in use after: 209.8 MB.
+Received Import Request.
+  Time since last request: 21.246094 seconds.
+  path: Assets/Caio/Scenes/ComboboxTest.unity
+  artifactKey: Guid(8c3be521cb84147bfa68c5290c0c66dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Caio/Scenes/ComboboxTest.unity using Guid(8c3be521cb84147bfa68c5290c0c66dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b6830582f8af1a041558e3295a0787') in 0.003625 seconds
+  Import took 0.011318 seconds .
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3478.
-Total: 40.082798 ms (FindLiveObjects: 2.422216 ms CreateObjectMapping: 0.461132 ms MarkObjects: 37.045278 ms  DeleteObjects: 0.152017 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010020 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1.15 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.794 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.67 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2877 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 209.8 MB.
-System memory in use after: 210.0 MB.
+Received Import Request.
+  Time since last request: 6.258145 seconds.
+  path: Assets/Caio/Scenes/Granulera.unity
+  artifactKey: Guid(c819ae2bc297944b7a41eb7b018ce23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Caio/Scenes/Granulera.unity using Guid(c819ae2bc297944b7a41eb7b018ce23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c08a01fd63abf73491c6a94bd358d2dd') in 0.002039 seconds
+  Import took 0.009063 seconds .
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3481.
-Total: 8.901131 ms (FindLiveObjects: 0.778074 ms CreateObjectMapping: 0.204339 ms MarkObjects: 7.813789 ms  DeleteObjects: 0.102196 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011686 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1.45 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.115 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 4.91 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2877 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 210.0 MB.
-System memory in use after: 210.3 MB.
+Received Import Request.
+  Time since last request: 6.401729 seconds.
+  path: Assets/Caio/Scenes/ComboboxTest.unity
+  artifactKey: Guid(8c3be521cb84147bfa68c5290c0c66dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Caio/Scenes/ComboboxTest.unity using Guid(8c3be521cb84147bfa68c5290c0c66dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '971f00dc291935cbac0b964e0a50f8d5') in 0.003392 seconds
+  Import took 0.010506 seconds .
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3484.
-Total: 34.606990 ms (FindLiveObjects: 4.360994 ms CreateObjectMapping: 0.908058 ms MarkObjects: 29.162011 ms  DeleteObjects: 0.174059 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.023878 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.408 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2877 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 210.3 MB.
-System memory in use after: 210.5 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3487.
-Total: 8.638418 ms (FindLiveObjects: 1.974521 ms CreateObjectMapping: 0.487403 ms MarkObjects: 5.296292 ms  DeleteObjects: 0.877293 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015759 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.236 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2877 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 210.5 MB.
-System memory in use after: 210.7 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3490.
-Total: 9.777361 ms (FindLiveObjects: 0.811705 ms CreateObjectMapping: 0.210068 ms MarkObjects: 7.334823 ms  DeleteObjects: 1.418020 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.029662 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.187 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 3.15 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2877 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 210.8 MB.
-System memory in use after: 211.0 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3493.
-Total: 32.020609 ms (FindLiveObjects: 8.410166 ms CreateObjectMapping: 0.904867 ms MarkObjects: 22.482192 ms  DeleteObjects: 0.216514 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.046999 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.975 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 64.01 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2877 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 211.0 MB.
-System memory in use after: 211.2 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3496.
-Total: 10.798870 ms (FindLiveObjects: 0.989427 ms CreateObjectMapping: 0.253922 ms MarkObjects: 9.491766 ms  DeleteObjects: 0.061732 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
