@@ -877,25 +877,23 @@ MonoBehaviour:
   loudWarningThreshold: 10
   csoundScore: 
   _csoundFileGUID: 9909c13686901470aa954df91ea0529c
-  _csoundString: "<Cabbage> bounds(0, 0, 0, 0)\r\n//CsoundUnity\r\nbutton bounds(24,
-    784, 80, 40) channel(\"OnOff\") text(\"Off\", \"On\")\r\nrslider bounds(246,
-    766, 60, 60) channel(\"MidiNote\") range(0, 127, 60, 1, 1) text(\"MidiNote\")\r\n\r\n//HEADER
-    AND UTILITIES\r\nform caption(\"Granulera by Caio M. Jiacomini\") size(1180,900),
-    guiMode(\"queue\") colour(0, 0, 0), pluginId(\"cjb2\")\r\nlabel bounds(10, 8,
-    216, 28) fontColour(188, 151, 49, 255) text(\"G R A N U L E R A\") channel(\"label3\")\r\nlabel
-    bounds(8, 38, 141, 15) text(\"by Caio M. Jiacomini\") colour(255, 255, 255, 0)
-    fontColour(255, 255, 255, 255) channel(\"label4\")\r\n\r\n;combobox bounds(400,
+  _csoundString: "<Cabbage>\r\n//CsoundUnity\r\nbutton bounds(24, 784, 80, 40) channel(\"OnOff\")
+    text(\"Off\", \"On\")\r\nrslider bounds(246, 766, 60, 60) channel(\"MidiNote\")
+    range(0, 127, 60, 1, 1) text(\"MidiNote\")\r\n\r\n//HEADER AND UTILITIES\r\nform
+    caption(\"Granulera by Caio M. Jiacomini\") size(1180,900), guiMode(\"queue\")
+    colour(0, 0, 0), pluginId(\"cjb2\")\r\nlabel bounds(10, 8, 216, 28) fontColour(188,
+    151, 49, 255) text(\"G R A N U L E R A\") channel(\"label3\")\r\nlabel bounds(8,
+    38, 141, 15) text(\"by Caio M. Jiacomini\") colour(255, 255, 255, 0) fontColour(255,
+    255, 255, 255) channel(\"label4\")\r\n\r\nbutton bounds(10, 624, 118, 32) channel(\"VelocityButton\")
+    text(\"Velocity Disabled\", \"Velocity Enabled\") colour:1(188, 151, 49, 255)
+    outlineThickness(2) outlineColour(188, 151, 49, 255)\r\n\r\n;combobox bounds(400,
     12, 400, 32) channelType(\"string\") populate(\"*.snaps\") fontColour(188, 151,
     49, 255) channel(\"combo10\")  value(\"1\")\r\n;filebutton bounds(328, 12, 64,
     32) text(\"Save\", \"Save\") mode(\"named preset\") channel(\"filebutton11\")\r\n;filebutton
     bounds(806, 12, 64, 32) text(\"Delete\", \"Delete\") mode(\"remove preset\")
-    channel(\"filebutton12\")\r\n\r\n;button bounds(160, 624, 55, 32) text(\"PANIC\",
-    \"PANIC\") channel(\"Panic\") colour:1(255, 0, 0, 255) outlineThickness(2) outlineColour(255,
-    0, 0, 255)\r\nbutton bounds(10, 624, 118, 32) channel(\"VelocityButton\") text(\"Velocity
-    Disabled\", \"Velocity Enabled\") colour:1(188, 151, 49, 255) outlineThickness(2)
-    outlineColour(188, 151, 49, 255)\r\n\r\n//OSCILLATORS\r\nimage bounds(0, 100,
-    237, 465) channel(\"image10115\") colour(0, 0, 0, 255)\r\n{\r\nlabel bounds(34,
-    0, 140, 18) text(\"OSCILLATOR 1\") fontColour(255, 255, 255, 255) channel(\"label18\")\r\nlabel
+    channel(\"filebutton12\")\r\n;\r\n//OSCILLATORS\r\nimage bounds(0, 100, 237,
+    465) channel(\"image10115\") colour(0, 0, 0, 255)\r\n{\r\nlabel bounds(34, 0,
+    140, 18) text(\"OSCILLATOR 1\") fontColour(255, 255, 255, 255) channel(\"label18\")\r\nlabel
     bounds(15, 30, 65, 14) text(\"Waveform\") fontColour(255, 255, 255, 255) channel(\"label20\")\r\ncombobox
     bounds(114, 28, 80, 20) text(\"Sine\", \"Triangle\", \"Sawtooth\", \"Square\",
     \"Pulse\") fontColour(188, 151, 49, 255) channel(\"WaveformSelection1\")\r\nhslider
@@ -1182,33 +1180,32 @@ MonoBehaviour:
     \r\n\r\nendin\r\n///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\r\ninstr
     Synthesis\r\n    //Oscillator1\r\n        iOsc1Vol    chnget \"Oscillator1Volume\"\r\n       
     iOsc1Semi   chnget \"Oscillator1Semitone\"\r\n        iOsc1Cent   chnget \"Oscillator1Cents\"\r\n       
-    iFn1        = 1 ;chnget \"WaveformSelection1\"\r\n    \r\n        iOsc1Semi =
-    semitone(iOsc1Semi)\r\n        iOsc1Cent = cent(iOsc1Cent)\r\n    \r\n    //Oscillator2\r\n       
-    iOsc2Vol    chnget \"Oscillator2Volume\"\r\n        iOsc2Semi   chnget \"Oscillator2Semitone\"\r\n       
-    iOsc2Cent   chnget \"Oscillator2Cents\"  \r\n        iFn2        = 1 ;chnget
-    \"WaveformSelection2\"\r\n   \r\n        iOsc2Semi = semitone(iOsc2Semi)\r\n       
-    iOsc2Cent = cent(iOsc2Cent)\r\n    \r\n    //Oscillator3\r\n        iOsc3Vol  
-    chnget \"Oscillator3Volume\"\r\n        iOsc3Semi  chnget \"Oscillator3Semitone\"\r\n       
-    iOsc3Cent  chnget \"Oscillator3Cents\"\r\n        iFn3       = 1 ;chnget \"WaveformSelection3\"\r\n  
-    \r\n        iOsc3Semi = semitone(iOsc3Semi)\r\n        iOsc3Cent = cent(iOsc3Cent)\r\n   
-    \r\n    //Windowing      \r\n        iWfn = 12 ;chnget:i(\"WindowingSelection\")
-    + 10\r\n        \r\n        kWindowIndex line 0, p3, 1\r\n        kWindowEnv
-    table kWindowIndex, iWfn, 1 \r\n        aWindowEnv interp kWindowEnv\r\n     
-    \r\n    //Globals\r\n        iGlobalPan  chnget \"GlobalPan\"\r\n        iGlobalVol 
-    chnget \"GlobalVolume\"\r\n        \r\n    //Modulation\r\n        iRMFreq chnget
-    \"RMFreq\"\r\n        iRMAmp  chnget \"RMAmp\"\r\n        iFMFreq chnget \"FMFreq\"\r\n       
-    iFMAmp  chnget \"FMAmp\"\r\n        \r\n    //FREQUENCY MODULATION\r\n       
-    iModAmpLfo = p12\r\n        iModFreqLfo = p13\r\n        iFMAmpInterpol ntrpol
-    0, 20000, iFMAmp\r\n        aFMOsc poscil iFMAmpInterpol * iModAmpLfo, iFMFreq
-    + abs(iModFreqLfo * 2)\r\n\r\n    //OSCILLATORS   \r\n        aGrain1 poscil
-    aWindowEnv * iOsc1Vol, (p4 * iOsc1Semi * iOsc1Cent) + p8 + aFMOsc, iFn1, p5\r\n       
-    aGrain2 poscil aWindowEnv * iOsc2Vol, (p4 * iOsc2Semi * iOsc2Cent) + p8 + aFMOsc,
-    iFn2, p5\r\n        aGrain3 poscil aWindowEnv * iOsc3Vol, (p4 * iOsc3Semi * iOsc3Cent)
-    + p8 + aFMOsc, iFn3, p5\r\n        \r\n        iAmpEnv = p7\r\n        iAmpLfo
-    = p11\r\n        aGrainSum = (aGrain1 + aGrain2 + aGrain3) * iAmpEnv * iAmpLfo\r\n\r\n   
-    //RING MODULATION\r\n        iRMFreq = cent(iRMFreq)\r\n        aRMOsc poscil
-    1, (iRMFreq * gkFreqTotal) + iModFreqLfo\r\n    \r\n        aRingModSig ntrpol
-    aGrainSum, aRMOsc * aGrainSum, iRMAmp * iModAmpLfo * 2\r\n\r\n    //FILTERING:  
+    iFn1        chnget \"WaveformSelection1\"\r\n    \r\n        iOsc1Semi = semitone(iOsc1Semi)\r\n       
+    iOsc1Cent = cent(iOsc1Cent)\r\n    \r\n    //Oscillator2\r\n        iOsc2Vol   
+    chnget \"Oscillator2Volume\"\r\n        iOsc2Semi   chnget \"Oscillator2Semitone\"\r\n       
+    iOsc2Cent   chnget \"Oscillator2Cents\"  \r\n        iFn2        chnget \"WaveformSelection2\"\r\n  
+    \r\n        iOsc2Semi = semitone(iOsc2Semi)\r\n        iOsc2Cent = cent(iOsc2Cent)\r\n   
+    \r\n    //Oscillator3\r\n        iOsc3Vol   chnget \"Oscillator3Volume\"\r\n       
+    iOsc3Semi  chnget \"Oscillator3Semitone\"\r\n        iOsc3Cent  chnget \"Oscillator3Cents\"\r\n       
+    iFn3       chnget \"WaveformSelection3\"\r\n   \r\n        iOsc3Semi = semitone(iOsc3Semi)\r\n       
+    iOsc3Cent = cent(iOsc3Cent)\r\n    \r\n    //Windowing      \r\n        iWfn
+    = chnget:i(\"WindowingSelection\") + 10\r\n        \r\n        kWindowIndex line
+    0, p3, 1\r\n        kWindowEnv table kWindowIndex, iWfn, 1 \r\n        aWindowEnv
+    interp kWindowEnv\r\n      \r\n    //Globals\r\n        iGlobalPan  chnget \"GlobalPan\"\r\n       
+    iGlobalVol  chnget \"GlobalVolume\"\r\n        \r\n    //Modulation\r\n       
+    iRMFreq chnget \"RMFreq\"\r\n        iRMAmp  chnget \"RMAmp\"\r\n        iFMFreq
+    chnget \"FMFreq\"\r\n        iFMAmp  chnget \"FMAmp\"\r\n        \r\n    //FREQUENCY
+    MODULATION\r\n        iModAmpLfo = p12\r\n        iModFreqLfo = p13\r\n       
+    iFMAmpInterpol ntrpol 0, 20000, iFMAmp\r\n        aFMOsc poscil iFMAmpInterpol
+    * iModAmpLfo, iFMFreq + abs(iModFreqLfo * 2)\r\n\r\n    //OSCILLATORS   \r\n       
+    aGrain1 poscil aWindowEnv * iOsc1Vol, (p4 * iOsc1Semi * iOsc1Cent) + p8 + aFMOsc,
+    iFn1, p5\r\n        aGrain2 poscil aWindowEnv * iOsc2Vol, (p4 * iOsc2Semi * iOsc2Cent)
+    + p8 + aFMOsc, iFn2, p5\r\n        aGrain3 poscil aWindowEnv * iOsc3Vol, (p4
+    * iOsc3Semi * iOsc3Cent) + p8 + aFMOsc, iFn3, p5\r\n        \r\n        iAmpEnv
+    = p7\r\n        iAmpLfo = p11\r\n        aGrainSum = (aGrain1 + aGrain2 + aGrain3)
+    * iAmpEnv * iAmpLfo\r\n\r\n    //RING MODULATION\r\n        iRMFreq = cent(iRMFreq)\r\n       
+    aRMOsc poscil 1, (iRMFreq * gkFreqTotal) + iModFreqLfo\r\n    \r\n        aRingModSig
+    ntrpol aGrainSum, aRMOsc * aGrainSum, iRMAmp * iModAmpLfo * 2\r\n\r\n    //FILTERING:  
     \r\n        iFilterEnvTotal ntrpol 20, 20000, p9\r\n\r\n        //Frequency offset       
     \r\n        if gkFilterNoteTracking == 0 then\r\n            kFilterFreqTotal
     =  iFilterEnvTotal\r\n            if gkLfoFilterFreq > 0 then\r\n               
@@ -1259,11 +1256,12 @@ MonoBehaviour:
     \r\n     endif\r\n\r\n     //Outputs dry signal only if both effects are bypassed\r\n        
     if kDelayBypass == 0 && gkReverbBypass == 0 then\r\n            outs aSigL, aSigR\r\n        
     endif\r\n \r\n    //CLEARS SIGNAL\r\n        chnclear \"SigL\"\r\n        chnclear
-    \"SigR\" \r\nendin\r\n</CsInstruments>\r\n<CsScore>\r\n;f0 z\r\ni \"OnOff\"  
-    0 999999999\r\ni \"Delay\"   0 999999999\r\ni \"Reverb\"  0 999999999\r\n</CsScore>\r\n</CsoundSynthesizer>\r\n<bsbPanel>\r\n
-    <label>Widgets</label>\r\n <objectName/>\r\n <x>100</x>\r\n <y>100</y>\r\n <width>320</width>\r\n
-    <height>240</height>\r\n <visible>true</visible>\r\n <uuid/>\r\n <bgcolor mode=\"nobackground\">\r\n 
-    <r>255</r>\r\n  <g>255</g>\r\n  <b>255</b>\r\n </bgcolor>\r\n</bsbPanel>\r\n<bsbPresets>\r\n</bsbPresets>\r\n"
+    \"SigR\" \r\nendin\r\n</CsInstruments>\r\n<CsScore>\r\nf0 z\r\ni \"OnOff\"  
+    0 60*60*24*7\r\ni \"Delay\"   0 60*60*24*7\r\ni \"Reverb\"  0 60*60*24*7\r\n</CsScore>\r\n</CsoundSynthesizer>\r\n;<bsbPanel>\r\n;
+    <label>Widgets</label>\r\n; <objectName/>\r\n; <x>100</x>\r\n; <y>100</y>\r\n;
+    <width>320</width>\r\n; <height>240</height>\r\n; <visible>true</visible>\r\n;
+    <uuid/>\r\n; <bgcolor mode=\"nobackground\">\r\n;  <r>255</r>\r\n;  <g>255</g>\r\n; 
+    <b>255</b>\r\n; </bgcolor>\r\n;</bsbPanel>\r\n;<bsbPresets>\r\n;</bsbPresets>\r\n"
   _csoundFileName: Granulera_CsoundUnity.csd
   _csoundAsset: {fileID: 102900000, guid: 9909c13686901470aa954df91ea0529c, type: 3}
   _channels:
@@ -2067,7 +2065,8 @@ AudioSource:
   m_GameObject: {fileID: 616722036}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 6117f30cbe8684b5d8869b70e0334cd6,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
