@@ -823,7 +823,6 @@ GameObject:
   - component: {fileID: 616722039}
   - component: {fileID: 616722038}
   - component: {fileID: 616722037}
-  - component: {fileID: 616722046}
   m_Layer: 0
   m_Name: Granulera
   m_TagString: Untagged
@@ -884,23 +883,19 @@ MonoBehaviour:
     guiMode(\"queue\") colour(0, 0, 0), pluginId(\"cjb2\")\r\nlabel bounds(10, 8,
     216, 28) fontColour(188, 151, 49, 255) text(\"G R A N U L E R A\") channel(\"label3\")\r\nlabel
     bounds(8, 38, 141, 15) text(\"by Caio M. Jiacomini\") colour(255, 255, 255, 0)
-    fontColour(255, 255, 255, 255) channel(\"label4\")\r\n\r\ncombobox bounds(400,
+    fontColour(255, 255, 255, 255) channel(\"label4\")\r\n\r\n;combobox bounds(400,
     12, 400, 32) channelType(\"string\") populate(\"*.snaps\") fontColour(188, 151,
-    49, 255) channel(\"combo10\")  value(\"1\")\r\nfilebutton bounds(328, 12, 64,
-    32) text(\"Save\", \"Save\") mode(\"named preset\") channel(\"filebutton11\")\r\nfilebutton
+    49, 255) channel(\"combo10\")  value(\"1\")\r\n;filebutton bounds(328, 12, 64,
+    32) text(\"Save\", \"Save\") mode(\"named preset\") channel(\"filebutton11\")\r\n;filebutton
     bounds(806, 12, 64, 32) text(\"Delete\", \"Delete\") mode(\"remove preset\")
-    channel(\"filebutton12\")\r\n\r\nlabel bounds(12, 594, 116, 14) channel(\"label10114\")
-    text(\"Pitch Bend Range\") fontColour(255, 255, 255, 255) \r\nnslider bounds(160,
-    588, 55, 26) channel(\"PitchBend\") range(1, 24, 2, 1, 1) colour(0, 0, 0, 255)
-    textColour(188, 151, 49, 255) trackerColour(0, 0, 0, 0) fontColour(188, 151,
-    49, 255)\r\nbutton bounds(160, 624, 55, 32) text(\"PANIC\", \"PANIC\") channel(\"Panic\")
-    colour:1(255, 0, 0, 255) outlineThickness(2) outlineColour(255, 0, 0, 255)\r\nbutton
-    bounds(10, 624, 118, 32) channel(\"VelocityButton\") text(\"Velocity Disabled\",
-    \"Velocity Enabled\") colour:1(188, 151, 49, 255) outlineThickness(2) outlineColour(188,
-    151, 49, 255)\r\n\r\n//OSCILLATORS\r\nimage bounds(0, 100, 237, 465) channel(\"image10115\")
-    colour(0, 0, 0, 255)\r\n{\r\nlabel bounds(34, 0, 140, 18) text(\"OSCILLATOR 1\")
-    fontColour(255, 255, 255, 255) channel(\"label18\")\r\nlabel bounds(15, 30, 65,
-    14) text(\"Waveform\") fontColour(255, 255, 255, 255) channel(\"label20\")\r\ncombobox
+    channel(\"filebutton12\")\r\n\r\n;button bounds(160, 624, 55, 32) text(\"PANIC\",
+    \"PANIC\") channel(\"Panic\") colour:1(255, 0, 0, 255) outlineThickness(2) outlineColour(255,
+    0, 0, 255)\r\nbutton bounds(10, 624, 118, 32) channel(\"VelocityButton\") text(\"Velocity
+    Disabled\", \"Velocity Enabled\") colour:1(188, 151, 49, 255) outlineThickness(2)
+    outlineColour(188, 151, 49, 255)\r\n\r\n//OSCILLATORS\r\nimage bounds(0, 100,
+    237, 465) channel(\"image10115\") colour(0, 0, 0, 255)\r\n{\r\nlabel bounds(34,
+    0, 140, 18) text(\"OSCILLATOR 1\") fontColour(255, 255, 255, 255) channel(\"label18\")\r\nlabel
+    bounds(15, 30, 65, 14) text(\"Waveform\") fontColour(255, 255, 255, 255) channel(\"label20\")\r\ncombobox
     bounds(114, 28, 80, 20) text(\"Sine\", \"Triangle\", \"Sawtooth\", \"Square\",
     \"Pulse\") fontColour(188, 151, 49, 255) channel(\"WaveformSelection1\")\r\nhslider
     bounds(12, 48, 180, 29) range(0, 1, 1, 1, 0.01) text(\"Volume\") channel(\"Oscillator1Volume\")
@@ -1127,14 +1122,13 @@ MonoBehaviour:
     + kLfoDensity, 0.1, 80\r\n        \r\n        kTrig metro kDensityTotal\r\n    
     \r\n    \r\n    //Phase Variation\r\n        kPhaseVar = 0 ;chnget \"PhaseVariation\"\r\n       
     kPhaseVar rand kPhaseVar\r\n\r\n    //Pitch\r\n        iFreqMIDI = p4\r\n       
-    iPitchBendValue  chnget \"PitchBend\"                \r\n        kPitchVar      
-    chnget \"PitchVariation\"\r\n        \r\n        kFreqVarRange   chnget \"FrequencyVariationRange\"\r\n       
-    kFreqVarRate    chnget \"FrequencyVariationRate\"\r\n        kGlobalTuning  
-    chnget \"GlobalTuning\"\r\n    \r\n        kLfoTuningRange chnget \"LfoTuningRange\"\r\n       
-    kLfoTuningFreq  chnget \"LfoTuningFreq\"\r\n        \r\n        kLfoTuning     
-    lfo kLfoTuningRange, kLfoTuningFreq       \r\n                \r\n        kPitchVar      
-    rand kPitchVar\r\n        kGlobalTuning = cent(kGlobalTuning)\r\n    \r\n       
-    kFreqVar jitter kFreqVarRange, .2 * kFreqVarRate, .5 * kFreqVarRate\r\n       
+    kPitchVar       chnget \"PitchVariation\"\r\n        \r\n        kFreqVarRange  
+    chnget \"FrequencyVariationRange\"\r\n        kFreqVarRate    chnget \"FrequencyVariationRate\"\r\n       
+    kGlobalTuning   chnget \"GlobalTuning\"\r\n    \r\n        kLfoTuningRange chnget
+    \"LfoTuningRange\"\r\n        kLfoTuningFreq  chnget \"LfoTuningFreq\"\r\n       
+    \r\n        kLfoTuning      lfo kLfoTuningRange, kLfoTuningFreq       \r\n               
+    \r\n        kPitchVar       rand kPitchVar\r\n        kGlobalTuning = cent(kGlobalTuning)\r\n   
+    \r\n        kFreqVar jitter kFreqVarRange, .2 * kFreqVarRate, .5 * kFreqVarRate\r\n       
     gkFreqTotal = ((iFreqMIDI + kFreqVar) * kGlobalTuning)\r\n    \r\n    //Spatialization\r\n       
     kGrainSpread    chnget \"GrainSpread\"\r\n        kRandomSpread  random 0, kGrainSpread\r\n   
     \r\n    //Filter\r\n        iFilterFreq     chnget \"FilterFreq\"\r\n       
@@ -1194,7 +1188,7 @@ MonoBehaviour:
     \"WaveformSelection2\"\r\n   \r\n        iOsc2Semi = semitone(iOsc2Semi)\r\n       
     iOsc2Cent = cent(iOsc2Cent)\r\n    \r\n    //Oscillator3\r\n        iOsc3Vol  
     chnget \"Oscillator3Volume\"\r\n        iOsc3Semi  chnget \"Oscillator3Semitone\"\r\n       
-    iOsc3Cent  chnget \"Oscillator3Cents\"\r\n        iFn3        = 1 ;chnget \"WaveformSelection3\"\r\n  
+    iOsc3Cent  chnget \"Oscillator3Cents\"\r\n        iFn3       = 1 ;chnget \"WaveformSelection3\"\r\n  
     \r\n        iOsc3Semi = semitone(iOsc3Semi)\r\n        iOsc3Cent = cent(iOsc3Cent)\r\n   
     \r\n    //Windowing      \r\n        iWfn = 12 ;chnget:i(\"WindowingSelection\")
     + 10\r\n        \r\n        kWindowIndex line 0, p3, 1\r\n        kWindowEnv
@@ -1288,7 +1282,7 @@ MonoBehaviour:
     caption: 
     min: 0
     max: 127
-    value: 62
+    value: 60
     skew: 0
     increment: 0
     options: []
@@ -1296,56 +1290,6 @@ MonoBehaviour:
     channel: 
     text: 
     caption: Granulera by Caio M. Jiacomini
-    min: 0
-    max: 0
-    value: 0
-    skew: 0
-    increment: 0
-    options: []
-  - type: combobox
-    channel: combo10
-    text: 
-    caption: 
-    min: 0
-    max: 0
-    value: 0
-    skew: 0
-    increment: 0
-    options: []
-  - type: filebutton
-    channel: filebutton11
-    text: 
-    caption: 
-    min: 0
-    max: 0
-    value: 0
-    skew: 0
-    increment: 0
-    options: []
-  - type: filebutton
-    channel: filebutton12
-    text: 
-    caption: 
-    min: 0
-    max: 0
-    value: 0
-    skew: 0
-    increment: 0
-    options: []
-  - type: nslider
-    channel: PitchBend
-    text: 
-    caption: 
-    min: 1
-    max: 24
-    value: 2
-    skew: 0
-    increment: 0
-    options: []
-  - type: button
-    channel: Panic
-    text: 
-    caption: 
     min: 0
     max: 0
     value: 0
@@ -2301,19 +2245,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &616722046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616722036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29b49596e88c141179f5854e5823e507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  templateSelection: 0
 --- !u!1 &811878393
 GameObject:
   m_ObjectHideFlags: 0
