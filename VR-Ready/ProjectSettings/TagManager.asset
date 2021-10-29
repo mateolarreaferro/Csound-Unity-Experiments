@@ -22,6 +22,8 @@ TagManager:
   - paradox
   - Gravity Field
   - change size
+  - manija
+  - wheel
   layers:
   - Default
   - TransparentFX
