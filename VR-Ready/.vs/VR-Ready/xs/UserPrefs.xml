@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{568DDEBF-9A88-25A8-49E2-F072C38C508D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Caio/Scripts/Granulera/GranuleraController.cs">
     <Files>
-      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraController.cs" Line="26" Column="27" />
-      <File FileName="Assets/Caio/Scripts/Controllers/ControllerInputValues.cs" Line="65" Column="9" />
+      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraController.cs" Line="24" Column="40" />
+      <File FileName="Assets/Caio/Scripts/Controllers/ControllerInputValues.cs" />
       <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" Line="46" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="048ba237-45f7-4937-9ff2-b60c3f33394c" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7a4f2fde-556a-4cba-a2a2-43a94c2457ae" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

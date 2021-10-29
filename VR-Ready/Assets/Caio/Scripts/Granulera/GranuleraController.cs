@@ -23,7 +23,7 @@ public class GranuleraController : MonoBehaviour
         csound.SetChannel("PitchVariation", input.leftGripValue * 50);
         csound.SetChannel("ReverbMix", Mathf.Clamp01(0.15f + input.leftTriggerValue));
         csound.SetChannel("DelaySend", Mathf.Clamp01(0.15f + input.leftTriggerValue));
-        csound.GetChannel()
+        //csound.GetChannel()
     }
 
     public void StartAndStop()
