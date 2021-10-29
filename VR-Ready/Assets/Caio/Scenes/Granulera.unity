@@ -822,7 +822,6 @@ GameObject:
   - component: {fileID: 616722040}
   - component: {fileID: 616722039}
   - component: {fileID: 616722038}
-  - component: {fileID: 616722037}
   - component: {fileID: 616722046}
   m_Layer: 0
   m_Name: Granulera
@@ -831,20 +830,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &616722037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616722036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61caea75744cc4633912c6057e81a46a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  csound: {fileID: 616722039}
-  triggerChannelName: OnOff
 --- !u!114 &616722038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1633,7 +1618,7 @@ MonoBehaviour:
     caption: 
     min: 0.01
     max: 10.01
-    value: 0.01
+    value: 0
     skew: 0
     increment: 0
     options: []
@@ -2023,7 +2008,7 @@ MonoBehaviour:
     caption: 
     min: 0.05
     max: 10
-    value: 0.05
+    value: 0
     skew: 0
     increment: 0
     options: []
@@ -2033,7 +2018,7 @@ MonoBehaviour:
     caption: 
     min: 0.05
     max: 10
-    value: 0.05
+    value: 0
     skew: 0
     increment: 0
     options: []
@@ -2273,7 +2258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &654110178
 RectTransform:
   m_ObjectHideFlags: 0
