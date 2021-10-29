@@ -1,4 +1,4 @@
-<Cabbage> bounds(0, 0, 0, 0)
+<Cabbage>
 //CsoundUnity
 button bounds(24, 784, 80, 40) channel("OnOff") text("Off", "On")
 rslider bounds(246, 766, 60, 60) channel("MidiNote") range(0, 127, 60, 1, 1) text("MidiNote")
@@ -8,13 +8,12 @@ form caption("Granulera by Caio M. Jiacomini") size(1180,900), guiMode("queue") 
 label bounds(10, 8, 216, 28) fontColour(188, 151, 49, 255) text("G R A N U L E R A") channel("label3")
 label bounds(8, 38, 141, 15) text("by Caio M. Jiacomini") colour(255, 255, 255, 0) fontColour(255, 255, 255, 255) channel("label4")
 
+button bounds(10, 624, 118, 32) channel("VelocityButton") text("Velocity Disabled", "Velocity Enabled") colour:1(188, 151, 49, 255) outlineThickness(2) outlineColour(188, 151, 49, 255)
+
 ;combobox bounds(400, 12, 400, 32) channelType("string") populate("*.snaps") fontColour(188, 151, 49, 255) channel("combo10")  value("1")
 ;filebutton bounds(328, 12, 64, 32) text("Save", "Save") mode("named preset") channel("filebutton11")
 ;filebutton bounds(806, 12, 64, 32) text("Delete", "Delete") mode("remove preset") channel("filebutton12")
-
-;button bounds(160, 624, 55, 32) text("PANIC", "PANIC") channel("Panic") colour:1(255, 0, 0, 255) outlineThickness(2) outlineColour(255, 0, 0, 255)
-button bounds(10, 624, 118, 32) channel("VelocityButton") text("Velocity Disabled", "Velocity Enabled") colour:1(188, 151, 49, 255) outlineThickness(2) outlineColour(188, 151, 49, 255)
-
+;
 //OSCILLATORS
 image bounds(0, 100, 237, 465) channel("image10115") colour(0, 0, 0, 255)
 {
@@ -401,7 +400,7 @@ instr Synthesis
         iOsc1Vol    chnget "Oscillator1Volume"
         iOsc1Semi   chnget "Oscillator1Semitone"
         iOsc1Cent   chnget "Oscillator1Cents"
-        iFn1        = 1 ;chnget "WaveformSelection1"
+        iFn1        chnget "WaveformSelection1"
     
         iOsc1Semi = semitone(iOsc1Semi)
         iOsc1Cent = cent(iOsc1Cent)
@@ -410,7 +409,7 @@ instr Synthesis
         iOsc2Vol    chnget "Oscillator2Volume"
         iOsc2Semi   chnget "Oscillator2Semitone"
         iOsc2Cent   chnget "Oscillator2Cents"  
-        iFn2        = 1 ;chnget "WaveformSelection2"
+        iFn2        chnget "WaveformSelection2"
    
         iOsc2Semi = semitone(iOsc2Semi)
         iOsc2Cent = cent(iOsc2Cent)
@@ -419,13 +418,13 @@ instr Synthesis
         iOsc3Vol   chnget "Oscillator3Volume"
         iOsc3Semi  chnget "Oscillator3Semitone"
         iOsc3Cent  chnget "Oscillator3Cents"
-        iFn3       = 1 ;chnget "WaveformSelection3"
+        iFn3       chnget "WaveformSelection3"
    
         iOsc3Semi = semitone(iOsc3Semi)
         iOsc3Cent = cent(iOsc3Cent)
     
     //Windowing      
-        iWfn = 12 ;chnget:i("WindowingSelection") + 10
+        iWfn = chnget:i("WindowingSelection") + 10
         
         kWindowIndex line 0, p3, 1
         kWindowEnv table kWindowIndex, iWfn, 1 
@@ -585,26 +584,26 @@ instr Delay
 endin
 </CsInstruments>
 <CsScore>
-;f0 z
-i "OnOff"   0 999999999
-i "Delay"   0 999999999
-i "Reverb"  0 999999999
+f0 z
+i "OnOff"   0 60*60*24*7
+i "Delay"   0 60*60*24*7
+i "Reverb"  0 60*60*24*7
 </CsScore>
 </CsoundSynthesizer>
-<bsbPanel>
- <label>Widgets</label>
- <objectName/>
- <x>100</x>
- <y>100</y>
- <width>320</width>
- <height>240</height>
- <visible>true</visible>
- <uuid/>
- <bgcolor mode="nobackground">
-  <r>255</r>
-  <g>255</g>
-  <b>255</b>
- </bgcolor>
-</bsbPanel>
-<bsbPresets>
-</bsbPresets>
+;<bsbPanel>
+; <label>Widgets</label>
+; <objectName/>
+; <x>100</x>
+; <y>100</y>
+; <width>320</width>
+; <height>240</height>
+; <visible>true</visible>
+; <uuid/>
+; <bgcolor mode="nobackground">
+;  <r>255</r>
+;  <g>255</g>
+;  <b>255</b>
+; </bgcolor>
+;</bsbPanel>
+;<bsbPresets>
+;</bsbPresets>
