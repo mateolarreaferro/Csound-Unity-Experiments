@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/V(R)ALIS/Template Scene 2.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
