@@ -18,13 +18,14 @@ public class ControllerInputValues : MonoBehaviour
     [HideInInspector] public bool leftSecondaryValue;
     [HideInInspector] public bool rightPrimaryValue;
     [HideInInspector] public bool rightSecondaryValue;
+    
+    public UnityEvent leftPrimaryButtonEvent;
+    public UnityEvent leftSecondaryButtonEvent;
 
-
-    //public UnityEvent leftPrimaryButtonEvent;
-    //public UnityEvent leftSecondaryButtonEvent;
-
-    //public UnityEvent rightPrimaryButtonEvent;
-    //public UnityEvent rightSecondaryButtonEvent;
+    public UnityEvent rightPrimaryButtonEvent;
+    private bool canSendRp = true;
+    public UnityEvent rightSecondaryButtonEvent;
+    private bool canSendRs = true;
 
     // Start is called before the first frame update
     void Awake()
@@ -61,6 +62,7 @@ public class ControllerInputValues : MonoBehaviour
     {
         UpdateRightHandInputValues();
         UpdateLeftHandInputValues();
+        CheckToSendEvents();
     }
 
     private void UpdateRightHandInputValues()
@@ -107,5 +109,28 @@ public class ControllerInputValues : MonoBehaviour
             leftSecondaryValue = secondaryButtonValue;
         else
             leftSecondaryValue = false;
+    }
+
+    private void CheckToSendEvents()
+    {
+        if(rightPrimaryValue && canSendRp)
+        {
+            rightPrimaryButtonEvent?.Invoke();
+            canSendRp = false;
+        }
+        else if (!rightPrimaryValue)
+        {
+            canSendRp = true;
+        }
+
+        if (rightSecondaryValue && canSendRs)
+        {
+            rightSecondaryButtonEvent?.Invoke();
+            canSendRs = false;
+        }
+        else if (!rightSecondaryValue)
+        {
+            canSendRs = true;
+        }
     }
 }
