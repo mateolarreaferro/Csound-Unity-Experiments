@@ -27,14 +27,17 @@ public class GranuleraTemplates : MonoBehaviour
 
     private void Template1()
     {
+        csound.SetChannel("WaveformSelection1", 1);
         csound.SetChannel("Oscillator1Volume", 1);
         csound.SetChannel("Oscillator1Semitone", 0);
         csound.SetChannel("Oscillator1Cents", 0);
 
+        csound.SetChannel("WaveformSelection2", 1);
         csound.SetChannel("Oscillator2Volume", 1);
         csound.SetChannel("Oscillator2Semitone", 2);
         csound.SetChannel("Oscillator2Cents", 0);
 
+        csound.SetChannel("WaveformSelection3", 1);
         csound.SetChannel("Oscillator3Volume", 1);
         csound.SetChannel("Oscillator3Semitone", 5);
         csound.SetChannel("Oscillator3Cents", 0);
@@ -44,13 +47,14 @@ public class GranuleraTemplates : MonoBehaviour
         csound.SetChannel("GrainDuration", 0.35f);
         csound.SetChannel("DurationVariationRange", 0.152f);
         csound.SetChannel("DurationVariationRate", 3);
-        csound.SetChannel("GrainDensity", 30);
+        csound.SetChannel("GrainDensity", 25);
         csound.SetChannel("DensityVariationRange", 18);
         csound.SetChannel("DensityVariationRate", 3.2f);
 
+        csound.SetChannel("FilterFreq", 1f);
         csound.SetChannel("RMFreq", 612);
         csound.SetChannel("FMFreq", 2160);
-        csound.SetChannel("GlobalVolume", 0.15f);
+        csound.SetChannel("GlobalVolume", 0.1f);
 
         csound.SetChannel("AmpAttack", 3.5f);
         csound.SetChannel("AmpDecay", 0.1f);
@@ -64,8 +68,8 @@ public class GranuleraTemplates : MonoBehaviour
         csound.SetChannel("DelayBypass", 1);
         csound.SetChannel("DelaySend", 0.45f);
         csound.SetChannel("DelayMix", 1);
-        csound.SetChannel("DelayTimeLeft", 0.5f);
-        csound.SetChannel("DelayTimeRight", 0.8f);
+        csound.SetChannel("DelayTimeLeft", 0.3f);
+        csound.SetChannel("DelayTimeRight", 0.6f);
         csound.SetChannel("DelayFeedback", 0.75f);
     }
 }

@@ -1,20 +1,14 @@
 ﻿<Properties StartupConfiguration="{568DDEBF-9A88-25A8-49E2-F072C38C508D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Caio/Scripts/Granulera/GranuleraController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs">
     <Files>
-      <File FileName="Assets/Mateo/Scripts/Experiments/Cube.cs" Line="25" Column="10" />
-      <File FileName="Assets/Mateo/Template/WallUI.cs" />
-      <File FileName="Assets/Mateo/Scripts/Experiments/RandomCollision.cs" />
-      <File FileName="Assets/Mateo/Scripts/Experiments/sensor.cs" />
-      <File FileName="Assets/Mateo/Scripts/Experiments/LocationBasedSynth.cs" />
-      <File FileName="Assets/Mateo/Scripts/Experiments/BasicInstrument.cs" />
-      <File FileName="Assets/Mateo/Scripts/Experiments/SizeChanger.cs" />
-      <File FileName="Assets/Mateo/Scripts/Real-Time Word Sound Processing/GravityField.cs" />
-      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraController.cs" Line="9" Column="1" />
+      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraController.cs" Line="26" Column="27" />
+      <File FileName="Assets/Caio/Scripts/Controllers/ControllerInputValues.cs" Line="65" Column="9" />
+      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" Line="46" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2b4e2846-ddcf-4304-9699-7d754a5cd122" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="048ba237-45f7-4937-9ff2-b60c3f33394c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
