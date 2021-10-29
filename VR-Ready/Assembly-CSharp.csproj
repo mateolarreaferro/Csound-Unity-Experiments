@@ -58,14 +58,17 @@
     <Compile Include="Assets/Mateo/Template/SimpleRotation.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/sphereMechanism.cs" />
     <Compile Include="Assets/Caio/Scripts/Controllers/HandPresence.cs" />
+    <Compile Include="Assets/V(R)ALIS/WheelOfTime.cs" />
     <Compile Include="Assets/Caio/Scripts/Controllers/ControllerInputValues.cs" />
     <Compile Include="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/RaycastSelector.cs" />
     <Compile Include="Assets/Caio/Scripts/EventBroker.cs" />
+    <Compile Include="Assets/V(R)ALIS/NumberBox.cs" />
     <Compile Include="Assets/Caio/Scripts/Granulera/GranuleraController.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/LocationBasedSynth.cs" />
     <Compile Include="Assets/Mateo/Scripts/Real-Time Word Sound Processing/GravityField.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/Cube.cs" />
+    <Compile Include="Assets/V(R)ALIS/WordProcessorInstrument.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/sensor.cs" />
     <Compile Include="Assets/Mateo/Scripts/Real-Time Word Sound Processing/LogicTable.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/UICLS.cs" />
@@ -79,9 +82,6 @@
     <Compile Include="Assets/Mateo/Scripts/Experiments/CharacterMovement.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/BasicInstrument.cs" />
     <Compile Include="Assets/Mateo/Scripts/Experiments/SimpleUI.cs" />
-    <Compile Include="Assets/WheelOfTime.cs" />
-    <Compile Include="Assets/WordProcessorInstrument.cs" />
-    <Compile Include="Assets/NumberBox.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
