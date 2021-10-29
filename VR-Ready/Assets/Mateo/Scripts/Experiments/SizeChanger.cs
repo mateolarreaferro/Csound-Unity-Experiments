@@ -21,6 +21,7 @@ public class SizeChanger : MonoBehaviour
 
     [SerializeField] bool Scaling;
 
+
     void Start()
     {
         
@@ -62,15 +63,22 @@ public class SizeChanger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Table"))
+        if (other.gameObject.CompareTag("change size"))
         {
             Debug.Log("Detected");
             Scaling = true;
         }
-        
 
 
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("change size"))
+        {
+            transform.localScale = startingScale;
+            //make a sound
+        }
     }
 
 

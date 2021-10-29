@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{568DDEBF-9A88-25A8-49E2-F072C38C508D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mateo/Scripts/Experiments/BasicInstrument.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NumberBox.cs">
     <Files>
       <File FileName="Assets/Mateo/Scripts/Experiments/Cube.cs" Line="25" Column="10" />
       <File FileName="Assets/Mateo/Template/WallUI.cs" />
@@ -7,11 +7,15 @@
       <File FileName="Assets/Mateo/Scripts/Experiments/sensor.cs" />
       <File FileName="Assets/Mateo/Scripts/Experiments/LocationBasedSynth.cs" />
       <File FileName="Assets/Mateo/Scripts/Experiments/BasicInstrument.cs" Line="50" Column="81" />
+      <File FileName="Assets/WheelOfTime.cs" Line="13" Column="29" />
+      <File FileName="Assets/Mateo/Scripts/Experiments/SizeChanger.cs" Line="77" Column="42" />
+      <File FileName="Assets/Mateo/Scripts/Real-Time Word Sound Processing/GravityField.cs" Line="18" Column="53" />
+      <File FileName="Assets/NumberBox.cs" Line="6" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="029e5a27-2aa5-4a9a-92e9-6c7b9e2269c4" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a8feae5e-a711-400d-bdd8-ababd992650a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -15,7 +15,7 @@ public class GravityField : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Gravity Field"))
+        if (other.gameObject.CompareTag("change size"))
         {
             rb.useGravity = true;
         }
@@ -23,7 +23,7 @@ public class GravityField : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Gravity Field"))
+        if (other.gameObject.CompareTag("change size"))
         {
             rb.useGravity = false;
         }
