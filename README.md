@@ -37,7 +37,7 @@ Let’s try to be as specific as possible with the description of our commits. I
 
 **Unity References**:
 [Unity's XR Interaction Toolkit Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@0.9/manual/index.html)
-, [Unity's Audio Engine Documentation](https://docs.unity3d.com/Manual/Audio.html), [XR Interaction Toolkit Setup](https://www.youtube.com/watch?v=ndwJHpxd9Mo).
+, [Unity's Audio Engine Documentation](https://docs.unity3d.com/Manual/Audio.html), [XR Interaction Toolkit Setup](https://www.youtube.com/watch?v=ndwJHpxd9Mo), [XR Input Manager](https://docs.unity3d.com/Manual/xr_input.html)
 
 
 ### Contact
