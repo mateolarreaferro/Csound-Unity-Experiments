@@ -48,7 +48,7 @@ Pedro Sodre - psodre@berklee.edu
 
 Mateo Larrea - mlarrea@berklee.edu
 
-
+Caio Jiaocmini - cmigueljiacomini@berklee.edu
 
 
 
