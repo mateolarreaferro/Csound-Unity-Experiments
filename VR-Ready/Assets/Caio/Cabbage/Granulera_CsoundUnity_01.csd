@@ -250,6 +250,7 @@ instr 100
         kDurVar     jitter  kDurVarRange, .2 * kDurVarRate, .5 * kDurVarRate
         kLfoDur     lfo     kLfoDurRange, kLfoDurFreq
         kDurTotal   limit   kDur + kDurVar + kLfoDur , 0.01, 1
+        kDurTotal   port    kDurTotal, 0.1
     
     //Grain Density
         kDensity            chnget "GrainDensity"
@@ -262,6 +263,7 @@ instr 100
         kLfoDensity     lfo     kLfoDensityRange, kLfoDensityFreq 
         kDensityVar     jitter  kDensityVarRange, .2 * kDensityVarRate, .5 * kDensityVarRate
         kDensityTotal   limit   kDensity + kDensityVar + kLfoDensity, 0.1, 80
+        kDensityToal    port    kDensity, 0.1
         
         kTrig metro kDensityTotal
      
@@ -288,10 +290,13 @@ instr 100
     
         kFreqVar jitter kFreqVarRange, .2 * kFreqVarRate, .5 * kFreqVarRate
         gkFreqTotal = ((iFreqMIDI + kFreqVar) * kGlobalTuning)
+        
+        gkFreqTotal port gkFreqTotal, 0,2
     
     //Spatialization
         kGrainSpread    chnget "GrainSpread"
-        kRandomSpread  random 0, kGrainSpread
+        kRandomSpread   random 0, kGrainSpread
+        kRandomSpread   portk kRandomSpread, 0.2
     
     //Filter
         iFilterFreq     chnget "FilterFreq"
@@ -300,7 +305,7 @@ instr 100
         iFilterDecay    chnget "FilterDecay"
         iFilterSustain  chnget "FilterSustain"
         iFilterRelease  chnget "FilterRelease"
-        giFilterType    = 0 ;= chnget:i("FilterSelection") - 1
+        giFilterType    = chnget:i("FilterSelection") - 1
  
         gkFilterFreq    chnget "FilterFreq"
         gkFilterReson   chnget "FilterReson"
@@ -336,7 +341,7 @@ instr 100
             endif
     
             //Ports envelope         
-            ;kFilterFreqSum port kFilterFreqSum, 0.1
+            kFilterFreqSum port kFilterFreqSum, 0.1
             
             //Filter LFO
             gkLfoFilterFreq chnget "LfoFilterFreq"
