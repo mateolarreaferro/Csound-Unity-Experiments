@@ -37,7 +37,6 @@ public class HandPresence : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (noController) { return; }
         UpdateHandAnimation();
     }
