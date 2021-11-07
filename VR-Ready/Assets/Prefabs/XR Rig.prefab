@@ -1144,8 +1144,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputSource: 4
-  speed: 3
+  speed: 1.5
   additionalHeight: 0.2
+  applyGravity: 0
   gravity: -9.81
   groundLayer:
     serializedVersion: 2

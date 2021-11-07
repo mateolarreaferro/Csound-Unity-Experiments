@@ -67,7 +67,6 @@ public class ContinuousMovement : MonoBehaviour
 		return hasHit;
 	}
 
-
 	private void CapsuleFollowHeadset()
 	{
 		character.height = rig.cameraInRigSpaceHeight + additionalHeight;
