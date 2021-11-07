@@ -104,6 +104,7 @@ public class GetControllerButtonValues : MonoBehaviour
 
     private void CheckToSendEvents()
     {
+        //Face buttons
         if (primaryButtonValue && canSendPrimaryEvent)
         {
             primaryButtonPressEvent?.Invoke();
@@ -124,6 +125,7 @@ public class GetControllerButtonValues : MonoBehaviour
             canSendSecondaryEvent = true;
         }
 
+        //Trigger and Grip
         if(triggerButtonValue && canSendTriggerEvent)
         {
             triggerButtonPressEvent?.Invoke();
@@ -144,6 +146,7 @@ public class GetControllerButtonValues : MonoBehaviour
             canSendGripEvent = true;
         }
 
+        //Joystick
         if (joystickClickValue && canSendJoystickEvent)
         {
             joystickPressEvent?.Invoke();

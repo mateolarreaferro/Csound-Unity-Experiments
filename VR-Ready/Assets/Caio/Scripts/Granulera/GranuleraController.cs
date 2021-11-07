@@ -7,7 +7,9 @@ public class GranuleraController : MonoBehaviour
     private CsoundUnity csound;
     private GetControllerButtonValues leftInput;
     private GetControllerButtonValues rightInput;
-    private int triggerToggle = 0;
+    private int triggerToggle = 1;
+
+    private int waveformSelection = 0;
 
     private void Awake()
     {
@@ -37,24 +39,14 @@ public class GranuleraController : MonoBehaviour
         csound.SetChannel("OnOff", triggerToggle);
     }
 
-    public void TriangleWaveform()
+    public void CycleWaveform()
     {
-        csound.SetChannel("WaveformSelection1", 2);
-        csound.SetChannel("WaveformSelection2", 2);
-        csound.SetChannel("WaveformSelection3", 2);
-    }
+        waveformSelection++;
+        if (waveformSelection > 5)
+            waveformSelection = 1;
 
-    public void SawWaveform()
-    {
-        csound.SetChannel("WaveformSelection1", 3);
-        csound.SetChannel("WaveformSelection2", 3);
-        csound.SetChannel("WaveformSelection3", 3);
-    }
-
-    public void SineWaveform()
-    {
-        csound.SetChannel("WaveformSelection1", 1);
-        csound.SetChannel("WaveformSelection2", 1);
-        csound.SetChannel("WaveformSelection3", 1);
+        csound.SetChannel("WaveformSelection1", waveformSelection);
+        csound.SetChannel("WaveformSelection2", waveformSelection);
+        csound.SetChannel("WaveformSelection3", waveformSelection);
     }
 }

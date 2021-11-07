@@ -1,15 +1,16 @@
 ﻿<Properties StartupConfiguration="{568DDEBF-9A88-25A8-49E2-F072C38C508D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Caio/Scripts/Granulera/GranuleraController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Caio/Scripts/Controllers/ContinuousMovement.cs">
     <Files>
-      <File FileName="Assets/Caio/Scripts/Controllers/GetControllerButtonValues.cs" Line="13" Column="56" />
-      <File FileName="Assets/Caio/Scripts/Controllers/HandPresence.cs" Line="21" Column="1" />
-      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraController.cs" Line="43" Column="1" />
-      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" Line="32" Column="1" />
+      <File FileName="Assets/Caio/Scripts/Controllers/GetControllerButtonValues.cs" Line="24" Column="47" />
+      <File FileName="Assets/Caio/Scripts/Controllers/HandPresence.cs" />
+      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraController.cs" />
+      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" />
+      <File FileName="Assets/Caio/Scripts/Controllers/ContinuousMovement.cs" Line="4" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1db9f3d5-78c8-4662-8f4f-f5d3e8120a5d" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="264053dd-c76e-441f-8a29-682c43ab6d54" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
