@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ContinuousMovement : MonoBehaviour
 {
 	private XRRig rig;
-	public XRNode inputSource; //set to left hand
+	public XRNode inputSource; //set to left hand on inspector
 	private Vector2 inputAxis;
 	private CharacterController character;
 
