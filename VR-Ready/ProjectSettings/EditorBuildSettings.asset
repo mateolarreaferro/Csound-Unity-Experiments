@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Caio/Scenes/GranuleraTemplateTests.unity
-    guid: 42ff2bd551c64413c83fa487d28c1b68
+    path: Assets/Scenes/Scriabin.unity
+    guid: d3565a40f6b85421caa770b1c9f5d78d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a9b9843d8423a401ab98a8931bf309a9,
       type: 2}

@@ -8,6 +8,7 @@ public class GranuleraTemplates : MonoBehaviour
 
     private CsoundUnity csound;
     public GranuleraTemplate templateSelection;
+    public bool applyOnStart = true;
 
     // Start is called before the first frame update
     void Awake()
@@ -17,6 +18,8 @@ public class GranuleraTemplates : MonoBehaviour
 
     private void Start()
     {
+        if(!applyOnStart) { return; }
+
         switch (templateSelection)
         {
             case GranuleraTemplate.template1:

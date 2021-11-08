@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
+    public enum SelectedColor { SoftBlue, Blue, Red, Yellow, White, Purple };
+    private SelectedColor colorSelect;
+    public GranuleraTemplates template;
 
     [SerializeField] bool SoftBlue = false;
     [SerializeField] bool Blue = false;
@@ -12,9 +15,6 @@ public class Sound : MonoBehaviour
     [SerializeField] bool White = false;
     [SerializeField] bool Purple = false;
 
-
-
-
     // Update is called once per frame
     void Update()
     {
@@ -22,47 +22,83 @@ public class Sound : MonoBehaviour
         //{
 
         //}
-        
+        SwitchSoundBasedOnColor();
     }
 
+    void SwitchSoundBasedOnColor()
+    {
+        switch (colorSelect)
+        {
+            case SelectedColor.SoftBlue:
+                template.Template1();
+                break;
+            case SelectedColor.Blue:
+                template.DigitalRain();
+                break;
+            case SelectedColor.Purple:
+                template.FlutterCrystals();
+                break;
+            case SelectedColor.Red:
+                template.NeonAbyss();
+                break;
+            case SelectedColor.White:
+                template.Organ();
+                break;
+            case SelectedColor.Yellow:
+                template.StereoCanonGenerator();
+                break;
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("SoftBlue"))
         {
-            SoftBlue = true;
+            colorSelect = SelectedColor.SoftBlue;
 
-            Purple = Blue = Yellow = Red = White = false;
+            //SoftBlue = true;
+
+            //Purple = Blue = Yellow = Red = White = false;
         }
         else if (other.gameObject.CompareTag("Purple"))
         {
-            Purple = true;
+            colorSelect = SelectedColor.Purple;
 
-            SoftBlue = Blue = Yellow = Red = White = false;
+            //Purple = true;
+
+            //SoftBlue = Blue = Yellow = Red = White = false;
         }
         else if (other.gameObject.CompareTag("Blue"))
         {
-            Blue = true;
+            colorSelect = SelectedColor.Blue;
 
-            Purple = SoftBlue = Yellow = Red = White = false;
+            //Blue = true;
+
+            //Purple = SoftBlue = Yellow = Red = White = false;
         }
         else if (other.gameObject.CompareTag("Yellow"))
         {
-            Yellow = true;
+            colorSelect = SelectedColor.Yellow;
 
-            Purple = Blue = SoftBlue = Red = White = false;
+            //Yellow = true;
+
+            //Purple = Blue = SoftBlue = Red = White = false;
         }
         else if (other.gameObject.CompareTag("Red"))
         {
-            Red = true;
+            colorSelect = SelectedColor.Red;
 
-            Purple = Blue = Yellow = SoftBlue = White = false;
+            //Red = true;
+
+            //Purple = Blue = Yellow = SoftBlue = White = false;
         }
         else if (other.gameObject.CompareTag("White"))
         {
-            White = true;
+            colorSelect = SelectedColor.White;
 
-            Purple = Blue = Yellow = Red = SoftBlue = false;
+            //White = true;
+
+            //Purple = Blue = Yellow = Red = SoftBlue = false;
         }
     }
 }

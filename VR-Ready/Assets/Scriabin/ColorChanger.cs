@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ColorChanger : MonoBehaviour
 {
-
     public Material newMaterial;
 
     private void OnTriggerEnter(Collider other)

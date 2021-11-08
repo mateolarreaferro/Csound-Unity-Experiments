@@ -8,7 +8,7 @@ public class Drawing : MonoBehaviour
 {
     // Input
     public InputHelpers.Button drawInput;
-    public XRController _controller;
+    XRController _controller;
 
     // Line
     LineRenderer currentLine;
@@ -19,8 +19,10 @@ public class Drawing : MonoBehaviour
     public float distanceThreshold = 0.05f;
 
     // Logic
-    public bool isDrawing = false; 
+    public bool isDrawing = false;
 
+    // Sound reference
+    public CsoundToggleTrigger csoundTrigger;
 
 
     // Start is called before the first frame update
@@ -35,7 +37,6 @@ public class Drawing : MonoBehaviour
     {
 
         // Check for Input
-
         InputHelpers.IsPressed(_controller.inputDevice, drawInput, out bool isPressed);
 
 
@@ -48,10 +49,7 @@ public class Drawing : MonoBehaviour
             StopDrawing();
 
         else if (isDrawing && isPressed)
-            UpdateDrawing();
-
-
-        
+            UpdateDrawing();      
     }
 
     // Functions Needed
@@ -72,6 +70,7 @@ public class Drawing : MonoBehaviour
     void StartDrawing()
     {
         isDrawing = true;
+        csoundTrigger.Trigger();
 
         // Create the Line
         GameObject lineGameObject = new GameObject("Line");
@@ -88,6 +87,7 @@ public class Drawing : MonoBehaviour
         currentLinePosition.Clear();
         currentLine = null;
 
+        csoundTrigger.Trigger();
     }
 
     void UpdateDrawing()
