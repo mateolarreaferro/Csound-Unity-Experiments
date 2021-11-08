@@ -24,6 +24,13 @@ TagManager:
   - change size
   - manija
   - wheel
+  - SoftBlue
+  - White
+  - Red
+  - Yellow
+  - Blue
+  - Purple
+  - Pincel
   layers:
   - Default
   - TransparentFX

@@ -1,18 +1,19 @@
 ﻿<Properties StartupConfiguration="{568DDEBF-9A88-25A8-49E2-F072C38C508D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scriabin/Drawing.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Scriabin/ChangeDrone.cs">
     <Files>
       <File FileName="Assets/Caio/Scripts/Controllers/ContinuousMovement.cs" Line="74" Column="20" />
-      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraController.cs" Line="9" Column="42" />
+      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraController.cs" />
       <File FileName="Assets/Caio/Scripts/CsoundToggleTrigger.cs" Line="12" Column="6" />
-      <File FileName="Assets/Scriabin/Drawing.cs" Line="87" Column="37" />
-      <File FileName="Assets/Scriabin/Sound.cs" Line="40" Column="1" />
-      <File FileName="Assets/Scriabin/ColorChanger.cs" Line="16" Column="6" />
-      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" Line="46" Column="22" />
+      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" />
+      <File FileName="Assets/Scripts/Scriabin/LerpSkyColor.cs" Line="40" Column="1" />
+      <File FileName="Assets/Scripts/Scriabin/Sound.cs" Line="15" Column="43" />
+      <File FileName="../../../_Template Scripts/Unity Audio Scripts/Script Files/Unity Native Audio/Utilities/AudioUtility.cs" Line="38" Column="1" />
+      <File FileName="Assets/Scripts/Scriabin/ChangeDrone.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="dbf85921-fef0-4a91-b5b8-564242818a6d" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4dd431b9-0c30-4ed9-a9ae-3b99b4e5eec2" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
