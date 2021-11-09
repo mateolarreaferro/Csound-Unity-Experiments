@@ -6,15 +6,21 @@ using UnityEngine.Events;
 public class ColorChanger : MonoBehaviour
 {
     public Material newMaterial;
+    private Material color;
     public UnityEvent triggerEvent;
 
     private void OnTriggerEnter(Collider other)
     {
+        if(!other.gameObject.CompareTag("Pincel")) { return; }
+
+        // get material
+        color = gameObject.GetComponent<Renderer>().material;
+
         // change brush tip
-        other.GetComponent<Renderer>().material = newMaterial;
+        other.GetComponent<Renderer>().material = color;
 
         // change line material
-        other.SendMessageUpwards("SetLineMaterial", newMaterial, SendMessageOptions.DontRequireReceiver);
+        other.SendMessageUpwards("SetLineMaterial", color, SendMessageOptions.DontRequireReceiver);
 
         // send unity event
         triggerEvent?.Invoke();

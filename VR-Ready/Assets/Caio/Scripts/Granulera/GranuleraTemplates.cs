@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GranuleraTemplates : MonoBehaviour
 {
-    public enum GranuleraTemplate { template1, FlutterCrystals, Organ, NeonAbyss, DigitalRain, StereoCanonGenerator };
+    public enum GranuleraTemplate { template1, FlutterCrystals, Organ, NeonAbyss, DigitalRain, StereoCanonGenerator, Scriabin01 };
 
     private CsoundUnity csound;
     public GranuleraTemplate templateSelection;
@@ -39,6 +39,9 @@ public class GranuleraTemplates : MonoBehaviour
                 break;
             case GranuleraTemplate.StereoCanonGenerator:
                 StereoCanonGenerator();
+                break;
+            case GranuleraTemplate.Scriabin01:
+                Scriabin01();
                 break;
         }
     }
@@ -562,4 +565,90 @@ public class GranuleraTemplates : MonoBehaviour
         csound.SetChannel("DelayFeedback", 0f);
     }
 
+    public void Scriabin01()
+    {
+        //NOTE
+        csound.SetChannel("MidiNote", 72);
+
+        //OSCILLATORS
+        csound.SetChannel("WaveformSelection1", 3);
+        csound.SetChannel("Oscillator1Volume", 0.5f);
+        csound.SetChannel("Oscillator1Semitone", 0);
+        csound.SetChannel("Oscillator1Cents", 0);
+
+        csound.SetChannel("WaveformSelection2", 3);
+        csound.SetChannel("Oscillator2Volume", 0.5f);
+        csound.SetChannel("Oscillator2Semitone", 12);
+        csound.SetChannel("Oscillator2Cents", 0);
+
+        csound.SetChannel("WaveformSelection3", 3);
+        csound.SetChannel("Oscillator3Volume", 0.5f);
+        csound.SetChannel("Oscillator3Semitone", 19);
+        csound.SetChannel("Oscillator3Cents", 0);
+
+        //GRANULATION
+        csound.SetChannel("GrainSpread", 0.5f);
+
+        csound.SetChannel("WindowingSelection", 1);
+        csound.SetChannel("FrequencyVariationRange", 1);
+        csound.SetChannel("FrequencyVariationRate", 0);
+        csound.SetChannel("PitchVariation", 0);
+        csound.SetChannel("GrainDuration", 0.8f);
+        csound.SetChannel("DurationVariationRange", 0.4f);
+        csound.SetChannel("DurationVariationRate", 3.6f);
+        csound.SetChannel("GrainDensity", 14f);
+        csound.SetChannel("DensityVariationRange", 6f);
+        csound.SetChannel("DensityVariationRate", 4f);
+        csound.SetChannel("PhaseVariation", 0f);
+
+        //FILTER
+        csound.SetChannel("FilterNoteTrack", 1);
+        csound.SetChannel("FilterSelection", 1);
+        csound.SetChannel("FilterFreq", 0.2f);
+        csound.SetChannel("FilterRange", 0.0001f);
+        csound.SetChannel("FilterReson", 2.1f);
+        csound.SetChannel("FilterBW", 0);
+        csound.SetChannel("FilterAttack", 1f);
+        csound.SetChannel("FilterDecay", 1f);
+        csound.SetChannel("FilterSustain", 1f);
+        csound.SetChannel("FilterRelease", 6f);
+
+        //LFOs
+        csound.SetChannel("LfoFilterFreq", 0.15f);
+        csound.SetChannel("LfoFilterRange", 0.2f);
+        csound.SetChannel("LfoModAmpFreq", 0f);
+        csound.SetChannel("LfoModAmpRange", 0f);
+
+        //MODULATION
+        csound.SetChannel("RMFreq", 0);
+        csound.SetChannel("RMAmp", 0f);
+        csound.SetChannel("FMFreq", 0);
+        csound.SetChannel("FMAmp", 0f);
+
+        //GLOBALS
+        csound.SetChannel("GlobalVolume", 0.35f);
+        csound.SetChannel("GlobalPan", 0.5f);
+        csound.SetChannel("GlobalTuning", 0f);
+
+        //AMP ENVELOPE
+        csound.SetChannel("AmpEnvelopeToggle", 0);
+        csound.SetChannel("AmpAttack", 1f);
+        csound.SetChannel("AmpDecay", 0.1f);
+        csound.SetChannel("AmpSustain", 1f);
+        csound.SetChannel("AmpRelease", 4f);
+
+        //REVERB
+        csound.SetChannel("ReverbBypass", 1);
+        csound.SetChannel("ReverbSend", 1);
+        csound.SetChannel("ReverbMix", 0.33f);
+        csound.SetChannel("ReverbSize", 0.9f);
+
+        //DELAY
+        csound.SetChannel("DelayBypass", 0);
+        csound.SetChannel("DelaySend", 1);
+        csound.SetChannel("DelayMix", 1);
+        csound.SetChannel("DelayTimeLeft", 0.37f);
+        csound.SetChannel("DelayTimeRight", 0.7f);
+        csound.SetChannel("DelayFeedback", 0.7f);
+    }
 }
