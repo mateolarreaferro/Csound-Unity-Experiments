@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.Events;
 
 
 public class Drawing : MonoBehaviour
@@ -21,8 +22,9 @@ public class Drawing : MonoBehaviour
     // Logic
     public bool isDrawing = false;
 
-    // Sound reference
-    public CsoundToggleTrigger csoundTrigger;
+    // Unity Event
+    public UnityEvent startDrawingEvent;
+    public UnityEvent stopDrawingEvent;
 
 
     // Start is called before the first frame update
@@ -70,7 +72,7 @@ public class Drawing : MonoBehaviour
     void StartDrawing()
     {
         isDrawing = true;
-        csoundTrigger.Trigger();
+        startDrawingEvent?.Invoke();
 
         // Create the Line
         GameObject lineGameObject = new GameObject("Line");
@@ -87,7 +89,7 @@ public class Drawing : MonoBehaviour
         currentLinePosition.Clear();
         currentLine = null;
 
-        csoundTrigger.Trigger();
+        stopDrawingEvent?.Invoke();
     }
 
     void UpdateDrawing()

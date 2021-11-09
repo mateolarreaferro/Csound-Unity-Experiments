@@ -1724,6 +1724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1064728242}
   - component: {fileID: 1064728243}
+  - component: {fileID: 1064728244}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -1777,6 +1778,42 @@ MonoBehaviour:
   m_MoveObjectIn: 14
   m_MoveObjectOut: 15
   m_PoseProvider: {fileID: 0}
+--- !u!114 &1064728244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064728241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9c3a1a8886740c190a5097702d3abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerCharacteristics: 320
+  primaryButtonValue: 0
+  secondaryButtonValue: 0
+  triggerValue: 0
+  gripValue: 0
+  triggerButtonValue: 0
+  gripButtonValue: 0
+  joystickValue: {x: 0, y: 0}
+  joystickClickValue: 0
+  primaryButtonPressEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  secondaryButtonPressEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerButtonPressEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  gripButtonPressEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  joystickPressEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1067774941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,6 +1824,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1067774943}
   - component: {fileID: 1067774942}
+  - component: {fileID: 1067774945}
+  - component: {fileID: 1067774944}
+  - component: {fileID: 1067774946}
+  - component: {fileID: 1067774947}
   m_Layer: 0
   m_Name: XR Rig
   m_TagString: Untagged
@@ -1828,6 +1869,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &1067774944
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067774941}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1067774945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067774941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9720e0514a14b9d80efbbe18cb22d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputSource: 4
+  speed: 1
+  additionalHeight: 0.2
+  applyGravity: 0
+  gravity: -9.81
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &1067774946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067774941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Timeout: 10
+  m_XRRig: {fileID: 1067774942}
+--- !u!114 &1067774947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067774941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4f2c0214c9b494fa7eb5b8b2c02885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 1067774946}
+  m_TurnAmount: 45
+  m_DebounceTime: 0.5
+  m_EnableTurnLeftRight: 1
+  m_EnableTurnAround: 1
+  m_TurnUsage: 0
+  m_Controllers:
+  - {fileID: 1064728243}
+  - {fileID: 1877761119}
+  m_DeadZone: 0.75
 --- !u!1 &1083095620
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,7 +2228,7 @@ GameObject:
   - component: {fileID: 1497696981}
   - component: {fileID: 1497696980}
   - component: {fileID: 1497696979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2449,6 +2564,216 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1064728242}
     m_Modifications:
+    - target: {fileID: 6828689422712614644, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689422712614644, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689422712614644, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 750445986}
+    - target: {fileID: 6828689422712614644, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689422712614644, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FlutterCrystals
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689422712614644, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GranuleraTemplates, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689422712614644, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423198174026, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423198174026, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423198174026, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 750445986}
+    - target: {fileID: 6828689423198174026, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423198174026, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Template1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423198174026, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GranuleraTemplates, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423198174026, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423318903017, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423318903017, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423318903017, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 750445986}
+    - target: {fileID: 6828689423318903017, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423318903017, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DigitalRain
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423318903017, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GranuleraTemplates, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423318903017, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423976579857, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423976579857, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423976579857, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 750445986}
+    - target: {fileID: 6828689423976579857, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423976579857, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NeonAbyss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423976579857, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GranuleraTemplates, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689423976579857, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689424140583933, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689424140583933, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689424140583933, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 750445986}
+    - target: {fileID: 6828689424140583933, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689424140583933, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Organ
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689424140583933, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GranuleraTemplates, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689424140583933, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689424260458707, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689424260458707, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689424260458707, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 750445986}
+    - target: {fileID: 6828689424260458707, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689424260458707, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StereoCanonGenerator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689424260458707, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GranuleraTemplates, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828689424260458707, guid: d058d02c63d46f84dade51a10250f6bf,
+        type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6828689424321484656, guid: d058d02c63d46f84dade51a10250f6bf,
         type: 3}
       propertyPath: m_RootOrder
@@ -2528,6 +2853,7 @@ GameObject:
   - component: {fileID: 1877761117}
   - component: {fileID: 1877761119}
   - component: {fileID: 1877761118}
+  - component: {fileID: 1877761120}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -2568,7 +2894,36 @@ MonoBehaviour:
   lineMaterial: {fileID: 0}
   distanceThreshold: 0.05
   isDrawing: 0
-  csoundTrigger: {fileID: 750445992}
+  startDrawingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 750445992}
+        m_TargetAssemblyTypeName: CsoundToggleTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  stopDrawingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 750445992}
+        m_TargetAssemblyTypeName: CsoundToggleTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1877761119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2600,6 +2955,42 @@ MonoBehaviour:
   m_MoveObjectIn: 14
   m_MoveObjectOut: 15
   m_PoseProvider: {fileID: 0}
+--- !u!114 &1877761120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877761116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9c3a1a8886740c190a5097702d3abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerCharacteristics: 576
+  primaryButtonValue: 0
+  secondaryButtonValue: 0
+  triggerValue: 0
+  gripValue: 0
+  triggerButtonValue: 0
+  gripButtonValue: 0
+  joystickValue: {x: 0, y: 0}
+  joystickClickValue: 0
+  primaryButtonPressEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  secondaryButtonPressEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerButtonPressEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  gripButtonPressEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  joystickPressEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2034994349
 GameObject:
   m_ObjectHideFlags: 0
