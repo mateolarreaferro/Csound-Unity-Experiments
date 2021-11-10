@@ -1,15 +1,16 @@
 ﻿<Properties StartupConfiguration="{568DDEBF-9A88-25A8-49E2-F072C38C508D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Scriabin/Scripts/_tests/CsoundSendValuesBasedOnHandPosition.cs">
     <Files>
       <File FileName="Assets/Scenes/Scriabin/Scripts/ColorChanger.cs" Line="14" Column="63" />
-      <File FileName="Assets/Scenes/Scriabin/Scripts/Drawing.cs" Line="14" Column="12" />
-      <File FileName="Assets/Scenes/Scriabin/Scripts/GranuleraChangeNote.cs" Line="12" Column="46" />
-      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" Line="615" Column="1" />
+      <File FileName="Assets/Scenes/Scriabin/Scripts/Drawing.cs" />
+      <File FileName="Assets/Scenes/Scriabin/Scripts/GranuleraChangeNote.cs" />
+      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" Line="621" Column="1" />
+      <File FileName="Assets/Scenes/Scriabin/Scripts/_tests/CsoundSendValuesBasedOnHandPosition.cs" Line="85" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d1946087-57d8-4c8a-bd2b-3dc88d27426e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="39a903b6-ab6d-4c61-becc-3fd7b5918c7a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

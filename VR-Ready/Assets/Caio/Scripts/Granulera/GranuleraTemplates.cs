@@ -572,17 +572,17 @@ public class GranuleraTemplates : MonoBehaviour
 
         //OSCILLATORS
         csound.SetChannel("WaveformSelection1", 3);
-        csound.SetChannel("Oscillator1Volume", 0.5f);
+        csound.SetChannel("Oscillator1Volume", 1f);
         csound.SetChannel("Oscillator1Semitone", 0);
         csound.SetChannel("Oscillator1Cents", 0);
 
         csound.SetChannel("WaveformSelection2", 3);
-        csound.SetChannel("Oscillator2Volume", 0.5f);
+        csound.SetChannel("Oscillator2Volume", 0f);
         csound.SetChannel("Oscillator2Semitone", 12);
         csound.SetChannel("Oscillator2Cents", 0);
 
         csound.SetChannel("WaveformSelection3", 3);
-        csound.SetChannel("Oscillator3Volume", 0.5f);
+        csound.SetChannel("Oscillator3Volume", 0f);
         csound.SetChannel("Oscillator3Semitone", 19);
         csound.SetChannel("Oscillator3Cents", 0);
 
@@ -614,19 +614,19 @@ public class GranuleraTemplates : MonoBehaviour
         csound.SetChannel("FilterRelease", 6f);
 
         //LFOs
-        csound.SetChannel("LfoFilterFreq", 0.15f);
-        csound.SetChannel("LfoFilterRange", 0.2f);
+        csound.SetChannel("LfoFilterFreq", 0f);
+        csound.SetChannel("LfoFilterRange", 0f);
         csound.SetChannel("LfoModAmpFreq", 0f);
         csound.SetChannel("LfoModAmpRange", 0f);
 
         //MODULATION
         csound.SetChannel("RMFreq", 0);
         csound.SetChannel("RMAmp", 0f);
-        csound.SetChannel("FMFreq", 0);
+        csound.SetChannel("FMFreq", 4700);
         csound.SetChannel("FMAmp", 0f);
 
         //GLOBALS
-        csound.SetChannel("GlobalVolume", 0.35f);
+        csound.SetChannel("GlobalVolume", 0.17f);
         csound.SetChannel("GlobalPan", 0.5f);
         csound.SetChannel("GlobalTuning", 0f);
 
