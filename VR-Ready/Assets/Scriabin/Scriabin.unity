@@ -260,408 +260,397 @@ PrefabInstance:
     - target: {fileID: 2312014893443418141, guid: 4dd4397aad2fc324f98e11df6c9565c6,
         type: 3}
       propertyPath: _csoundString
-      value: "<Cabbage>\r\n//CsoundUnity\r\nbutton bounds(24, 784, 80, 40) channel(\"OnOff\")
-        text(\"Off\", \"On\")\r\nrslider bounds(246, 766, 60, 60) channel(\"MidiNote\")
-        range(0, 127, 60, 1, 1) text(\"MidiNote\")\r\n\r\n//HEADER AND UTILITIES\r\nform
+      value: "<Cabbage>\n//CsoundUnity\nbutton bounds(24, 784, 80, 40) channel(\"OnOff\")
+        text(\"Off\", \"On\")\nrslider bounds(246, 766, 60, 60) channel(\"MidiNote\")
+        range(0, 127, 60, 1, 1) text(\"MidiNote\")\n\n//HEADER AND UTILITIES\nform
         caption(\"Granulera by Caio M. Jiacomini\") size(1180,900), guiMode(\"queue\")
-        colour(0, 0, 0), pluginId(\"cjb2\")\r\nlabel bounds(10, 8, 216, 28) fontColour(188,
-        151, 49, 255) text(\"G R A N U L E R A\") channel(\"label3\")\r\nlabel bounds(8,
+        colour(0, 0, 0), pluginId(\"cjb2\")\nlabel bounds(10, 8, 216, 28) fontColour(188,
+        151, 49, 255) text(\"G R A N U L E R A\") channel(\"label3\")\nlabel bounds(8,
         38, 141, 15) text(\"by Caio M. Jiacomini\") colour(255, 255, 255, 0) fontColour(255,
-        255, 255, 255) channel(\"label4\")\r\n\r\nbutton bounds(10, 624, 118, 32)
-        channel(\"VelocityButton\") text(\"Velocity Disabled\", \"Velocity Enabled\")
-        colour:1(188, 151, 49, 255) outlineThickness(2) outlineColour(188, 151, 49,
-        255)\r\n\r\n;combobox bounds(400, 12, 400, 32) channelType(\"string\") populate(\"*.snaps\")
-        fontColour(188, 151, 49, 255) channel(\"combo10\")  value(\"1\")\r\n;filebutton
-        bounds(328, 12, 64, 32) text(\"Save\", \"Save\") mode(\"named preset\") channel(\"filebutton11\")\r\n;filebutton
+        255, 255, 255) channel(\"label4\")\n\nbutton bounds(10, 624, 118, 32) channel(\"VelocityButton\")
+        text(\"Velocity Disabled\", \"Velocity Enabled\") colour:1(188, 151, 49,
+        255) outlineThickness(2) outlineColour(188, 151, 49, 255)\n\n;combobox bounds(400,
+        12, 400, 32) channelType(\"string\") populate(\"*.snaps\") fontColour(188,
+        151, 49, 255) channel(\"combo10\")  value(\"1\")\n;filebutton bounds(328,
+        12, 64, 32) text(\"Save\", \"Save\") mode(\"named preset\") channel(\"filebutton11\")\n;filebutton
         bounds(806, 12, 64, 32) text(\"Delete\", \"Delete\") mode(\"remove preset\")
-        channel(\"filebutton12\")\r\n;\r\n//OSCILLATORS\r\nimage bounds(0, 100, 237,
-        465) channel(\"image10115\") colour(0, 0, 0, 255)\r\n{\r\nlabel bounds(34,
-        0, 140, 18) text(\"OSCILLATOR 1\") fontColour(255, 255, 255, 255) channel(\"label18\")\r\nlabel
+        channel(\"filebutton12\")\n;\n//OSCILLATORS\nimage bounds(0, 100, 237, 465)
+        channel(\"image10115\") colour(0, 0, 0, 255)\n{\nlabel bounds(34, 0, 140,
+        18) text(\"OSCILLATOR 1\") fontColour(255, 255, 255, 255) channel(\"label18\")\nlabel
         bounds(15, 30, 65, 14) text(\"Waveform\") fontColour(255, 255, 255, 255)
-        channel(\"label20\")\r\ncombobox bounds(114, 28, 80, 20) text(\"Sine\", \"Triangle\",
-        \"Sawtooth\", \"Square\", \"Pulse\") fontColour(188, 151, 49, 255) channel(\"WaveformSelection1\")\r\nhslider
+        channel(\"label20\")\ncombobox bounds(114, 28, 80, 20) text(\"Sine\", \"Triangle\",
+        \"Sawtooth\", \"Square\", \"Pulse\") fontColour(188, 151, 49, 255) channel(\"WaveformSelection1\")\nhslider
         bounds(12, 48, 180, 29) range(0, 1, 1, 1, 0.01) text(\"Volume\") channel(\"Oscillator1Volume\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\nhslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nhslider
         bounds(12, 78, 180, 29) range(-24, 24, 0, 1, 1) text(\"Semitone\") channel(\"Oscillator1Semitone\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\nhslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nhslider
         bounds(12, 108, 180, 29) range(-100, 100, 0, 1, 1) text(\"Cents\") channel(\"Oscillator1Cents\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\nlabel
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n\nlabel
         bounds(34, 165, 140, 18) text(\"OSCILLATOR 2\") channel(\"label29\") fontColour(255,
-        255, 255, 255)\r\nlabel bounds(15, 195, 65, 14) fontColour(255, 255, 255,
-        255) text(\"Waveform\") channel(\"label24\")\r\ncombobox bounds(114, 193,
-        80, 20) channel(\"WaveformSelection2\") fontColour(188, 151, 49, 255) text(\"Sine\",
-        \"Triangle\", \"Sawtooth\", \"Square\", \"Pulse\") \r\nhslider bounds(12,
-        213, 180, 29) channel(\"Oscillator2Volume\") range(0, 1, 0, 1, 0.01) text(\"Volume\")
-        textColour(255, 255, 255, 255) trackerColour(188, 151, 49, 255)\r\nhslider
+        255, 255, 255)\nlabel bounds(15, 195, 65, 14) fontColour(255, 255, 255, 255)
+        text(\"Waveform\") channel(\"label24\")\ncombobox bounds(114, 193, 80, 20)
+        channel(\"WaveformSelection2\") fontColour(188, 151, 49, 255) text(\"Sine\",
+        \"Triangle\", \"Sawtooth\", \"Square\", \"Pulse\") \nhslider bounds(12, 213,
+        180, 29) channel(\"Oscillator2Volume\") range(0, 1, 0, 1, 0.01) text(\"Volume\")
+        textColour(255, 255, 255, 255) trackerColour(188, 151, 49, 255)\nhslider
         bounds(12, 243, 180, 29) range(-24, 24, 0, 1, 1) text(\"Semitone\") channel(\"Oscillator2Semitone\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\nhslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nhslider
         bounds(12, 273, 180, 29) range(-100, 100, 0, 1, 1) text(\"Cents\") channel(\"Oscillator2Cents\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\nlabel
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n\nlabel
         bounds(34, 330, 140, 18) fontColour(255, 255, 255, 255) text(\"OSCILLATOR
-        3\") channel(\"label30\")\r\nlabel bounds(15, 360, 65, 14) fontColour(255,
-        255, 255, 255) text(\"Waveform\") channel(\"label31\")\r\ncombobox bounds(114,
+        3\") channel(\"label30\")\nlabel bounds(15, 360, 65, 14) fontColour(255,
+        255, 255, 255) text(\"Waveform\") channel(\"label31\")\ncombobox bounds(114,
         358, 80, 20) fontColour(188, 151, 49, 255) text(\"Sine\", \"Triangle\", \"Sawtooth\",
-        \"Square\", \"Pulse\") channel(\"WaveformSelection3\")\r\nhslider bounds(12,
+        \"Square\", \"Pulse\") channel(\"WaveformSelection3\")\nhslider bounds(12,
         378, 180, 29) range(0, 1, 0, 1, 0.01) text(\"Volume\") channel(\"Oscillator3Volume\")
-        textColour(255, 255, 255, 255) trackerColour(188, 151, 49, 255)\r\nhslider
+        textColour(255, 255, 255, 255) trackerColour(188, 151, 49, 255)\nhslider
         bounds(12, 408, 180, 29) range(-24, 24, 0, 1, 1) text(\"Semitone\") channel(\"Oscillator3Semitone\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\nhslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nhslider
         bounds(12, 438, 180, 29) range(-100, 100, 0, 1, 1) text(\"Cents\") channel(\"Oscillator3Cents\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n}\r\n\r\n//GRAINS\r\nlabel
-        bounds(368, 75, 99, 18) fontColour(255, 255, 255, 255) text(\"G R A I N S\")\r\nlabel
-        bounds(305, 238, 230, 14) fontColour(255, 255, 255, 255) text(\"Randomization\")\r\nhslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n}\n\n//GRAINS\nlabel
+        bounds(368, 75, 99, 18) fontColour(255, 255, 255, 255) text(\"G R A I N S\")\nlabel
+        bounds(305, 238, 230, 14) fontColour(255, 255, 255, 255) text(\"Randomization\")\nhslider
         bounds(244, 200, 332, 29) range(0, 0.5, 0.5, 1, 0.01) text(\"Grain Spread\")
         channel(\"GrainSpread\") trackerColour(188, 151, 49, 255) textColour(255,
-        255, 255, 255)\r\n//Windowing\r\nlabel bounds(315, 109, 97, 14) text(\"Windowing\")
-        fontColour(255, 255, 255, 255)\r\ncombobox bounds(420, 107, 93, 20) text(\"Sync\",
+        255, 255, 255)\n//Windowing\nlabel bounds(315, 109, 97, 14) text(\"Windowing\")
+        fontColour(255, 255, 255, 255)\ncombobox bounds(420, 107, 93, 20) text(\"Sync\",
         \"Hanning\", \"Blackman-Harris\", \"Gaussian\", \"Kaiser\", \"Rectangle\",
-        \"\") fontColour(188, 151, 49, 255) channel(\"WindowingSelection\") value(2)\r\n//Freq\r\nrslider
+        \"\") fontColour(188, 151, 49, 255) channel(\"WindowingSelection\") value(2)\n//Freq\nrslider
         bounds(462, 264, 80, 56) range(1, 1000, 1, 0.5, 1) channel(\"FrequencyVariationRange\")
         text(\"Frequency Range\") trackerColour(188, 151, 49, 255) textColour(255,
-        255, 255, 255)\r\nrslider bounds(462, 338, 80, 56) range(0, 10, 0, 1, 0.1)
+        255, 255, 255)\nrslider bounds(462, 338, 80, 56) range(0, 10, 0, 1, 0.1)
         channel(\"FrequencyVariationRate\") text(\"Frequency Rate\") trackerColour(188,
-        151, 49, 255) textColour(255, 255, 255, 255)\r\nrslider bounds(422, 133,
-        80, 56) range(0, 1000, 0, 0.3, 0.01) text(\"Pitch Variation\") channel(\"PitchVariation\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n//Duration\r\nrslider
+        151, 49, 255) textColour(255, 255, 255, 255)\nrslider bounds(422, 133, 80,
+        56) range(0, 1000, 0, 0.3, 0.01) text(\"Pitch Variation\") channel(\"PitchVariation\")
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n//Duration\nrslider
         bounds(254, 132, 80, 56) range(0.01, 1, 0.1, 0.5, 0.01) channel(\"GrainDuration\")
         text(\"Grain Duration\") trackerColour(188, 151, 49, 255) textColour(255,
-        255, 255, 255)\r\nrslider bounds(294, 264, 80, 56) range(0.01, 1, 0.01, 0.5,
+        255, 255, 255)\nrslider bounds(294, 264, 80, 56) range(0.01, 1, 0.01, 0.5,
         0.01) channel(\"DurationVariationRange\") text(\"Duration Range\") trackerColour(188,
-        151, 49, 255) textColour(255, 255, 255, 255)\r\nrslider bounds(294, 338,
-        80, 56) range(0.01, 10, 0.01, 1, 0.1) channel(\"DurationVariationRate\")
-        text(\"Duration Rate\") trackerColour(188, 151, 49, 255) textColour(255,
-        255, 255, 255)\r\n//Density\r\nrslider bounds(338, 133, 80, 56) range(0.5,
-        100, 14, 0.5, 0.1) channel(\"GrainDensity\") text(\"Grain Density\") trackerColour(188,
-        151, 49, 255) textColour(255, 255, 255, 255)\r\nrslider bounds(378, 264,
-        80, 56) range(0.01, 100, 0.01, 0.5, 0.1) channel(\"DensityVariationRange\")
-        text(\"Density Range\") trackerColour(188, 151, 49, 255) textColour(255,
-        255, 255, 255)\r\nrslider bounds(378, 338, 80, 56) range(0.01, 10, 0.01,
-        1, 0.1) channel(\"DensityVariationRate\") text(\"Density Rate\") trackerColour(188,
-        151, 49, 255) textColour(255, 255, 255, 255)\r\n//Phase\r\nrslider bounds(506,
-        133, 80, 56) range(0, 1, 1, 1, 0.05) text(\"Phase Variation\") channel(\"PhaseVariation\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\n//FILTER\r\nlabel
-        bounds(366, 430, 99, 18) fontColour(255, 255, 255, 255) text(\"F I L T E
-        R\")\r\nlabel bounds(373, 462, 89, 14) fontColour(255, 255, 255, 255) text(\"Filter
-        Type\")\r\nbutton bounds(252, 456, 116, 26)  channel(\"FilterNoteTrack\")
+        151, 49, 255) textColour(255, 255, 255, 255)\nrslider bounds(294, 338, 80,
+        56) range(0.01, 10, 0.01, 1, 0.1) channel(\"DurationVariationRate\") text(\"Duration
+        Rate\") trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n//Density\nrslider
+        bounds(338, 133, 80, 56) range(0.5, 100, 14, 0.5, 0.1) channel(\"GrainDensity\")
+        text(\"Grain Density\") trackerColour(188, 151, 49, 255) textColour(255,
+        255, 255, 255)\nrslider bounds(378, 264, 80, 56) range(0.01, 100, 0.01, 0.5,
+        0.1) channel(\"DensityVariationRange\") text(\"Density Range\") trackerColour(188,
+        151, 49, 255) textColour(255, 255, 255, 255)\nrslider bounds(378, 338, 80,
+        56) range(0.01, 10, 0.01, 1, 0.1) channel(\"DensityVariationRate\") text(\"Density
+        Rate\") trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n//Phase\nrslider
+        bounds(506, 133, 80, 56) range(0, 1, 1, 1, 0.05) text(\"Phase Variation\")
+        channel(\"PhaseVariation\") trackerColour(188, 151, 49, 255) textColour(255,
+        255, 255, 255)\n\n//FILTER\nlabel bounds(366, 430, 99, 18) fontColour(255,
+        255, 255, 255) text(\"F I L T E R\")\nlabel bounds(373, 462, 89, 14) fontColour(255,
+        255, 255, 255) text(\"Filter Type\")\nbutton bounds(252, 456, 116, 26)  channel(\"FilterNoteTrack\")
         text(\"Key Tracking Off\", \"Key Tracking On\")    colour:1(188, 151, 49,
-        255) value(1) outlineThickness(2) outlineColour(188, 151, 49, 255)\r\ncombobox
+        255) value(1) outlineThickness(2) outlineColour(188, 151, 49, 255)\ncombobox
         bounds(472, 460, 87, 20) text(\"Low Pass\", \"High Pass\", \"Band Pass\")
-        fontColour(188, 151, 49, 255) channel(\"FilterSelection\") value(1)\r\nrslider
+        fontColour(188, 151, 49, 255) channel(\"FilterSelection\") value(1)\nrslider
         bounds(294, 491, 80, 56) range(0.001, 1, 1, 0.5, 0.001) text(\"Frequency\")
         channel(\"FilterFreq\") trackerColour(188, 151, 49, 255) textColour(255,
-        255, 255, 255)\r\nrslider bounds(378, 491, 80, 56) range(0.001, 1, 0.001,
-        0.5, 0.001) text(\"Start/End Freq\") channel(\"FilterRange\") trackerColour(188,
-        151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\nrslider bounds(462, 491,
+        255, 255, 255)\nrslider bounds(378, 491, 80, 56) range(0.001, 1, 0.001, 0.5,
+        0.001) text(\"Start/End Freq\") channel(\"FilterRange\") trackerColour(188,
+        151, 49, 255) textColour(255, 255, 255, 255)\n\nrslider bounds(462, 491,
         80, 56) range(1, 50, 1, 0.5, 0.1) text(\"Resonance\") channel(\"FilterReson\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255) \r\nrslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255) \nrslider
         bounds(462, 491, 80, 56) range(1, 5000, 1000, 0.5, 0.1) text(\"Bandwidth\")
         channel(\"FilterBW\") trackerColour(188, 151, 49, 255) textColour(255, 255,
-        255, 255) visible(0)\r\n\r\nlabel bounds(340, 570, 160, 14) fontColour(255,
-        255, 255, 255) text(\"Filter Envelope\")\r\nrslider bounds(244, 594, 80,
-        56) range(0.01, 10.01, 0, 0.5, 0.01) text(\"Attack\") channel(\"FilterAttack\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\nrslider
-        bounds(328, 594, 80, 56) range(0.01, 10.01, 0.01, 0.5, 0.01) text(\"Decay\")
-        channel(\"FilterDecay\") trackerColour(188, 151, 49, 255) textColour(255,
-        255, 255, 255)\r\nrslider bounds(412, 594, 80, 56) range(0.01, 1.01, 1, 0.5,
-        0.001) text(\"Sustain\") channel(\"FilterSustain\") trackerColour(188, 151,
-        49, 255) textColour(255, 255, 255, 255)\r\nrslider bounds(494, 594, 80, 56)
-        range(0.01, 10.01, 0.1, 0.5, 0.01) text(\"Release\") channel(\"FilterRelease\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\n//LFO\r\nlabel
-        bounds(744, 230, 70, 18) fontColour(255, 255, 255, 255) text(\"L F O\")\r\n\r\nlabel
-        bounds(636, 270, 110, 14) fontColour(255, 255, 255, 255) text(\"Grain Duration\")\r\nrslider
+        255, 255) visible(0)\n\nlabel bounds(340, 570, 160, 14) fontColour(255, 255,
+        255, 255) text(\"Filter Envelope\")\nrslider bounds(244, 594, 80, 56) range(0.01,
+        10.01, 0, 0.5, 0.01) text(\"Attack\") channel(\"FilterAttack\") trackerColour(188,
+        151, 49, 255) textColour(255, 255, 255, 255)\nrslider bounds(328, 594, 80,
+        56) range(0.01, 10.01, 0.01, 0.5, 0.01) text(\"Decay\") channel(\"FilterDecay\")
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nrslider
+        bounds(412, 594, 80, 56) range(0.01, 1.01, 1, 0.5, 0.001) text(\"Sustain\")
+        channel(\"FilterSustain\") trackerColour(188, 151, 49, 255) textColour(255,
+        255, 255, 255)\nrslider bounds(494, 594, 80, 56) range(0.01, 10.01, 0.1,
+        0.5, 0.01) text(\"Release\") channel(\"FilterRelease\") trackerColour(188,
+        151, 49, 255) textColour(255, 255, 255, 255)\n\n//LFO\nlabel bounds(744,
+        230, 70, 18) fontColour(255, 255, 255, 255) text(\"L F O\")\n\nlabel bounds(636,
+        270, 110, 14) fontColour(255, 255, 255, 255) text(\"Grain Duration\")\nrslider
         bounds(694, 294, 80, 56) range(0, 0.7, 0, 0.5, 0.01) text(\"Depth\") channel(\"LfoDurRange\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\nrslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nrslider
         bounds(614, 294, 80, 56) range(0, 15, 0, 0.5, 0.01) text(\"Frequency\") channel(\"LfoDurFreq\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\nlabel
-        bounds(818, 270, 111, 14) fontColour(255, 255, 255, 255) text(\"Grain Density\")\r\nrslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n\nlabel
+        bounds(818, 270, 111, 14) fontColour(255, 255, 255, 255) text(\"Grain Density\")\nrslider
         bounds(872, 294, 80, 56) range(0, 100, 0, 0.5, 0.01) text(\"Depth\") channel(\"LfoDensityRange\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\nrslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nrslider
         bounds(792, 294, 80, 56) range(0, 15, 0, 0.5, 0.01) text(\"Frequency\") channel(\"LfoDensityFreq\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\nlabel
-        bounds(630, 370, 131, 14) fontColour(255, 255, 255, 255) text(\"Filter Frequency\")\r\nrslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n\nlabel
+        bounds(630, 370, 131, 14) fontColour(255, 255, 255, 255) text(\"Filter Frequency\")\nrslider
         bounds(694, 394, 80, 56) range(0, 0.5, 0, 1, 0.01) text(\"Depth\") channel(\"LfoFilterRange\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\nrslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nrslider
         bounds(614, 394, 80, 56) range(0, 15, 0, 0.5, 0.01) text(\"Frequency\") channel(\"LfoFilterFreq\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\nlabel
-        bounds(828, 370, 91, 14) fontColour(255, 255, 255, 255) text(\"Amplitude\")\r\nrslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n\nlabel
+        bounds(828, 370, 91, 14) fontColour(255, 255, 255, 255) text(\"Amplitude\")\nrslider
         bounds(872, 394, 80, 56) range(0, 0.5, 0, 1, 0.01) text(\"Depth\") channel(\"LfoAmpRange\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\nrslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nrslider
         bounds(792, 394, 80, 56) range(0, 15, 0, 0.5, 0.01) text(\"Frequency\") channel(\"LfoAmpFreq\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\nlabel
-        bounds(632, 470, 133, 14) fontColour(255, 255, 255, 255) text(\"Panning\")\r\nrslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n\nlabel
+        bounds(632, 470, 133, 14) fontColour(255, 255, 255, 255) text(\"Panning\")\nrslider
         bounds(694, 494, 80, 56) range(0, 0.5, 0, 1, 0.01) text(\"Depth\") channel(\"LfoPanRange\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\nrslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nrslider
         bounds(614, 494, 80, 56) range(0, 15, 0, 0.5, 0.01) text(\"Frequency\") channel(\"LfoPanFreq\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\nlabel
-        bounds(814, 470, 115, 14) fontColour(255, 255, 255, 255) text(\"Tuning\")\r\nrslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n\nlabel
+        bounds(814, 470, 115, 14) fontColour(255, 255, 255, 255) text(\"Tuning\")\nrslider
         bounds(872, 494, 80, 56) range(0, 1200, 0, 0.35, 0.01) text(\"Depth\") channel(\"LfoTuningRange\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\nrslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nrslider
         bounds(792, 494, 80, 56) range(0, 15, 0, 0.5, 0.01) text(\"Frequency\") channel(\"LfoTuningFreq\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\nlabel
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n\nlabel
         bounds(620, 570, 151, 14) fontColour(255, 255, 255, 255) text(\"Modulation
-        Tuning\")\r\nrslider bounds(694, 594, 80, 56) range(0, 5000, 0, 0.5, 1) text(\"Depth\")
+        Tuning\")\nrslider bounds(694, 594, 80, 56) range(0, 5000, 0, 0.5, 1) text(\"Depth\")
         channel(\"LfoModFreqRange\") trackerColour(188, 151, 49, 255) textColour(255,
-        255, 255, 255)\r\nrslider bounds(614, 594, 80, 56) range(0, 15, 0, 0.5, 0.01)
+        255, 255, 255)\nrslider bounds(614, 594, 80, 56) range(0, 15, 0, 0.5, 0.01)
         text(\"Frequency\") channel(\"LfoModFreqFreq\") trackerColour(188, 151, 49,
-        255) textColour(255, 255, 255, 255)\r\n\r\nlabel bounds(804, 570, 140, 14)
-        fontColour(255, 255, 255, 255) text(\"Modulation Amount\")\r\nrslider bounds(872,
-        594, 80, 56) range(0, 0.5, 0, 1, 0.01) text(\"Depth\") channel(\"LfoModAmpRange\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\nrslider
+        255) textColour(255, 255, 255, 255)\n\nlabel bounds(804, 570, 140, 14) fontColour(255,
+        255, 255, 255) text(\"Modulation Amount\")\nrslider bounds(872, 594, 80,
+        56) range(0, 0.5, 0, 1, 0.01) text(\"Depth\") channel(\"LfoModAmpRange\")
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nrslider
         bounds(792, 594, 80, 56) range(0, 15, 0, 0.5, 0.01) text(\"Frequency\") channel(\"LfoModAmpFreq\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\n//MODULATION\r\nlabel
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n\n//MODULATION\nlabel
         bounds(696, 75, 203, 18) fontColour(255, 255, 255, 255) text(\"M O D U L
-        A T I O N\")\r\nlabel bounds(654, 109, 83, 15) fontColour(255, 255, 255,
-        255) text(\"Ring\")\r\nrslider bounds(614, 132, 80, 56) range(-3600, 3600,
-        0, 1, 10) text(\"Tuning\") channel(\"RMFreq\") trackerColour(188, 151, 49,
-        255) textColour(255, 255, 255, 255)\r\nrslider bounds(694, 132, 80, 56) range(0,
+        A T I O N\")\nlabel bounds(654, 109, 83, 15) fontColour(255, 255, 255, 255)
+        text(\"Ring\")\nrslider bounds(614, 132, 80, 56) range(-3600, 3600, 0, 1,
+        10) text(\"Tuning\") channel(\"RMFreq\") trackerColour(188, 151, 49, 255)
+        textColour(255, 255, 255, 255)\nrslider bounds(694, 132, 80, 56) range(0,
         1, 0, 1, 0.01) text(\"Amount\") channel(\"RMAmp\") trackerColour(188, 151,
-        49, 255) textColour(255, 255, 255, 255)\r\nlabel bounds(832, 108, 83, 15)
-        fontColour(255, 255, 255, 255) text(\"Frequency\") channel(\"label132\")\r\nrslider
-        bounds(792, 132, 80, 56) range(0, 10000, 0, 0.5, 1) text(\"Tuning\") channel(\"FMFreq\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\nrslider
+        49, 255) textColour(255, 255, 255, 255)\nlabel bounds(832, 108, 83, 15) fontColour(255,
+        255, 255, 255) text(\"Frequency\") channel(\"label132\")\nrslider bounds(792,
+        132, 80, 56) range(0, 10000, 0, 0.5, 1) text(\"Tuning\") channel(\"FMFreq\")
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nrslider
         bounds(872, 132, 80, 56) range(0, 1, 0, 0.5, 0.01) text(\"Amount\") channel(\"FMAmp\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\n//GLOBALS\r\nlabel
-        bounds(1024, 20, 103, 18) fontColour(255, 255, 255, 255) text(\"GLOBAL\")\r\nhslider
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\n\n//GLOBALS\nlabel
+        bounds(1024, 20, 103, 18) fontColour(255, 255, 255, 255) text(\"GLOBAL\")\nhslider
         bounds(976, 42, 180, 29) range(0, 2, 1, 1, 0.01) text(\"Volume\") channel(\"GlobalVolume\")
         trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255) fontColour(255,
-        255, 255, 255)\r\nhslider bounds(976, 72, 180, 29) range(0, 1, 0.5, 1, 0.01)
+        255, 255, 255)\nhslider bounds(976, 72, 180, 29) range(0, 1, 0.5, 1, 0.01)
         text(\"Stereo Pan\") channel(\"GlobalPan\") trackerColour(188, 151, 49, 255)
-        textColour(255, 255, 255, 255)\r\nhslider bounds(976, 102, 180, 29) range(-2400,
+        textColour(255, 255, 255, 255)\nhslider bounds(976, 102, 180, 29) range(-2400,
         2400, 0, 1, 0.01) channel(\"GlobalTuning\") text(\"Tuning\") trackerColour(188,
-        151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\nlabel bounds(976, 158,
-        89, 18) fontColour(255, 255, 255, 255) text(\"ENVELOPE\") channel(\"label144\")\r\nbutton
+        151, 49, 255) textColour(255, 255, 255, 255)\n\nlabel bounds(976, 158, 89,
+        18) fontColour(255, 255, 255, 255) text(\"ENVELOPE\") channel(\"label144\")\nbutton
         bounds(1080, 152, 81, 28) channel(\"AmpEnvelopeToggle\") text(\"Linear\",
-        \"Exponential\") outlineThickness(2) outlineColour(188, 151, 49, 255) \r\n\r\nhslider
+        \"Exponential\") outlineThickness(2) outlineColour(188, 151, 49, 255) \n\nhslider
         bounds(976, 183, 180, 29) range(0.01, 10, 0.1, 0.5, 0.01) text(\"Attack\")
         channel(\"AmpAttack\") trackerColour(188, 151, 49, 255) textColour(255, 255,
-        255, 255)\r\nhslider bounds(976, 213, 180, 29) range(0.01, 10, 0.1, 0.5,
-        0.01) text(\"Decay\") channel(\"AmpDecay\") trackerColour(188, 151, 49, 255)
-        textColour(255, 255, 255, 255)\r\nhslider bounds(976, 243, 180, 29) range(0.0001,
-        1, 1, 1, 0.01) text(\"Sustain\") channel(\"AmpSustain\") trackerColour(188,
-        151, 49, 255) textColour(255, 255, 255, 255)\r\nhslider bounds(976, 273,
-        180, 29) range(0.01, 10, 0.4, 1, 0.01) text(\"Release\") channel(\"AmpRelease\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\n//EFFECTS\r\nlabel
-        bounds(976, 330, 67, 18) fontColour(255, 255, 255, 255) text(\"REVERB\")\r\nbutton
-        bounds(1080, 326, 81, 25)  channel(\"ReverbBypass\") text(\"Off\", \"On\")   
-        colour:1(188, 151, 49, 255) value(1) outlineThickness(2) outlineColour(188,
-        151, 49, 255)\r\nhslider bounds(976, 354, 180, 29) range(0, 1, 1, 1, 0.01)
-        channel(\"ReverbSend\") text(\"Send\") trackerColour(188, 151, 49, 255) textColour(255,
-        255, 255, 255)\r\nhslider bounds(976, 384, 180, 29) range(0, 1, 0, 1, 0.01)
-        channel(\"ReverbMix\") text(\"Mix\") trackerColour(188, 151, 49, 255) textColour(255,
-        255, 255, 255)\r\nhslider bounds(976, 414, 180, 29) range(0, 0.9, 0.4, 1,
-        0.01) channel(\"ReverbSize\") text(\"Size\") trackerColour(188, 151, 49,
-        255) textColour(255, 255, 255, 255)\r\n\r\nlabel bounds(976, 470, 52, 18)
-        fontColour(255, 255, 255, 255) text(\"DELAY\")\r\nbutton bounds(1080, 466,
-        81, 25)  channel(\"DelayBypass\") text(\"Off\", \"On\")    colour:1(188,
-        151, 49, 255) value(0) outlineThickness(2) outlineColour(188, 151, 49, 255)\r\nhslider
-        bounds(976, 495, 180, 29) range(0, 1, 0, 1, 0.01) channel(\"DelaySend\")
+        255, 255)\nhslider bounds(976, 213, 180, 29) range(0.01, 10, 0.1, 0.5, 0.01)
+        text(\"Decay\") channel(\"AmpDecay\") trackerColour(188, 151, 49, 255) textColour(255,
+        255, 255, 255)\nhslider bounds(976, 243, 180, 29) range(0.0001, 1, 1, 1,
+        0.01) text(\"Sustain\") channel(\"AmpSustain\") trackerColour(188, 151, 49,
+        255) textColour(255, 255, 255, 255)\nhslider bounds(976, 273, 180, 29) range(0.01,
+        10, 0.4, 1, 0.01) text(\"Release\") channel(\"AmpRelease\") trackerColour(188,
+        151, 49, 255) textColour(255, 255, 255, 255)\n\n//EFFECTS\nlabel bounds(976,
+        330, 67, 18) fontColour(255, 255, 255, 255) text(\"REVERB\")\nbutton bounds(1080,
+        326, 81, 25)  channel(\"ReverbBypass\") text(\"Off\", \"On\")    colour:1(188,
+        151, 49, 255) value(1) outlineThickness(2) outlineColour(188, 151, 49, 255)\nhslider
+        bounds(976, 354, 180, 29) range(0, 1, 1, 1, 0.01) channel(\"ReverbSend\")
         text(\"Send\") trackerColour(188, 151, 49, 255) textColour(255, 255, 255,
-        255)\r\nhslider bounds(976, 525, 180, 29) range(0, 1, 1, 1, 0.01) channel(\"DelayMix\")
+        255)\nhslider bounds(976, 384, 180, 29) range(0, 1, 0, 1, 0.01) channel(\"ReverbMix\")
         text(\"Mix\") trackerColour(188, 151, 49, 255) textColour(255, 255, 255,
-        255)\r\nhslider bounds(976, 555, 180, 29) range(0.05, 10, 0, 0.4, 0.01) channel(\"DelayTimeLeft\")
-        text(\"Time Left\") trackerColour(188, 151, 49, 255) textColour(255, 255,
-        255, 255)\r\nhslider bounds(976, 585, 180, 29) range(0.05, 10, 0, 0.4, 0.01)
-        channel(\"DelayTimeRight\") text(\"Time Right\") trackerColour(188, 151,
-        49, 255) textColour(255, 255, 255, 255)\r\nhslider bounds(976, 615, 180,
-        29) range(0, 1, 0, 1, 0.01) channel(\"DelayFeedback\") text(\"Feedback\")
-        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\r\n\r\n//GRAPHIC
-        LINES\r\n//Vertical\r\nimage bounds(237, 0, 2, 724) channel(\"image10000\")
-        colour(188, 151, 49, 255)\r\nimage bounds(600, 55, 2, 669) channel(\"image10000\")
-        colour(188, 151, 49, 255)\r\nimage bounds(960, 0, 2, 724) channel(\"image10000\")
-        colour(188, 151, 49, 255)\r\n//Horizontal\r\nimage bounds(237, 55, 725, 2)
-        channel(\"image10000\") colour(188, 151, 49, 255)\r\nimage bounds(237, 410,
-        363, 2) channel(\"image10000\") colour(188, 151, 49, 255)\r\nimage bounds(600,
-        210, 360, 2) channel(\"image10000\") colour(188, 151, 49, 255)\r\n\r\n</Cabbage>\r\n<CsoundSynthesizer>\r\n<CsOptions>\r\n-n
-        -dm0\r\n</CsOptions>\r\n<CsInstruments>\r\n\r\nksmps = 32\r\nnchnls = 2\r\n0dbfs
-        = 1\r\n\r\nseed 0\r\n\r\n//Waveforms\r\ngiSine ftgen 1, 0, 8192, 10, 1\r\ngiTriangle
-        ftgen 2,0, 8192, 9, 1, 1, 0, 3, .333, 180, 5, .2, 0, 7, .143, 180, 9, .111,
-        0\r\ngiSaw ftgen 3, 0, 8192, 10, 1, .5, .333, .25, .2, .166, .143, .125,
-        .111, .1, .0909, .0833, .077\r\ngiSquare ftgen 4, 0, 8192, 10, 1, 0, .333,
-        0, .2, 0, .143, 0, .111, 0, .0909, 0, .077, 0, .0666, 0, .0588\r\ngiPulse
-        ftgen 5, 0, 8192, 10, 1, 1, 1, 1, 0.7, 0.5, 0.3, 0.1\r\n\r\n//Windowing\r\ngiWfn9
-        ftgen 11, 0, 16384, 20, 9 //Sync window\r\ngiWfn2 ftgen 12, 0, 16384, 20,
-        2 //Hanning window\r\ngiWfn5 ftgen 13, 0, 16384, 20, 5 //Blackman-Harris
-        window\r\ngiWfn5 ftgen 14, 0, 16384, 20, 6, 1, 2 //Gaussian window\r\ngiWfn5
-        ftgen 15, 0, 16384, 20, 7, 1, 3.5 //Kaiser window\r\ngiWfn8 ftgen 16, 0,
-        16384, 20, 8 //Rectangle window\r\n\r\nopcode linearRandom_Low, i, iii\r\n   
-        iMin, iMax, iMaxCount xin\r\n    \r\n    iCount = 0\r\n    iRandom = iMax\r\n   
-        \r\n    until iCount == iMaxCount do\r\n        iUniRandom random iMin,iMax\r\n       
-        iRandom = iUniRandom < iRandom ? iUniRandom : iRandom\r\n        iCount +=
-        1\r\n    enduntil\r\n        xout iRandom\r\nendop\r\n\r\nopcode linearRandom_High,
-        i, iii\r\n    iMin, iMax, iMaxCount xin\r\n    \r\n    iCount = 0\r\n   
-        iRandom = iMin\r\n    \r\n    until iCount == iMaxCount do\r\n        iUniRandom
-        random iMin,iMax\r\n        iRandom = iUniRandom > iRandom ? iUniRandom :
-        iRandom\r\n        iCount += .5\r\n    enduntil\r\n        xout iRandom\r\nendop\r\n\r\n\r\ninstr
-        OnOff\r\n    kOnOff      chnget \"OnOff\" \r\n    kIsOnTrig   changed kOnOff\r\n   
-        \r\n    kFreqMidi   chnget \"MidiNote\"\r\n    kFreq       cpsmidinn kFreqMidi\r\n   
-        \r\n    //Turn insturment on indefinitely on triggeer and turn it off when
-        trigger is hit again\r\n    if kOnOff == 1 then\r\n        if kIsOnTrig ==
-        1 then\r\n            event \"i\", 100, 0, 60*60*24*7, kFreq\r\n        endif\r\n   
-        elseif kOnOff == 0 then\r\n        turnoff2 100, 0, 1\r\n    endif\r\n               
-        \r\nendin\r\n\r\ninstr 100\r\n    //Grain Duration\r\n        kDur           
-        chnget \"GrainDuration\"\r\n        kDurVarRange    chnget \"DurationVariationRange\"\r\n       
-        kDurVarRate     chnget \"DurationVariationRate\"\r\n        \r\n        kLfoDurRange   
-        chnget \"LfoDurRange\"\r\n        kLfoDurFreq     chnget \"LfoDurFreq\"\r\n   
-        \r\n        kDurVar     jitter  kDurVarRange, .2 * kDurVarRate, .5 * kDurVarRate\r\n       
-        kLfoDur     lfo     kLfoDurRange, kLfoDurFreq\r\n        kDurTotal   limit  
-        kDur + kDurVar + kLfoDur , 0.01, 1\r\n        kDurTotal   port    kDurTotal,
-        0.1\r\n    \r\n    //Grain Density\r\n        kDensity            chnget
-        \"GrainDensity\"\r\n        kDensityVarRange    chnget \"DensityVariationRange\"\r\n       
-        kDensityVarRate     chnget \"DensityVariationRate\"\r\n        \r\n       
-        kLfoDensityRange    chnget \"LfoDensityRange\"\r\n        kLfoDensityFreq   
-        chnget \"LfoDensityFreq\"\r\n    \r\n        kLfoDensity     lfo     kLfoDensityRange,
-        kLfoDensityFreq \r\n        kDensityVar     jitter  kDensityVarRange, .2
-        * kDensityVarRate, .5 * kDensityVarRate\r\n        kDensityTotal   limit  
-        kDensity + kDensityVar + kLfoDensity, 0.1, 80\r\n        kDensityToal   
-        port    kDensity, 0.1\r\n        \r\n        kTrig metro kDensityTotal\r\n    
-        \r\n    \r\n    //Phase Variation\r\n        kPhaseVar = 0 ;chnget \"PhaseVariation\"\r\n       
-        kPhaseVar rand kPhaseVar\r\n\r\n    //Pitch\r\n        iFreqMIDI = p4\r\n       
-        kPitchVar       chnget \"PitchVariation\"\r\n        \r\n        kFreqVarRange  
-        chnget \"FrequencyVariationRange\"\r\n        kFreqVarRate    chnget \"FrequencyVariationRate\"\r\n       
-        kGlobalTuning   chnget \"GlobalTuning\"\r\n    \r\n        kLfoTuningRange
-        chnget \"LfoTuningRange\"\r\n        kLfoTuningFreq  chnget \"LfoTuningFreq\"\r\n       
-        \r\n        kLfoTuning      lfo kLfoTuningRange, kLfoTuningFreq       \r\n               
-        \r\n        kPitchVar       rand kPitchVar\r\n        kGlobalTuning = cent(kGlobalTuning)\r\n   
-        \r\n        kFreqVar jitter kFreqVarRange, .2 * kFreqVarRate, .5 * kFreqVarRate\r\n       
-        gkFreqTotal = ((iFreqMIDI + kFreqVar) * kGlobalTuning)\r\n            \r\n   
-        //Spatialization\r\n        kGrainSpread    chnget \"GrainSpread\"\r\n       
-        kRandomSpread   random 0, kGrainSpread\r\n        kRandomSpread   portk kRandomSpread,
-        0.2\r\n    \r\n    //Filter\r\n        iFilterFreq     chnget \"FilterFreq\"\r\n       
-        iFilterRange    chnget \"FilterRange\"\r\n        iFilterAttack   chnget
-        \"FilterAttack\"\r\n        iFilterDecay    chnget \"FilterDecay\"\r\n       
-        iFilterSustain  chnget \"FilterSustain\"\r\n        iFilterRelease  chnget
-        \"FilterRelease\"\r\n        giFilterType    = chnget:i(\"FilterSelection\")
-        - 1\r\n \r\n        gkFilterFreq    chnget \"FilterFreq\"\r\n        gkFilterReson  
-        chnget \"FilterReson\"\r\n        gkFilterReson   port gkFilterReson, 0.02\r\n       
-        gkFilterBW      chnget \"FilterBW\"\r\n        gkFilterBW      port gkFilterBW,
-        0.02\r\n\r\n        gkFilterNoteTracking  = 1 ;chnget \"FilterNoteTrack\"\r\n           
-        \r\n            //Filter Envelope:    \r\n            if iFilterAttack >
-        0.01 then\r\n                kFilterEnv  expsegr iFilterRange, iFilterAttack,
-        iFilterFreq, iFilterDecay, iFilterSustain * iFilterFreq, iFilterRelease,
-        iFilterRange\r\n            else\r\n                kFilterEnv  expsegr iFilterFreq,
-        iFilterDecay, iFilterSustain * iFilterFreq, iFilterRelease, iFilterRange\r\n           
-        endif\r\n                \r\n            //Allows filter frequency to be
-        modulated in real time\r\n            kcc1Trig changed2 gkFilterFreq\r\n           
-        kcc1Trig2 init 0\r\n        \r\n            if kcc1Trig == 1 then\r\n               
-        kcc1Trig2 = 1\r\n            endif\r\n\r\n            if release() == 0 then\r\n               
-        if kcc1Trig2 == 1 then\r\n                    kFilterFreqSum = gkFilterFreq\r\n               
-        else\r\n                    kFilterFreqSum = kFilterEnv\r\n               
-        endif  \r\n            else\r\n                kFilterFreqSum = kFilterEnv\r\n           
-        endif\r\n    \r\n            //Ports envelope         \r\n            kFilterFreqSum
-        port kFilterFreqSum, 0.1\r\n            \r\n            //Filter LFO\r\n           
-        gkLfoFilterFreq chnget \"LfoFilterFreq\"\r\n            kLfoFilterRange chnget
-        \"LfoFilterRange\"\r\n\r\n            kLfoFilter lfo kLfoFilterRange, gkLfoFilterFreq\r\n           
-        kLfoFilter += 0.5\r\n\r\n    //Velocity\r\n        ;iVelocityToggle chnget
-        \"VelocityButton\"\r\n        ;iAmpMIDI        ampmidi 1\r\n     \r\n   
-        //Amp envelope\r\n        iAttack         chnget \"AmpAttack\"\r\n       
-        iDecay          chnget \"AmpDecay\"\r\n        iSustain        chnget \"AmpSustain\"\r\n       
-        iRelease        chnget \"AmpRelease\"\r\n        iAmpEnvToggle   chnget \"AmpEnvelopeToggle\"\r\n       
-        \r\n        \r\n        if iAmpEnvToggle == 1 then\r\n            kAmpEnv    
-        mxadsr iAttack, iDecay, iSustain, iRelease\r\n        else\r\n           
-        kAmpEnv     madsr iAttack, iDecay, iSustain, iRelease\r\n        endif\r\n       
-        \r\n        ;if iVelocityToggle == 1 then\r\n        ;    kAmpEnv *= iAmpMIDI\r\n       
-        ;endif   \r\n        \r\n        kLfoAmpRange chnget \"LfoAmpRange\"\r\n       
-        kLfoAmpFreq  chnget \"LfoAmpFreq\"    \r\n        kAmpLfo lfo kLfoAmpRange,
-        kLfoAmpFreq\r\n        kAmpLfo += 0.5\r\n        \r\n    //Modulation LFO\r\n       
-        kLfoModAmpRange chnget \"LfoModAmpRange\"\r\n        kLfoModAmpFreq  chnget
-        \"LfoModAmpFreq\"\r\n    \r\n        kLfoModFreqRange chnget \"LfoModFreqRange\"\r\n       
-        kLfoModFreqFreq chnget \"LfoModFreqFreq\"\r\n        \r\n        kModAmpLfo
-        lfo kLfoModAmpRange, kLfoModAmpFreq\r\n        kModAmpLfo += 0.5\r\n       
-        kModFreqLfo lfo kLfoModFreqRange, kLfoModFreqFreq\r\n        \r\n    ///Pan
-        LFO\r\n        kLfoPanRange chnget \"LfoPanRange\"\r\n        gkLfoPanFreq
-        chnget \"LfoPanFreq\" \r\n        kPanLfo lfo kLfoPanRange, gkLfoPanFreq\r\n               
-        \r\n                \r\n    //Granulation \r\n        schedkwhen kTrig, 0,
-        0, \"Synthesis\", 0, kDurTotal, gkFreqTotal + kPitchVar, abs(kPhaseVar),
-        kRandomSpread, kAmpEnv, kLfoTuning, kFilterFreqSum, kLfoFilter, kAmpLfo,
-        kModAmpLfo, kModFreqLfo, kPanLfo \r\n;                                                 
+        255)\nhslider bounds(976, 414, 180, 29) range(0, 0.9, 0.4, 1, 0.01) channel(\"ReverbSize\")
+        text(\"Size\") trackerColour(188, 151, 49, 255) textColour(255, 255, 255,
+        255)\n\nlabel bounds(976, 470, 52, 18) fontColour(255, 255, 255, 255) text(\"DELAY\")\nbutton
+        bounds(1080, 466, 81, 25)  channel(\"DelayBypass\") text(\"Off\", \"On\")   
+        colour:1(188, 151, 49, 255) value(0) outlineThickness(2) outlineColour(188,
+        151, 49, 255)\nhslider bounds(976, 495, 180, 29) range(0, 1, 0, 1, 0.01)
+        channel(\"DelaySend\") text(\"Send\") trackerColour(188, 151, 49, 255) textColour(255,
+        255, 255, 255)\nhslider bounds(976, 525, 180, 29) range(0, 1, 1, 1, 0.01)
+        channel(\"DelayMix\") text(\"Mix\") trackerColour(188, 151, 49, 255) textColour(255,
+        255, 255, 255)\nhslider bounds(976, 555, 180, 29) range(0.05, 10, 0, 0.4,
+        0.01) channel(\"DelayTimeLeft\") text(\"Time Left\") trackerColour(188, 151,
+        49, 255) textColour(255, 255, 255, 255)\nhslider bounds(976, 585, 180, 29)
+        range(0.05, 10, 0, 0.4, 0.01) channel(\"DelayTimeRight\") text(\"Time Right\")
+        trackerColour(188, 151, 49, 255) textColour(255, 255, 255, 255)\nhslider
+        bounds(976, 615, 180, 29) range(0, 1, 0, 1, 0.01) channel(\"DelayFeedback\")
+        text(\"Feedback\") trackerColour(188, 151, 49, 255) textColour(255, 255,
+        255, 255)\n\n//GRAPHIC LINES\n//Vertical\nimage bounds(237, 0, 2, 724) channel(\"image10000\")
+        colour(188, 151, 49, 255)\nimage bounds(600, 55, 2, 669) channel(\"image10000\")
+        colour(188, 151, 49, 255)\nimage bounds(960, 0, 2, 724) channel(\"image10000\")
+        colour(188, 151, 49, 255)\n//Horizontal\nimage bounds(237, 55, 725, 2) channel(\"image10000\")
+        colour(188, 151, 49, 255)\nimage bounds(237, 410, 363, 2) channel(\"image10000\")
+        colour(188, 151, 49, 255)\nimage bounds(600, 210, 360, 2) channel(\"image10000\")
+        colour(188, 151, 49, 255)\n\n</Cabbage>\n<CsoundSynthesizer>\n<CsOptions>\n-n
+        -dm0\n</CsOptions>\n<CsInstruments>\n\nksmps = 32\nnchnls = 2\n0dbfs = 1\n\nseed
+        0\n\n//Waveforms\ngiSine ftgen 1, 0, 8192, 10, 1\ngiTriangle ftgen 2,0, 8192,
+        9, 1, 1, 0, 3, .333, 180, 5, .2, 0, 7, .143, 180, 9, .111, 0\ngiSaw ftgen
+        3, 0, 8192, 10, 1, .5, .333, .25, .2, .166, .143, .125, .111, .1, .0909,
+        .0833, .077\ngiSquare ftgen 4, 0, 8192, 10, 1, 0, .333, 0, .2, 0, .143, 0,
+        .111, 0, .0909, 0, .077, 0, .0666, 0, .0588\ngiPulse ftgen 5, 0, 8192, 10,
+        1, 1, 1, 1, 0.7, 0.5, 0.3, 0.1\n\n//Windowing\ngiWfn9 ftgen 11, 0, 16384,
+        20, 9 //Sync window\ngiWfn2 ftgen 12, 0, 16384, 20, 2 //Hanning window\ngiWfn5
+        ftgen 13, 0, 16384, 20, 5 //Blackman-Harris window\ngiWfn5 ftgen 14, 0, 16384,
+        20, 6, 1, 2 //Gaussian window\ngiWfn5 ftgen 15, 0, 16384, 20, 7, 1, 3.5 //Kaiser
+        window\ngiWfn8 ftgen 16, 0, 16384, 20, 8 //Rectangle window\n\nopcode linearRandom_Low,
+        i, iii\n    iMin, iMax, iMaxCount xin\n    \n    iCount = 0\n    iRandom
+        = iMax\n    \n    until iCount == iMaxCount do\n        iUniRandom random
+        iMin,iMax\n        iRandom = iUniRandom < iRandom ? iUniRandom : iRandom\n       
+        iCount += 1\n    enduntil\n        xout iRandom\nendop\n\nopcode linearRandom_High,
+        i, iii\n    iMin, iMax, iMaxCount xin\n    \n    iCount = 0\n    iRandom
+        = iMin\n    \n    until iCount == iMaxCount do\n        iUniRandom random
+        iMin,iMax\n        iRandom = iUniRandom > iRandom ? iUniRandom : iRandom\n       
+        iCount += .5\n    enduntil\n        xout iRandom\nendop\n\n\ninstr OnOff\n   
+        kOnOff      chnget \"OnOff\" \n    kIsOnTrig   changed kOnOff\n    \n   
+        kFreqMidi   chnget \"MidiNote\"\n    kFreq       cpsmidinn kFreqMidi\n   
+        \n    //Turn insturment on indefinitely on triggeer and turn it off when
+        trigger is hit again\n    if kOnOff == 1 then\n        if kIsOnTrig == 1
+        then\n            event \"i\", 100, 0, 60*60*24*7, kFreq\n        endif\n   
+        elseif kOnOff == 0 then\n        turnoff2 100, 0, 1\n    endif\n               
+        \nendin\n\ninstr 100\n    //Grain Duration\n        kDur            chnget
+        \"GrainDuration\"\n        kDurVarRange    chnget \"DurationVariationRange\"\n       
+        kDurVarRate     chnget \"DurationVariationRate\"\n        \n        kLfoDurRange   
+        chnget \"LfoDurRange\"\n        kLfoDurFreq     chnget \"LfoDurFreq\"\n   
+        \n        kDurVar     jitter  kDurVarRange, .2 * kDurVarRate, .5 * kDurVarRate\n       
+        kLfoDur     lfo     kLfoDurRange, kLfoDurFreq\n        kDurTotal   limit  
+        kDur + kDurVar + kLfoDur , 0.01, 1\n        kDurTotal   port    kDurTotal,
+        0.1\n    \n    //Grain Density\n        kDensity            chnget \"GrainDensity\"\n       
+        kDensityVarRange    chnget \"DensityVariationRange\"\n        kDensityVarRate    
+        chnget \"DensityVariationRate\"\n        \n        kLfoDensityRange    chnget
+        \"LfoDensityRange\"\n        kLfoDensityFreq    chnget \"LfoDensityFreq\"\n   
+        \n        kLfoDensity     lfo     kLfoDensityRange, kLfoDensityFreq \n       
+        kDensityVar     jitter  kDensityVarRange, .2 * kDensityVarRate, .5 * kDensityVarRate\n       
+        kDensityTotal   limit   kDensity + kDensityVar + kLfoDensity, 0.1, 80\n       
+        kDensityToal    port    kDensity, 0.1\n        \n        kTrig metro kDensityTotal\n    
+        \n    \n    //Phase Variation\n        kPhaseVar = 0 ;chnget \"PhaseVariation\"\n       
+        kPhaseVar rand kPhaseVar\n\n    //Pitch\n        iFreqMIDI = p4\n       
+        kPitchVar       chnget \"PitchVariation\"\n        \n        kFreqVarRange  
+        chnget \"FrequencyVariationRange\"\n        kFreqVarRate    chnget \"FrequencyVariationRate\"\n       
+        kGlobalTuning   chnget \"GlobalTuning\"\n    \n        kLfoTuningRange chnget
+        \"LfoTuningRange\"\n        kLfoTuningFreq  chnget \"LfoTuningFreq\"\n       
+        \n        kLfoTuning      lfo kLfoTuningRange, kLfoTuningFreq       \n               
+        \n        kPitchVar       rand kPitchVar\n        kGlobalTuning = cent(kGlobalTuning)\n   
+        \n        kFreqVar jitter kFreqVarRange, .2 * kFreqVarRate, .5 * kFreqVarRate\n       
+        gkFreqTotal = ((iFreqMIDI + kFreqVar) * kGlobalTuning)\n            \n   
+        //Spatialization\n        kGrainSpread    chnget \"GrainSpread\"\n       
+        kRandomSpread   random 0, kGrainSpread\n        kRandomSpread   portk kRandomSpread,
+        0.2\n    \n    //Filter\n        iFilterFreq     chnget \"FilterFreq\"\n       
+        iFilterRange    chnget \"FilterRange\"\n        iFilterAttack   chnget \"FilterAttack\"\n       
+        iFilterDecay    chnget \"FilterDecay\"\n        iFilterSustain  chnget \"FilterSustain\"\n       
+        iFilterRelease  chnget \"FilterRelease\"\n        giFilterType    = chnget:i(\"FilterSelection\")
+        - 1\n \n        gkFilterFreq    chnget \"FilterFreq\"\n        gkFilterReson  
+        chnget \"FilterReson\"\n        gkFilterReson   port gkFilterReson, 0.02\n       
+        gkFilterBW      chnget \"FilterBW\"\n        gkFilterBW      port gkFilterBW,
+        0.02\n\n        gkFilterNoteTracking  = 1 ;chnget \"FilterNoteTrack\"\n           
+        \n            //Filter Envelope:    \n            if iFilterAttack > 0.01
+        then\n                kFilterEnv  expsegr iFilterRange, iFilterAttack, iFilterFreq,
+        iFilterDecay, iFilterSustain * iFilterFreq, iFilterRelease, iFilterRange\n           
+        else\n                kFilterEnv  expsegr iFilterFreq, iFilterDecay, iFilterSustain
+        * iFilterFreq, iFilterRelease, iFilterRange\n            endif\n               
+        \n            //Allows filter frequency to be modulated in real time\n           
+        kcc1Trig changed2 gkFilterFreq\n            kcc1Trig2 init 0\n        \n           
+        if kcc1Trig == 1 then\n                kcc1Trig2 = 1\n            endif\n\n           
+        if release() == 0 then\n                if kcc1Trig2 == 1 then\n                   
+        kFilterFreqSum = gkFilterFreq\n                else\n                   
+        kFilterFreqSum = kFilterEnv\n                endif  \n            else\n               
+        kFilterFreqSum = kFilterEnv\n            endif\n    \n            //Ports
+        envelope         \n            kFilterFreqSum port kFilterFreqSum, 0.1\n           
+        \n            //Filter LFO\n            gkLfoFilterFreq chnget \"LfoFilterFreq\"\n           
+        kLfoFilterRange chnget \"LfoFilterRange\"\n\n            kLfoFilter lfo kLfoFilterRange,
+        gkLfoFilterFreq\n            kLfoFilter += 0.5\n\n    //Velocity\n       
+        ;iVelocityToggle chnget \"VelocityButton\"\n        ;iAmpMIDI        ampmidi
+        1\n     \n    //Amp envelope\n        iAttack         chnget \"AmpAttack\"\n       
+        iDecay          chnget \"AmpDecay\"\n        iSustain        chnget \"AmpSustain\"\n       
+        iRelease        chnget \"AmpRelease\"\n        iAmpEnvToggle   chnget \"AmpEnvelopeToggle\"\n       
+        \n        \n        if iAmpEnvToggle == 1 then\n            kAmpEnv     mxadsr
+        iAttack, iDecay, iSustain, iRelease\n        else\n            kAmpEnv    
+        madsr iAttack, iDecay, iSustain, iRelease\n        endif\n        \n       
+        ;if iVelocityToggle == 1 then\n        ;    kAmpEnv *= iAmpMIDI\n       
+        ;endif   \n        \n        kLfoAmpRange chnget \"LfoAmpRange\"\n       
+        kLfoAmpFreq  chnget \"LfoAmpFreq\"    \n        kAmpLfo lfo kLfoAmpRange,
+        kLfoAmpFreq\n        kAmpLfo += 0.5\n        \n    //Modulation LFO\n       
+        kLfoModAmpRange chnget \"LfoModAmpRange\"\n        kLfoModAmpFreq  chnget
+        \"LfoModAmpFreq\"\n    \n        kLfoModFreqRange chnget \"LfoModFreqRange\"\n       
+        kLfoModFreqFreq chnget \"LfoModFreqFreq\"\n        \n        kModAmpLfo lfo
+        kLfoModAmpRange, kLfoModAmpFreq\n        kModAmpLfo += 0.5\n        kModFreqLfo
+        lfo kLfoModFreqRange, kLfoModFreqFreq\n        \n    ///Pan LFO\n       
+        kLfoPanRange chnget \"LfoPanRange\"\n        gkLfoPanFreq chnget \"LfoPanFreq\"
+        \n        kPanLfo lfo kLfoPanRange, gkLfoPanFreq\n                \n               
+        \n    //Granulation \n        schedkwhen kTrig, 0, 0, \"Synthesis\", 0, kDurTotal,
+        gkFreqTotal + kPitchVar, abs(kPhaseVar), kRandomSpread, kAmpEnv, kLfoTuning,
+        kFilterFreqSum, kLfoFilter, kAmpLfo, kModAmpLfo, kModFreqLfo, kPanLfo \n;                                                 
         p3            p4                      p5              p6          p7         
         p8          p9          p10        p11        p12          p13         p14  
-        \r\n\r\nendin\r\n///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\r\ninstr
-        Synthesis\r\n    //Oscillator1\r\n        iOsc1Vol    chnget \"Oscillator1Volume\"\r\n       
-        iOsc1Semi   chnget \"Oscillator1Semitone\"\r\n        iOsc1Cent   chnget
-        \"Oscillator1Cents\"\r\n        iFn1        chnget \"WaveformSelection1\"\r\n   
-        \r\n        iOsc1Semi = semitone(iOsc1Semi)\r\n        iOsc1Cent = cent(iOsc1Cent)\r\n   
-        \r\n    //Oscillator2\r\n        iOsc2Vol    chnget \"Oscillator2Volume\"\r\n       
-        iOsc2Semi   chnget \"Oscillator2Semitone\"\r\n        iOsc2Cent   chnget
-        \"Oscillator2Cents\"  \r\n        iFn2        chnget \"WaveformSelection2\"\r\n  
-        \r\n        iOsc2Semi = semitone(iOsc2Semi)\r\n        iOsc2Cent = cent(iOsc2Cent)\r\n   
-        \r\n    //Oscillator3\r\n        iOsc3Vol   chnget \"Oscillator3Volume\"\r\n       
-        iOsc3Semi  chnget \"Oscillator3Semitone\"\r\n        iOsc3Cent  chnget \"Oscillator3Cents\"\r\n       
-        iFn3       chnget \"WaveformSelection3\"\r\n   \r\n        iOsc3Semi = semitone(iOsc3Semi)\r\n       
-        iOsc3Cent = cent(iOsc3Cent)\r\n    \r\n    //Windowing      \r\n        iWfn
-        = chnget:i(\"WindowingSelection\") + 10\r\n        \r\n        kWindowIndex
-        line 0, p3, 1\r\n        kWindowEnv table kWindowIndex, iWfn, 1 \r\n       
-        aWindowEnv interp kWindowEnv\r\n      \r\n    //Globals\r\n        iGlobalPan 
-        chnget \"GlobalPan\"\r\n        iGlobalVol  chnget \"GlobalVolume\"\r\n       
-        \r\n    //Modulation\r\n        iRMFreq chnget \"RMFreq\"\r\n        iRMAmp 
-        chnget \"RMAmp\"\r\n        iFMFreq chnget \"FMFreq\"\r\n        iFMAmp 
-        chnget \"FMAmp\"\r\n        \r\n    //FREQUENCY MODULATION\r\n        iModAmpLfo
-        = p12\r\n        iModFreqLfo = p13\r\n        iFMAmpInterpol ntrpol 0, 20000,
-        iFMAmp\r\n        aFMOsc poscil iFMAmpInterpol * iModAmpLfo, iFMFreq + abs(iModFreqLfo
-        * 2)\r\n\r\n    //OSCILLATORS   \r\n        aGrain1 poscil aWindowEnv * iOsc1Vol,
-        (p4 * iOsc1Semi * iOsc1Cent) + p8 + aFMOsc, iFn1, p5\r\n        aGrain2 poscil
-        aWindowEnv * iOsc2Vol, (p4 * iOsc2Semi * iOsc2Cent) + p8 + aFMOsc, iFn2,
-        p5\r\n        aGrain3 poscil aWindowEnv * iOsc3Vol, (p4 * iOsc3Semi * iOsc3Cent)
-        + p8 + aFMOsc, iFn3, p5\r\n        \r\n        iAmpEnv = p7\r\n        iAmpLfo
-        = p11\r\n        aGrainSum = (aGrain1 + aGrain2 + aGrain3) * iAmpEnv * iAmpLfo\r\n\r\n   
-        //RING MODULATION\r\n        iRMFreq = cent(iRMFreq)\r\n        aRMOsc poscil
-        1, (iRMFreq * gkFreqTotal) + iModFreqLfo\r\n    \r\n        aRingModSig ntrpol
-        aGrainSum, aRMOsc * aGrainSum, iRMAmp * iModAmpLfo * 2\r\n\r\n    //FILTERING:  
-        \r\n        iFilterEnvTotal ntrpol 20, 20000, p9\r\n\r\n        //Frequency
-        offset        \r\n        if gkFilterNoteTracking == 0 then\r\n           
-        kFilterFreqTotal =  iFilterEnvTotal\r\n            if gkLfoFilterFreq > 0
-        then\r\n                kFilterFreqTotal *= p10\r\n            endif\r\n       
-        else\r\n            kFilterFreqTotal =  iFilterEnvTotal + gkFreqTotal ;kFreqTotal
-        = cpsmidi + global cent tuning + frequency randomization         \r\n           
-        if gkLfoFilterFreq > 0 then\r\n                kFilterFreqTotal *= p10\r\n           
-        endif\r\n        endif\r\n        \r\n        kFilterFreqTotal limit kFilterFreqTotal,
-        20, 20000\r\n\r\n        //Filter type selection\r\n        if giFilterType
-        == 2 then\r\n            aSigFilter butterbp aRingModSig, kFilterFreqTotal,
-        gkFilterBW\r\n        else\r\n            gkFilterReson limit gkFilterReson,
-        1, 50\r\n            aSigFilter bqrez aRingModSig, kFilterFreqTotal, gkFilterReson,
-        giFilterType  \r\n        endif\r\n\r\n    //Random Pan Position\r\n       
-        iRandomLow linearRandom_Low -p6, 0, 50\r\n        iRandomHigh linearRandom_High
-        0, p6, 50\r\n        iRandomArray[] fillarray iRandomLow, iRandomHigh\r\n       
-        \r\n        iRandomIndexSelector random 0, 1\r\n        iRandomIndex = iRandomIndexSelector
-        < 0.5 ? 0 : 1\r\n        aGrainOutL, aGrainOutR pan2 aSigFilter, .5 + iRandomArray[iRandomIndex]\r\n       
-        \r\n    //Global pan\r\n        if gkLfoPanFreq > 0 then\r\n            kPan
-        = iGlobalPan + p14\r\n        else\r\n            kPan = iGlobalPan\r\n       
-        endif\r\n        \r\n       aGrainOutL *= 1 - kPan\r\n       aGrainOutR *=
-        kPan\r\n        \r\n    //Output\r\n        chnmix aGrainOutL * iGlobalVol,
-        \"SigL\"\r\n        chnmix aGrainOutR * iGlobalVol, \"SigR\"\r\nendin\r\n////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\r\ninstr
-        Reverb\r\n    //CHNGET\r\n        aSigL chnget \"SigL\"\r\n        aSigR
-        chnget \"SigR\"\r\n        kReverbSize chnget \"ReverbSize\"\r\n        kReverbMix
-        chnget \"ReverbMix\"\r\n        kReverbSend chnget \"ReverbSend\"\r\n       
-        gkReverbBypass chnget \"ReverbBypass\"\r\n\r\n    //PORTK\r\n        kReverbMix
-        port kReverbMix, 0.02\r\n        kReverbSend portk kReverbSend, 0.02\r\n       
-        kReverbSize portk kReverbSize, 0.02\r\n    \r\n     if kReverbSend > 0 then   
-        \r\n        //REVERB\r\n        aVerbL, aVerbR reverbsc aSigL * kReverbSend,
-        aSigR * kReverbSend, kReverbSize, 6000  \r\n    \r\n        //MIX\r\n       
-        if gkReverbBypass == 1 then\r\n            aVerbMixL ntrpol aSigL, aVerbL,
-        kReverbMix\r\n            aVerbMixR ntrpol aSigR, aVerbR, kReverbMix\r\n           
-        outs aVerbMixL, aVerbMixR\r\n        endif\r\n     endif\r\n\r\nendin\r\n//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\r\ninstr
-        Delay\r\n    //CHNGET\r\n        aSigL chnget \"SigL\"\r\n        aSigR chnget
-        \"SigR\"\r\n        kDelaySend chnget \"DelaySend\"\r\n        kDelayMix
-        chnget \"DelayMix\"\r\n        kDelayTimeLeft chnget \"DelayTimeLeft\"\r\n       
-        kDelayTimeRight chnget \"DelayTimeRight\"\r\n        kDelayFeedback chnget
-        \"DelayFeedback\"\r\n        kDelayBypass chnget \"DelayBypass\"\r\n\r\n   
-        //PORTK\r\n        kDelayMix port kDelayMix, 0.02\r\n        kDelaySend portk
-        kDelaySend, 0.02\r\n        kDelayTimeLeft portk kDelayTimeLeft, 0.02\r\n       
-        kDelayTimeRight portk kDelayTimeRight, 0.02\r\n        kDelayFeedBack portk
-        kDelayFeedback, 0.02\r\n\r\n     if kDelaySend > 0 then\r\n        //DELAY\r\n       
-        aBufferOutL delayr 10\r\n        aTapL       deltapi kDelayTimeLeft\r\n                   
-        delayw (aSigL * kDelaySend) + (aTapL * kDelayFeedback)\r\n        aBufferOutR
-        delayr 10\r\n        aTapR       deltapi kDelayTimeRight\r\n                   
-        delayw (aSigR * kDelaySend) + (aTapR * kDelayFeedback)\r\n    \r\n       
-        if kDelayBypass == 1 then            \r\n            aDelayMixL ntrpol aSigL,
-        aTapL, kDelayMix\r\n            aDelayMixR ntrpol aSigR, aTapR, kDelayMix\r\n           
-        outs aDelayMixL, aDelayMixR\r\n        endif       \r\n     endif\r\n\r\n    
-        //Outputs dry signal only if both effects are bypassed\r\n         if kDelayBypass
-        == 0 && gkReverbBypass == 0 then\r\n            outs aSigL, aSigR\r\n        
-        endif\r\n \r\n    //CLEARS SIGNAL\r\n        chnclear \"SigL\"\r\n       
-        chnclear \"SigR\" \r\nendin\r\n</CsInstruments>\r\n<CsScore>\r\nf0 z\r\ni
-        \"OnOff\"   0 999999999999999999999\r\ni \"Delay\"   0 999999999999999999999\r\ni
-        \"Reverb\"  0 999999999999999999999\r\n</CsScore>\r\n</CsoundSynthesizer>\r\n"
+        \n\nendin\n///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\ninstr
+        Synthesis\n    //Oscillator1\n        iOsc1Vol    chnget \"Oscillator1Volume\"\n       
+        iOsc1Semi   chnget \"Oscillator1Semitone\"\n        iOsc1Cent   chnget \"Oscillator1Cents\"\n       
+        iFn1        chnget \"WaveformSelection1\"\n    \n        iOsc1Semi = semitone(iOsc1Semi)\n       
+        iOsc1Cent = cent(iOsc1Cent)\n    \n    //Oscillator2\n        iOsc2Vol   
+        chnget \"Oscillator2Volume\"\n        iOsc2Semi   chnget \"Oscillator2Semitone\"\n       
+        iOsc2Cent   chnget \"Oscillator2Cents\"  \n        iFn2        chnget \"WaveformSelection2\"\n  
+        \n        iOsc2Semi = semitone(iOsc2Semi)\n        iOsc2Cent = cent(iOsc2Cent)\n   
+        \n    //Oscillator3\n        iOsc3Vol   chnget \"Oscillator3Volume\"\n       
+        iOsc3Semi  chnget \"Oscillator3Semitone\"\n        iOsc3Cent  chnget \"Oscillator3Cents\"\n       
+        iFn3       chnget \"WaveformSelection3\"\n   \n        iOsc3Semi = semitone(iOsc3Semi)\n       
+        iOsc3Cent = cent(iOsc3Cent)\n    \n    //Windowing      \n        iWfn =
+        chnget:i(\"WindowingSelection\") + 10\n        \n        kWindowIndex line
+        0, p3, 1\n        kWindowEnv table kWindowIndex, iWfn, 1 \n        aWindowEnv
+        interp kWindowEnv\n      \n    //Globals\n        iGlobalPan  chnget \"GlobalPan\"\n       
+        iGlobalVol  chnget \"GlobalVolume\"\n        \n    //Modulation\n       
+        iRMFreq chnget \"RMFreq\"\n        iRMAmp  chnget \"RMAmp\"\n        iFMFreq
+        chnget \"FMFreq\"\n        iFMAmp  chnget \"FMAmp\"\n        \n    //FREQUENCY
+        MODULATION\n        iModAmpLfo = p12\n        iModFreqLfo = p13\n       
+        iFMAmpInterpol ntrpol 0, 20000, iFMAmp\n        aFMOsc poscil iFMAmpInterpol
+        * iModAmpLfo, iFMFreq + abs(iModFreqLfo * 2)\n\n    //OSCILLATORS   \n       
+        aGrain1 poscil aWindowEnv * iOsc1Vol, (p4 * iOsc1Semi * iOsc1Cent) + p8 +
+        aFMOsc, iFn1, p5\n        aGrain2 poscil aWindowEnv * iOsc2Vol, (p4 * iOsc2Semi
+        * iOsc2Cent) + p8 + aFMOsc, iFn2, p5\n        aGrain3 poscil aWindowEnv *
+        iOsc3Vol, (p4 * iOsc3Semi * iOsc3Cent) + p8 + aFMOsc, iFn3, p5\n        \n       
+        iAmpEnv = p7\n        iAmpLfo = p11\n        aGrainSum = (aGrain1 + aGrain2
+        + aGrain3) * iAmpEnv * iAmpLfo\n\n    //RING MODULATION\n        iRMFreq
+        = cent(iRMFreq)\n        aRMOsc poscil 1, (iRMFreq * gkFreqTotal) + iModFreqLfo\n   
+        \n        aRingModSig ntrpol aGrainSum, aRMOsc * aGrainSum, iRMAmp * iModAmpLfo
+        * 2\n\n    //FILTERING:   \n        iFilterEnvTotal ntrpol 20, 20000, p9\n\n       
+        //Frequency offset        \n        if gkFilterNoteTracking == 0 then\n           
+        kFilterFreqTotal =  iFilterEnvTotal\n            if gkLfoFilterFreq > 0 then\n               
+        kFilterFreqTotal *= p10\n            endif\n        else\n            kFilterFreqTotal
+        =  iFilterEnvTotal + gkFreqTotal ;kFreqTotal = cpsmidi + global cent tuning
+        + frequency randomization         \n            if gkLfoFilterFreq > 0 then\n               
+        kFilterFreqTotal *= p10\n            endif\n        endif\n        \n       
+        kFilterFreqTotal limit kFilterFreqTotal, 20, 20000\n\n        //Filter type
+        selection\n        if giFilterType == 2 then\n            aSigFilter butterbp
+        aRingModSig, kFilterFreqTotal, gkFilterBW\n        else\n            gkFilterReson
+        limit gkFilterReson, 1, 50\n            aSigFilter bqrez aRingModSig, kFilterFreqTotal,
+        gkFilterReson, giFilterType  \n        endif\n\n    //Random Pan Position\n       
+        iRandomLow linearRandom_Low -p6, 0, 50\n        iRandomHigh linearRandom_High
+        0, p6, 50\n        iRandomArray[] fillarray iRandomLow, iRandomHigh\n       
+        \n        iRandomIndexSelector random 0, 1\n        iRandomIndex = iRandomIndexSelector
+        < 0.5 ? 0 : 1\n        aGrainOutL, aGrainOutR pan2 aSigFilter, .5 + iRandomArray[iRandomIndex]\n       
+        \n    //Global pan\n        if gkLfoPanFreq > 0 then\n            kPan =
+        iGlobalPan + p14\n        else\n            kPan = iGlobalPan\n        endif\n       
+        \n       aGrainOutL *= 1 - kPan\n       aGrainOutR *= kPan\n        \n   
+        //Output\n        chnmix aGrainOutL * iGlobalVol, \"SigL\"\n        chnmix
+        aGrainOutR * iGlobalVol, \"SigR\"\nendin\n////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\ninstr
+        Reverb\n    //CHNGET\n        aSigL chnget \"SigL\"\n        aSigR chnget
+        \"SigR\"\n        kReverbSize chnget \"ReverbSize\"\n        kReverbMix chnget
+        \"ReverbMix\"\n        kReverbSend chnget \"ReverbSend\"\n        gkReverbBypass
+        chnget \"ReverbBypass\"\n\n    //PORTK\n        kReverbMix port kReverbMix,
+        0.02\n        kReverbSend portk kReverbSend, 0.02\n        kReverbSize portk
+        kReverbSize, 0.02\n    \n     if kReverbSend > 0 then    \n        //REVERB\n       
+        aVerbL, aVerbR reverbsc aSigL * kReverbSend, aSigR * kReverbSend, kReverbSize,
+        6000  \n    \n        //MIX\n        if gkReverbBypass == 1 then\n           
+        aVerbMixL ntrpol aSigL, aVerbL, kReverbMix\n            aVerbMixR ntrpol
+        aSigR, aVerbR, kReverbMix\n            outs aVerbMixL, aVerbMixR\n       
+        endif\n     endif\n\nendin\n//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\ninstr
+        Delay\n    //CHNGET\n        aSigL chnget \"SigL\"\n        aSigR chnget
+        \"SigR\"\n        kDelaySend chnget \"DelaySend\"\n        kDelayMix chnget
+        \"DelayMix\"\n        kDelayTimeLeft chnget \"DelayTimeLeft\"\n        kDelayTimeRight
+        chnget \"DelayTimeRight\"\n        kDelayFeedback chnget \"DelayFeedback\"\n       
+        kDelayBypass chnget \"DelayBypass\"\n\n    //PORTK\n        kDelayMix port
+        kDelayMix, 0.02\n        kDelaySend portk kDelaySend, 0.02\n        kDelayTimeLeft
+        portk kDelayTimeLeft, 0.02\n        kDelayTimeRight portk kDelayTimeRight,
+        0.02\n        kDelayFeedBack portk kDelayFeedback, 0.02\n\n     if kDelaySend
+        > 0 then\n        //DELAY\n        aBufferOutL delayr 10\n        aTapL      
+        deltapi kDelayTimeLeft\n                    delayw (aSigL * kDelaySend) +
+        (aTapL * kDelayFeedback)\n        aBufferOutR delayr 10\n        aTapR      
+        deltapi kDelayTimeRight\n                    delayw (aSigR * kDelaySend)
+        + (aTapR * kDelayFeedback)\n    \n        if kDelayBypass == 1 then           
+        \n            aDelayMixL ntrpol aSigL, aTapL, kDelayMix\n            aDelayMixR
+        ntrpol aSigR, aTapR, kDelayMix\n            outs aDelayMixL, aDelayMixR\n       
+        endif       \n     endif\n\n     //Outputs dry signal only if both effects
+        are bypassed\n         if kDelayBypass == 0 && gkReverbBypass == 0 then\n           
+        outs aSigL, aSigR\n         endif\n \n    //CLEARS SIGNAL\n        chnclear
+        \"SigL\"\n        chnclear \"SigR\" \nendin\n</CsInstruments>\n<CsScore>\nf0
+        z\ni \"OnOff\"   0 999999999999999999999\ni \"Delay\"   0 999999999999999999999\ni
+        \"Reverb\"  0 999999999999999999999\n</CsScore>\n</CsoundSynthesizer>\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2312014893443418141, guid: 4dd4397aad2fc324f98e11df6c9565c6,
         type: 3}
@@ -677,6 +666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _csoundFileName
       value: Granulera_CsoundUnity_Scriabin.csd
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312014893443418141, guid: 4dd4397aad2fc324f98e11df6c9565c6,
+        type: 3}
+      propertyPath: _drawAudioChannels
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2312014893443418141, guid: 4dd4397aad2fc324f98e11df6c9565c6,
         type: 3}
@@ -2485,40 +2479,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66172e3106aff498092da5cf463aa414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 1
+  vectorDisplayText: {fileID: 1994045260}
   vectorRanges: {x: 1, y: 3, z: 1}
+  setXPositionTo: 1
+  setYPositionTo: 0
+  setZPositionTo: 1
+  updatePositionOnStart: 0
   csound: {fileID: 501210962}
   csoundChannelsX:
   - channelName: Oscillator1Cents
     minValue: -35
     maxValue: 35
-    mirror: 0
+    returnAbsoluteValue: 0
   - channelName: Oscillator2Cents
     minValue: -50
     maxValue: 50
-    mirror: 0
+    returnAbsoluteValue: 0
   - channelName: Oscillator3Cents
     minValue: -75
     maxValue: 75
-    mirror: 0
+    returnAbsoluteValue: 0
   csoundChannelsY:
   - channelName: FilterFreq
     minValue: 0.03
     maxValue: 1
-    mirror: 0
+    returnAbsoluteValue: 0
   - channelName: Oscillator2Volume
     minValue: 0.3
     maxValue: 1
-    mirror: 0
+    returnAbsoluteValue: 0
   - channelName: Oscillator3Volume
     minValue: 0
     maxValue: 1
-    mirror: 0
+    returnAbsoluteValue: 0
   csoundChannelsZ:
   - channelName: FMAmp
     minValue: 0
     maxValue: 1
-    mirror: 0
-  vectorDisplayText: {fileID: 1994045260}
+    returnAbsoluteValue: 0
 --- !u!1 &529719919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,7 +2906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &672860082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3237,6 +3236,107 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 501210960}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &739425015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 739425019}
+  - component: {fileID: 739425018}
+  - component: {fileID: 739425017}
+  - component: {fileID: 739425016}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &739425016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739425015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &739425017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739425015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &739425018
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739425015}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &739425019
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739425015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2116916235}
+  - {fileID: 1141983156}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 243, y: 272}
+  m_SizeDelta: {x: 560, y: 543}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &750445984 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2312014893443418128, guid: 4dd4397aad2fc324f98e11df6c9565c6,
@@ -3588,6 +3688,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876419212}
   m_CullTransparentMesh: 1
+--- !u!1 &986508194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 986508195}
+  - component: {fileID: 986508197}
+  - component: {fileID: 986508196}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &986508195
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986508194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1141983156}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &986508196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986508194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Button
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &986508197
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986508194}
+  m_CullTransparentMesh: 1
 --- !u!1 &1005950743
 GameObject:
   m_ObjectHideFlags: 0
@@ -3610,7 +3844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1005950744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4241,6 +4475,127 @@ Transform:
   m_Father: {fileID: 1067774943}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1141983155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1141983156}
+  - component: {fileID: 1141983159}
+  - component: {fileID: 1141983158}
+  - component: {fileID: 1141983157}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1141983156
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141983155}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 14.3}
+  m_LocalScale: {x: 0.045074053, y: 0.045074053, z: 0.045074053}
+  m_Children:
+  - {fileID: 986508195}
+  m_Father: {fileID: 739425019}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -242, y: -265.3}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1141983157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141983155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1141983158}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1141983158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141983155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1141983159
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141983155}
+  m_CullTransparentMesh: 1
 --- !u!1 &1183657922
 GameObject:
   m_ObjectHideFlags: 0
@@ -4406,7 +4761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1272028929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6276,7 +6631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2077944674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6600,3 +6955,173 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2116916234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2116916235}
+  - component: {fileID: 2116916237}
+  - component: {fileID: 2116916236}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2116916235
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116916234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 11.49}
+  m_LocalScale: {x: 0.30308, y: 0.30308, z: 0.30308}
+  m_Children: []
+  m_Father: {fileID: 739425019}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -246.38, y: -268.5}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2116916236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116916234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Sample text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 2116916237}
+  m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+--- !u!23 &2116916237
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116916234}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
