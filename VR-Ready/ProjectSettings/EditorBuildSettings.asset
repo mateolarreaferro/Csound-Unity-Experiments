@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Scriabin.unity
+  - enabled: 0
+    path: Assets/Scriabin/Scriabin.unity
     guid: d3565a40f6b85421caa770b1c9f5d78d
+  - enabled: 1
+    path: Assets/V(R)ALIS/Template Scene 2.unity
+    guid: cf0540a3792a34eca83231a3c73328fc
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a9b9843d8423a401ab98a8931bf309a9,
       type: 2}
