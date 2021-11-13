@@ -620,9 +620,9 @@ public class GranuleraTemplates : MonoBehaviour
         csound.SetChannel("LfoModAmpRange", 0f);
 
         //MODULATION
-        csound.SetChannel("RMFreq", 0);
+        csound.SetChannel("RMFreq", 1200f);
         csound.SetChannel("RMAmp", 0f);
-        csound.SetChannel("FMFreq", 4700);
+        csound.SetChannel("FMFreq", 4700f);
         csound.SetChannel("FMAmp", 0f);
 
         //GLOBALS
