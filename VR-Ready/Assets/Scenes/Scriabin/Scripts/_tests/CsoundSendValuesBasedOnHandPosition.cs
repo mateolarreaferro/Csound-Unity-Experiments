@@ -3,41 +3,58 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 //TODO
 //Make X and Z axis relative to rotation
-//Fix the FMAMp 0-1 range thing
 
 public class CsoundSendValuesBasedOnHandPosition : MonoBehaviour
 {
-    [SerializeField] private Vector3 vectorRanges;
+    public enum PositionReference { Absolute, Relative };
 
-    //Csound
+    [Header("DEBUGGIN")]
+    public bool debug;
+    public TextMeshProUGUI vectorDisplayText;
+    [Space]
+    [Header("VECTOR RANGES")]
+    [SerializeField] private Vector3 vectorRanges;
+    [SerializeField] private PositionReference setXPositionTo = PositionReference.Relative;
+    [SerializeField] private PositionReference setYPositionTo = PositionReference.Absolute;
+    [SerializeField] private PositionReference setZPositionTo = PositionReference.Relative;
+    [SerializeField] private bool updatePositionOnStart = false;
+    [Space]
+    [Header("CSOUND CHANNELS")]
     [SerializeField] private CsoundUnity csound;
     [SerializeField] private CsoundChannelValuesBasedOnPosition[] csoundChannelsX;
     [SerializeField] private CsoundChannelValuesBasedOnPosition[] csoundChannelsY;
     [SerializeField] private CsoundChannelValuesBasedOnPosition[] csoundChannelsZ;
 
+    //Position references
     private Vector3 startPos;
     private Vector3 relativePos;
-    private bool updateRelativePos = false;
+    private bool updatePosition = false;
 
-    //UI TEST
-    public TextMeshProUGUI vectorDisplayText;
+    private void Start()
+    {
+        if (updatePositionOnStart)
+            updatePosition = true;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (updateRelativePos)
-        {
-            CaculateRelativePos();
-            SetCsoundChannelX();
-            SetCsoundChannelY();
-            SetCsoundChannelZ();
+        if (!updatePosition) { return; }
 
+        CaculateRelativePos();
+        SetCsoundValuesY();
+        SetCsoundValuesX();
+        SetCsoundValuesZ();
+
+        if (debug)
             DisplayRelativePosOnCanvas();
-        }
+
     }
 
+    #region Relative Position Calculation
     private void DisplayRelativePosOnCanvas()
     {
         vectorDisplayText.text =
@@ -49,7 +66,7 @@ public class CsoundSendValuesBasedOnHandPosition : MonoBehaviour
     public void GetStartPos()
     {
         startPos = transform.position;
-        updateRelativePos = true;
+        updatePosition = true;
     }
 
     private void CaculateRelativePos()
@@ -61,42 +78,56 @@ public class CsoundSendValuesBasedOnHandPosition : MonoBehaviour
 
     public void StopUpdatingRelativePos()
     {
-        updateRelativePos = false;
+        updatePosition = false;
     }
+    #endregion
 
-    private void SetCsoundChannelY()
+    #region Csound Communication
+    private void SetCsoundChannelBasedOnPosition(CsoundChannelValuesBasedOnPosition[] csoundChannels, float minVectorRange, float maxVectorRange, float transformAxis)
     {
-        foreach(CsoundChannelValuesBasedOnPosition data in csoundChannelsY)
+        foreach (CsoundChannelValuesBasedOnPosition data in csoundChannels)
         {
-            if(!data.mirror)
-                csound.SetChannel(data.channelName, ScaleFloat.Scale(0, vectorRanges.y, data.minValue, data.maxValue, transform.position.y));
+            float value =
+                Mathf.Clamp(ScaleFloat.Scale(minVectorRange, maxVectorRange, data.minValue, data.maxValue, transformAxis), data.minValue, data.maxValue);
+
+            if (!data.returnAbsoluteValue)
+            {
+                csound.SetChannel(data.channelName, value);
+            }
             else
-                csound.SetChannel(data.channelName, ScaleFloat.Scale(0, vectorRanges.y, data.minValue, data.maxValue, Mathf.Abs(transform.position.y)));
+            {
+                csound.SetChannel(data.channelName, Mathf.Abs(value));
+            }
+
+            //if (debug)
+            //    Debug.Log(data.channelName + ": " + value);
         }
     }
 
-    private void SetCsoundChannelX()
+    private void SetCsoundValuesX()
     {
-        foreach (CsoundChannelValuesBasedOnPosition data in csoundChannelsX)
-        {
-            if(!data.mirror)
-                csound.SetChannel(data.channelName, ScaleFloat.Scale(-vectorRanges.x, vectorRanges.x, data.minValue, data.maxValue, relativePos.x));
-            else
-                csound.SetChannel(data.channelName, ScaleFloat.Scale(-vectorRanges.x, vectorRanges.x, data.minValue, data.maxValue, Mathf.Abs(relativePos.x)));
-
-        }
+        if (setXPositionTo == PositionReference.Absolute)
+            SetCsoundChannelBasedOnPosition(csoundChannelsX, -vectorRanges.x, vectorRanges.y, transform.position.x);
+        else
+            SetCsoundChannelBasedOnPosition(csoundChannelsX, -vectorRanges.x, vectorRanges.x, relativePos.x);
     }
 
-    private void SetCsoundChannelZ()
+    private void SetCsoundValuesY()
     {
-        foreach (CsoundChannelValuesBasedOnPosition data in csoundChannelsZ)
-        {
-            if(!data.mirror)
-                csound.SetChannel(data.channelName, ScaleFloat.Scale(-vectorRanges.z, vectorRanges.z, data.minValue, data.maxValue, relativePos.z));
-            else
-                csound.SetChannel(data.channelName, ScaleFloat.Scale(-vectorRanges.z, vectorRanges.z, data.minValue, data.maxValue, Mathf.Abs(relativePos.z)));
-        }
+        if(setYPositionTo == PositionReference.Absolute)
+            SetCsoundChannelBasedOnPosition(csoundChannelsY, 0, vectorRanges.y, transform.position.y);
+        else
+            SetCsoundChannelBasedOnPosition(csoundChannelsY, -vectorRanges.y, vectorRanges.y, relativePos.y);
     }
+
+    private void SetCsoundValuesZ()
+    {
+        if (setZPositionTo == PositionReference.Absolute)
+            SetCsoundChannelBasedOnPosition(csoundChannelsZ, -vectorRanges.z, vectorRanges.z, transform.position.z);
+        else
+            SetCsoundChannelBasedOnPosition(csoundChannelsZ, -vectorRanges.z, vectorRanges.z, relativePos.z);
+    }
+    #endregion
 }
 
 [System.Serializable]
@@ -105,6 +136,6 @@ public class CsoundChannelValuesBasedOnPosition
     public string channelName;
     public float minValue;
     public float maxValue;
-    public bool mirror;
+    public bool returnAbsoluteValue = false;
 }
 
