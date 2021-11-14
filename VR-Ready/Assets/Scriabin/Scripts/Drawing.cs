@@ -33,7 +33,11 @@ public class Drawing : MonoBehaviour
     public bool creationMode = true;
     public string newGestureName;
     private List<Gesture> trainingSet = new List<Gesture>();
+    public float recognitionThreshold = 0.9f;
 
+    [System.Serializable]
+    public class UnityStringEvent : UnityEvent<string> { }
+    public UnityStringEvent OnRecognized;
 
 
     // Start is called before the first frame update
@@ -136,6 +140,11 @@ public class Drawing : MonoBehaviour
         else // Recognize Gesture
         {
             Result result = PointCloudRecognizer.Classify(newGesture, trainingSet.ToArray());
+
+            if (result.Score > recognitionThreshold)
+            {
+                OnRecognized.Invoke(result.GestureClass); 
+            }
         }
     }
 
