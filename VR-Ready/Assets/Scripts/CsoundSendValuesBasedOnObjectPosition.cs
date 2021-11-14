@@ -16,8 +16,6 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
     public TextMeshProUGUI vectorDisplayText;
     [Space]
     [Header("VECTOR RANGES")]
-    private GameObject head;
-    private GameObject objectPostition;
     [SerializeField] private Vector3 vectorRanges;
     [SerializeField] private PositionReference setXPositionTo = PositionReference.Relative;
     [SerializeField] private PositionReference setYPositionTo = PositionReference.Absolute;
@@ -31,15 +29,18 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
     [SerializeField] private CsoundChannelValueBasedOnPosition[] csoundChannelsZ;
 
     //Position references
+    private Transform camera;
+    private GameObject objectPostition;
     private Vector3 startPos;
     private Vector3 relativePos;
     private bool updatePosition = false;
 
     private void Awake()
     {
-        head = GameObject.FindGameObjectWithTag("MainCamera");
+        camera = Camera.main.transform;
         objectPostition = gameObject;
     }
+
     private void Start()
     {
         if (updatePositionOnStart)
@@ -56,9 +57,8 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
         SetCsoundValuesX();
         SetCsoundValuesZ();
 
-        //if (debug)
-        //    DisplayRelativePosOnCanvas();
-
+        if (debug)
+            DisplayRelativePosOnCanvas();
     }
 
     #region Relative Position Calculation
@@ -72,17 +72,18 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
 
     public void GetRelativeStartPos()
     {
-        head.transform.InverseTransformPoint(objectPostition.transform.position);
-
-        startPos = transform.position;
+        startPos = camera.transform.InverseTransformPoint(transform.position);
+        //startPos = transform.position;
         updatePosition = true;
     }
 
     private void CaculateRelativePos()
     {
-        relativePos.x = transform.position.x - startPos.x;
-        relativePos.y = transform.position.y - startPos.y;
-        relativePos.z = transform.position.z - startPos.z;
+        Vector3 inverseTransform = camera.transform.InverseTransformPoint(transform.position);
+
+        relativePos.x = inverseTransform.x - startPos.x;
+        relativePos.y = inverseTransform.y - startPos.y;
+        relativePos.z = inverseTransform.z - startPos.z;
     }
 
     public void StopUpdatingRelativePos()
