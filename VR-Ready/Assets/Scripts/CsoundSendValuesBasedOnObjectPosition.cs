@@ -7,7 +7,7 @@ using TMPro;
 //TODO
 //Make X and Z axis relative to rotation
 
-public class CsoundSendValuesBasedOnHandPosition : MonoBehaviour
+public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
 {
     public enum PositionReference { Absolute, Relative };
 
@@ -16,6 +16,8 @@ public class CsoundSendValuesBasedOnHandPosition : MonoBehaviour
     public TextMeshProUGUI vectorDisplayText;
     [Space]
     [Header("VECTOR RANGES")]
+    private GameObject head;
+    private GameObject objectPostition;
     [SerializeField] private Vector3 vectorRanges;
     [SerializeField] private PositionReference setXPositionTo = PositionReference.Relative;
     [SerializeField] private PositionReference setYPositionTo = PositionReference.Absolute;
@@ -24,15 +26,20 @@ public class CsoundSendValuesBasedOnHandPosition : MonoBehaviour
     [Space]
     [Header("CSOUND CHANNELS")]
     [SerializeField] private CsoundUnity csound;
-    [SerializeField] private CsoundChannelValuesBasedOnPosition[] csoundChannelsX;
-    [SerializeField] private CsoundChannelValuesBasedOnPosition[] csoundChannelsY;
-    [SerializeField] private CsoundChannelValuesBasedOnPosition[] csoundChannelsZ;
+    [SerializeField] private CsoundChannelValueBasedOnPosition[] csoundChannelsX;
+    [SerializeField] private CsoundChannelValueBasedOnPosition[] csoundChannelsY;
+    [SerializeField] private CsoundChannelValueBasedOnPosition[] csoundChannelsZ;
 
     //Position references
     private Vector3 startPos;
     private Vector3 relativePos;
     private bool updatePosition = false;
 
+    private void Awake()
+    {
+        head = GameObject.FindGameObjectWithTag("MainCamera");
+        objectPostition = gameObject;
+    }
     private void Start()
     {
         if (updatePositionOnStart)
@@ -49,8 +56,8 @@ public class CsoundSendValuesBasedOnHandPosition : MonoBehaviour
         SetCsoundValuesX();
         SetCsoundValuesZ();
 
-        if (debug)
-            DisplayRelativePosOnCanvas();
+        //if (debug)
+        //    DisplayRelativePosOnCanvas();
 
     }
 
@@ -63,8 +70,10 @@ public class CsoundSendValuesBasedOnHandPosition : MonoBehaviour
             "Z: " + relativePos.z.ToString("#.00");
     }
 
-    public void GetStartPos()
+    public void GetRelativeStartPos()
     {
+        head.transform.InverseTransformPoint(objectPostition.transform.position);
+
         startPos = transform.position;
         updatePosition = true;
     }
@@ -83,9 +92,9 @@ public class CsoundSendValuesBasedOnHandPosition : MonoBehaviour
     #endregion
 
     #region Csound Communication
-    private void SetCsoundChannelBasedOnPosition(CsoundChannelValuesBasedOnPosition[] csoundChannels, float minVectorRange, float maxVectorRange, float transformAxis)
+    private void SetCsoundChannelBasedOnPosition(CsoundChannelValueBasedOnPosition[] csoundChannels, float minVectorRange, float maxVectorRange, float transformAxis)
     {
-        foreach (CsoundChannelValuesBasedOnPosition data in csoundChannels)
+        foreach (CsoundChannelValueBasedOnPosition data in csoundChannels)
         {
             float value =
                 Mathf.Clamp(ScaleFloat.Scale(minVectorRange, maxVectorRange, data.minValue, data.maxValue, transformAxis), data.minValue, data.maxValue);
@@ -131,7 +140,7 @@ public class CsoundSendValuesBasedOnHandPosition : MonoBehaviour
 }
 
 [System.Serializable]
-public class CsoundChannelValuesBasedOnPosition
+public class CsoundChannelValueBasedOnPosition
 {
     public string channelName;
     public float minValue;
