@@ -1,15 +1,14 @@
 ﻿<Properties StartupConfiguration="{568DDEBF-9A88-25A8-49E2-F072C38C508D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pedro/Scripts/Csound_Sender/CsoundSendScoreOnCollision.cs">
     <Files>
-      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" Line="580" Column="45" />
-      <File FileName="Assets/Scripts/CsoundSendValuesBasedOnObjectPosition.cs" />
-      <File FileName="Assets/Scriabin/Scripts/GranuleraChangeNote.cs" />
-      <File FileName="Assets/Scriabin/Scripts/ColorChanger.cs" />
+      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" Line="655" Column="1" />
+      <File FileName="Assets/DebugCSound.cs" Line="15" Column="37" />
+      <File FileName="Assets/Pedro/Scripts/Csound_Sender/CsoundSendScoreOnCollision.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="80cc245c-c9b5-4f3b-95cc-bbe37e1bc253" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b93b5610-d39a-45f3-9453-b4fa63697ac6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
