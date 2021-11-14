@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{568DDEBF-9A88-25A8-49E2-F072C38C508D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pedro/Scripts/Csound_Sender/CsoundSendScoreOnCollision.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scriabin/Scripts/Drawing.cs">
     <Files>
       <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" Line="655" Column="1" />
-      <File FileName="Assets/DebugCSound.cs" Line="15" Column="37" />
       <File FileName="Assets/Pedro/Scripts/Csound_Sender/CsoundSendScoreOnCollision.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scriabin/Scripts/Drawing.cs" Line="6" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

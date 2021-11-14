@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.Events;
+using PDollarGestureRecognizer; // for recognizer algorithm
 
 
 public class Drawing : MonoBehaviour
@@ -17,7 +18,7 @@ public class Drawing : MonoBehaviour
     List<Vector3> currentLinePosition = new List<Vector3>(); // Store the position of the line that is currently being created
     public float lineWidth = 0.03f;
     public Material lineMaterial;
-    public float distanceThreshold = 0.05f;
+    public float distanceThreshold = 0.01f;
 
     // Logic
     public bool isDrawing = false;
@@ -25,6 +26,13 @@ public class Drawing : MonoBehaviour
     // Unity Event
     public UnityEvent startDrawingEvent;
     public UnityEvent stopDrawingEvent;
+
+
+    // Gestures
+    public bool creationMode = true;
+    public string newGestureName;
+    private List<Gesture> trainingSet = new List<Gesture>();
+
 
 
     // Start is called before the first frame update
@@ -90,6 +98,31 @@ public class Drawing : MonoBehaviour
         currentLine = null;
 
         stopDrawingEvent?.Invoke();
+
+        Point[] pointArray = new Point[currentLinePosition.Count - 1];
+
+
+        //solves the 3D to 2D 
+        for (int i = 0; i < currentLinePosition.Count; i++)
+        {
+            Vector2 screenPoint = Camera.main.WorldToScreenPoint(currentLinePosition[i]);
+            pointArray[i] = new Point(screenPoint.x, screenPoint.y, 0);
+        }
+
+
+        Gesture newGesture = new Gesture(pointArray);
+
+
+        // Add new Gesture to training set
+        if (creationMode)
+        {
+            newGesture.Name = newGestureName;
+            trainingSet.Add(newGesture);
+        }
+        else // Recognize Gesture
+        {
+            Result result = PointCloudRecognizer.Classify(newGesture, trainingSet.ToArray());
+        }
     }
 
     void UpdateDrawing()
