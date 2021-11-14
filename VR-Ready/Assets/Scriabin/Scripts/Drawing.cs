@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.Events;
 using PDollarGestureRecognizer; // for recognizer algorithm
+using System.IO;
 
 
 public class Drawing : MonoBehaviour
@@ -39,6 +40,14 @@ public class Drawing : MonoBehaviour
     void Start()
     {
         _controller = GetComponent<XRController>();
+
+        // Looks for previously added gestures
+        string[] gestureFiles = Directory.GetFiles(Application.persistentDataPath, "*.xml");
+
+        foreach (var item in gestureFiles)
+        {
+            trainingSet.Add(GestureIO.ReadGestureFromFile(item));
+        }
         
     }
 
@@ -118,6 +127,11 @@ public class Drawing : MonoBehaviour
         {
             newGesture.Name = newGestureName;
             trainingSet.Add(newGesture);
+
+
+            // store gesture in a file
+            string fileName = Application.persistentDataPath + "/" + newGestureName + ".xml"; // Thank you Valem!
+            GestureIO.WriteGesture(pointArray, newGestureName, fileName);
         }
         else // Recognize Gesture
         {
