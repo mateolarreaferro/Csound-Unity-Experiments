@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.csound.csoundunity": {
-      "version": "file:/Users/mlf/Desktop/Csound-Unity-Experiments/CsoundUnity Package",
+      "version": "file:/Users/caiojiacomini/Documents/_CaioDocs/_Unity/CsoundUnity/Csound-Unity-Experiments/CsoundUnityPackage",
       "depth": 0,
       "source": "local",
       "dependencies": {}

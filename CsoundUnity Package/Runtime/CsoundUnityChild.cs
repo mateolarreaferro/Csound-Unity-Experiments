@@ -44,6 +44,12 @@ public class CsoundUnityChild : MonoBehaviour
     private CsoundUnity csoundUnity;
     // private uint ksmpsIndex = 0;
 
+    /* FIX ATTEMPT SPATIALIZATION ISSUES
+     * */
+    //float[] audioClipData = new float[2];
+    //float[] audioSourceDataLeft = new float[1024];
+    //float[] audioSourceDataRight = new float[1024];
+    //float[] audioSourceData = new float[2048];
     #endregion PRIVATE_FIELDS
 
 
@@ -64,31 +70,65 @@ public class CsoundUnityChild : MonoBehaviour
 
         audioSource.velocityUpdateMode = AudioVelocityUpdateMode.Fixed;
         audioSource.spatialBlend = 1.0f;
+        audioSource.spatializePostEffects = true;
+
+        // this will invert the audio channels
+        // 0---------180-----360
+        // normal----mono----reverse
+        // audioSource.spread = 360.0f; 
+
+        /* FIX SPATIALIZATION ISSUES
+        */
+        if (audioSource.clip == null)
+        {
+            var ac = AudioClip.Create("DummyClip", 32, 1, AudioSettings.outputSampleRate, false);
+            var data = new float[32];
+            for (var i = 0; i < data.Length; i++)
+            {
+                data[i] = 1;
+            }
+            ac.SetData(data, 0);
+
+            audioSource.clip = ac;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+
+        if (namedAudioChannelData.Count == 0)
+            for (var chan = 0; chan < (int)AudioChannelsSetting; chan++)
+            {
+                namedAudioChannelData.Add(new MYFLT[bufferSize]);
+            }
 
         if (selectedAudioChannelIndexByChannel == null) selectedAudioChannelIndexByChannel = new int[2];
         // TODO: force doppler level of the AudioSource to 0, to avoid audio artefacts ?
         // audioSource.dopplerLevel = 0;
     }
 
-    public void Init(CsoundUnity csound)
+    public void Init(CsoundUnity csound, AudioChannels audioChannels = AudioChannels.MONO)
     {
+        AudioChannelsSetting = audioChannels;
+
+        for (var chan = 0; chan < (int)audioChannels; chan++)
+        {
+            namedAudioChannelData.Add(new MYFLT[bufferSize]);
+        }
+
         this.csoundUnity = csound;
         this.csoundUnityGameObject = csound.gameObject;
+        this.availableAudioChannels = csound.availableAudioChannels;
+        this.selectedAudioChannelIndexByChannel = new int[2];
         zerodbfs = csoundUnity.Get0dbfs();
     }
 
     public void SetAudioChannel(int channel, int audioChannel)
     {
+        //Debug.Log($"CsoundUnityChild SetAudioChannel channel: {channel}, audioChannel: {audioChannel}");
         selectedAudioChannelIndexByChannel[channel] = audioChannel;
     }
 
     void Start()
     {
-        for (var chan = 0; chan < (int)AudioChannelsSetting; chan++)
-        {
-            namedAudioChannelData.Add(new MYFLT[bufferSize]);
-        }
-
         if (csoundUnity) zerodbfs = csoundUnity.Get0dbfs();
     }
 
@@ -100,10 +140,10 @@ public class CsoundUnityChild : MonoBehaviour
         }
     }
 
-    public void ProcessBlock(float[] samples, int numChannels)
+    void ProcessBlock(float[] samples, int numChannels)
     {
         // print("CsoundUnityChild DSP Time - " + AudioSettings.dspTime * 48000);
-        if (availableAudioChannels.Count < 1)
+        if (availableAudioChannels == null || availableAudioChannels.Count < 1 || !csoundUnity.IsInitialized)
         {
             return;
         }
@@ -125,10 +165,10 @@ public class CsoundUnityChild : MonoBehaviour
                     case AudioChannels.MONO:
                         // sample is multiplied by 0.5f to obtain the same volume as the original audio file, 
                         // since the mono channel is duplicated between the channels
-                        samples[i + channel] = (float)(namedAudioChannelData[0][sampleIndex] / zerodbfs * 0.5f);
+                        samples[i + channel] = samples[i + channel] * (float)(namedAudioChannelData[0][sampleIndex] / zerodbfs * 0.5f);
                         break;
                     case AudioChannels.STEREO:
-                        samples[i + channel] = (float)(namedAudioChannelData[(int)channel][sampleIndex] / zerodbfs);
+                        samples[i + channel] = samples[i + channel] * (float)(namedAudioChannelData[(int)channel][sampleIndex] / zerodbfs);
                         break;
                 }
             }
