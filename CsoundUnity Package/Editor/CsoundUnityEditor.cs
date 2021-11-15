@@ -153,8 +153,9 @@ public class CsoundUnityEditor : Editor
     private void DrawCsdString() {
 
         m_drawCsoundString.boolValue = EditorGUILayout.Foldout(m_drawCsoundString.boolValue, "Edit Csd Section", true);
-        if (m_drawCsoundString.boolValue) {
-            scrollPos = EditorGUILayout.BeginScrollView(scrollPos, GUILayout.Height(500));
+        if (m_drawCsoundString.boolValue && m_csoundString.stringValue.Length > 30) {
+            var lines = m_csoundString.stringValue.Split('\n').Length;
+            scrollPos = EditorGUILayout.BeginScrollView(scrollPos, GUILayout.Height(Mathf.Min(Mathf.Max(30, lines * 30), 500f)));
 
             m_csoundString.stringValue = EditorGUILayout.TextArea(m_csoundString.stringValue);
 
@@ -222,6 +223,8 @@ public class CsoundUnityEditor : Editor
                 {
                     var ac = m_availableAudioChannels.GetArrayElementAtIndex(i);
                     EditorGUILayout.LabelField($"Channel {i}", ac.stringValue);
+
+                    // TODO DRAW A VU METER FOR EVERY CHANNEL?
                 }
             }
         }
@@ -318,9 +321,13 @@ public class CsoundUnityEditor : Editor
                     }
                     else if (type.Contains("button"))
                     {
-                        if (GUILayout.Button(label) && Application.isPlaying && csoundUnity != null)
+                        if (GUILayout.Button(label))
                         {
-                            csoundUnity.SetChannel(channel, 1);
+                            if (Application.isPlaying && csoundUnity != null)
+                            {
+                                chanValue.floatValue = chanValue.floatValue == 1 ? 0 : 1;
+                                csoundUnity.SetChannel(channel, chanValue.floatValue);
+                            }
                         }
                     }
                     else if (type.Contains("groupbox"))

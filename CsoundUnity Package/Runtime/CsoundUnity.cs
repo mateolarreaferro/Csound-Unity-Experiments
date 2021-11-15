@@ -63,14 +63,14 @@ public class CsoundChannelController
     }
 }
 
-/// <summary>
-/// Utility class for CsoundFiles to copy 
-/// </summary>
-[Serializable]
-public struct CsoundFilesInfo
-{
-    public string[] fileNames;
-}
+///// <summary>
+///// Utility class for CsoundFiles to copy 
+///// </summary>
+//[Serializable]
+//public struct CsoundFilesInfo
+//{
+//    public string[] fileNames;
+//}
 
 #endregion PUBLIC_CLASSES
 
@@ -234,7 +234,6 @@ public class CsoundUnity : MonoBehaviour
 
     #endregion
 
-
     /// <summary>
     /// CsoundUnity Awake function. Called when this script is first instantiated. This should never be called directly. 
     /// This functions behaves in more or less the same way as a class constructor. When creating references to the
@@ -263,6 +262,20 @@ public class CsoundUnity : MonoBehaviour
         //}
 
         audioSource = GetComponent<AudioSource>();
+        audioSource.spatializePostEffects = true;
+
+        // FIX SPATIALIZATION ISSUES
+        if (audioSource.clip == null && !processClipAudio)
+        {
+            var ac = AudioClip.Create("DummyClip", 32, 1, AudioSettings.outputSampleRate, false);
+            var data = new float[32];
+            for (var i = 0; i < data.Length; i++) data[i] = 1;
+            ac.SetData(data, 0);
+
+            audioSource.clip = ac;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
 
         /// the CsoundUnityBridge constructor takes a path to the package Runtime folder, and a string with the csound code.
         /// It then calls createCsound() to create an instance of Csound and compile the csd string.
@@ -275,7 +288,10 @@ public class CsoundUnity : MonoBehaviour
                 // initialise channels if found in xml descriptor..
                 for (int i = 0; i < channels.Count; i++)
                 {
-                    csound.SetChannel(channels[i].channel, channels[i].value);
+                    if (channels[i].type.Contains("combobox"))
+                        csound.SetChannel(channels[i].channel, channels[i].value + 1);
+                    else
+                        csound.SetChannel(channels[i].channel, channels[i].value);
                 }
 
             foreach (var name in availableAudioChannels)
@@ -327,7 +343,7 @@ public class CsoundUnity : MonoBehaviour
     #region PUBLIC_METHODS
 
     /// <summary>
-    /// Returns the version number times 1000 (5.00.0 = 5000).
+    /// Returns the Csound version number times 1000 (5.00.0 = 5000).
     /// </summary>
     /// <returns></returns>
     public int GetVersion()
@@ -336,7 +352,7 @@ public class CsoundUnity : MonoBehaviour
     }
 
     /// <summary>
-    /// Returns the API version number times 100 (1.00 = 100).
+    /// Returns the Csound API version number times 100 (1.00 = 100).
     /// </summary>
     /// <returns></returns>
     public int GetAPIVersion()
@@ -1419,6 +1435,10 @@ public class CsoundUnity : MonoBehaviour
             {
                 for (uint channel = 0; channel < numChannels; channel++)
                 {
+                    // necessary to avoid calling csound functions when quitting while reading this block of samples
+                    // always remember OnAudioFilterRead runs on a different thread
+                    if (_quitting) return;
+
                     if (mute == true)
                         samples[i + channel] = 0.0f;
                     else
@@ -1443,9 +1463,7 @@ public class CsoundUnity : MonoBehaviour
 
                         //if csound nChnls are more than the current channel, set the last csound channel available on the sample (assumes GetNchnls above 0)
                         var outputSampleChannel = channel < GetNchnls() ? channel : GetNchnls() - 1;
-                        //var rand = new System.Random();
-                        //samples[i + channel] = (float)rand.NextDouble();
-                        samples[i + channel] = (float)GetOutputSample((int)ksmpsIndex, (int)outputSampleChannel) / zerdbfs;
+                        samples[i + channel] = samples[i + channel] * (float)GetOutputSample((int)ksmpsIndex, (int)outputSampleChannel) / zerdbfs;
 
                         if (loudVolumeWarning && (samples[i + channel] > loudWarningThreshold))
                         {
