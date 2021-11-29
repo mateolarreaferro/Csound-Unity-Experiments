@@ -19,16 +19,21 @@ public class GetControllerButtonValues : MonoBehaviour
     [HideInInspector] public bool joystickClickValue;
 
     public UnityEvent primaryButtonPressEvent;
+    public UnityEvent primaryButtonReleaseEvent;
     private bool canSendPrimaryEvent = true;
     public UnityEvent secondaryButtonPressEvent;
+    public UnityEvent secondaryButtonReleaseEvent;
     private bool canSendSecondaryEvent = true;
 
     public UnityEvent triggerButtonPressEvent;
+    public UnityEvent triggerButtonReleaseEvent;
     private bool canSendTriggerEvent = true;
     public UnityEvent gripButtonPressEvent;
+    public UnityEvent gripButtonReleaseEvent;
     private bool canSendGripEvent = true;
 
     public UnityEvent joystickPressEvent;
+    public UnityEvent joystickReleaseEvent;
     private bool canSendJoystickEvent = true;
 
     // Start is called before the first frame update
@@ -110,8 +115,9 @@ public class GetControllerButtonValues : MonoBehaviour
             primaryButtonPressEvent?.Invoke();
             canSendPrimaryEvent = false;
         }
-        else if (!primaryButtonValue)
+        else if (!primaryButtonValue && !canSendPrimaryEvent)
         {
+            primaryButtonReleaseEvent?.Invoke();
             canSendPrimaryEvent = true;
         }
 
@@ -120,8 +126,9 @@ public class GetControllerButtonValues : MonoBehaviour
             secondaryButtonPressEvent?.Invoke();
             canSendSecondaryEvent = false;
         }
-        else if (!secondaryButtonValue)
+        else if (!secondaryButtonValue && !canSendSecondaryEvent)
         {
+            secondaryButtonReleaseEvent?.Invoke();
             canSendSecondaryEvent = true;
         }
 
@@ -131,18 +138,20 @@ public class GetControllerButtonValues : MonoBehaviour
             triggerButtonPressEvent?.Invoke();
             canSendTriggerEvent = false;
         }
-        else if (!triggerButtonValue)
+        else if (!triggerButtonValue && !canSendTriggerEvent)
         {
+            triggerButtonReleaseEvent?.Invoke();
             canSendTriggerEvent = true;
         }
 
         if (gripButtonValue && canSendGripEvent)
         {
             gripButtonPressEvent?.Invoke();
-            canSendTriggerEvent = false;
+            canSendGripEvent = false;
         }
-        else if (!gripButtonValue)
+        else if (!gripButtonValue && !canSendGripEvent)
         {
+            gripButtonReleaseEvent?.Invoke();
             canSendGripEvent = true;
         }
 
@@ -152,8 +161,9 @@ public class GetControllerButtonValues : MonoBehaviour
             joystickPressEvent?.Invoke();
             canSendJoystickEvent = false;
         }
-        else if (!joystickClickValue)
+        else if (!joystickClickValue && !canSendJoystickEvent)
         {
+            joystickReleaseEvent?.Invoke();
             canSendJoystickEvent = true;
         }
     }

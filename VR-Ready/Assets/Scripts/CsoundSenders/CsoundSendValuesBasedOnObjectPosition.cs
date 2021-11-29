@@ -4,16 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-//TODO
-//Make X and Z axis relative to rotation
-
 public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
 {
     public enum PositionReference { Absolute, Relative };
 
-    [Header("DEBUGGIN")]
     public bool debug;
-    public TextMeshProUGUI vectorDisplayText;
     [Space]
     [Header("VECTOR RANGES")]
     [SerializeField] private Vector3 vectorRanges;
@@ -39,6 +34,9 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
     {
         camera = Camera.main.transform;
         objectPostition = gameObject;
+
+        if (csound == null)
+            csound = GetComponent<CsoundUnity>();
     }
 
     private void Start()
@@ -56,24 +54,12 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
         SetCsoundValuesY();
         SetCsoundValuesX();
         SetCsoundValuesZ();
-
-        if (debug)
-            DisplayRelativePosOnCanvas();
     }
 
     #region Relative Position Calculation
-    private void DisplayRelativePosOnCanvas()
-    {
-        vectorDisplayText.text =
-            "X: " + relativePos.x.ToString("#.00") +
-            ", Y: " + transform.position.y.ToString("#.00") + ", " +
-            "Z: " + relativePos.z.ToString("#.00");
-    }
-
-    public void GetRelativeStartPos()
+    public void UpdatePosition()
     {
         startPos = camera.transform.InverseTransformPoint(transform.position);
-        //startPos = transform.position;
         updatePosition = true;
     }
 
@@ -86,7 +72,7 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
         relativePos.z = inverseTransform.z - startPos.z;
     }
 
-    public void StopUpdatingRelativePos()
+    public void StopUpdatingPosition()
     {
         updatePosition = false;
     }
@@ -109,15 +95,15 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
                 csound.SetChannel(data.channelName, Mathf.Abs(value));
             }
 
-            //if (debug)
-            //    Debug.Log(data.channelName + ": " + value);
+            if (debug)
+                Debug.Log(data.channelName + ": " + value);
         }
     }
 
     private void SetCsoundValuesX()
     {
         if (setXPositionTo == PositionReference.Absolute)
-            SetCsoundChannelBasedOnPosition(csoundChannelsX, -vectorRanges.x, vectorRanges.y, transform.position.x);
+            SetCsoundChannelBasedOnPosition(csoundChannelsX, -vectorRanges.x, vectorRanges.x, transform.position.x);
         else
             SetCsoundChannelBasedOnPosition(csoundChannelsX, -vectorRanges.x, vectorRanges.x, relativePos.x);
     }
@@ -148,4 +134,3 @@ public class CsoundChannelValueBasedOnPosition
     public float maxValue;
     public bool returnAbsoluteValue = false;
 }
-
