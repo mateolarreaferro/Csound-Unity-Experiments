@@ -1,15 +1,17 @@
 ﻿<Properties StartupConfiguration="{568DDEBF-9A88-25A8-49E2-F072C38C508D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CsoundSenders/CsoundSendValuesBasedOnObjectPosition.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CsoundSenders/CsoundObjectSpeed.cs">
     <Files>
       <File FileName="Assets/Scripts/Controllers/GetControllerButtonValues.cs" Line="16" Column="1" />
-      <File FileName="Assets/Caio/Scripts/Tutorials/Tutorial_StartAndStop.cs" Line="11" Column="39" />
-      <File FileName="Assets/Caio/Scripts/Tutorials/Tutorial_PassControllerValueToCsound.cs" Line="22" Column="6" />
-      <File FileName="Assets/Scripts/CsoundSenders/CsoundSendValuesBasedOnObjectPosition.cs" Line="4" Column="22" />
+      <File FileName="Assets/Caio/Scripts/Tutorials/Tutorial_StartAndStop.cs" />
+      <File FileName="Assets/Caio/Scripts/Tutorials/Tutorial_PassControllerValueToCsound.cs" />
+      <File FileName="Assets/Scripts/CsoundSenders/CsoundSendValuesBasedOnObjectPosition.cs" Line="87" Column="102" />
+      <File FileName="Assets/Scripts/CsoundSenders/CsoundSetChannels.cs" Line="33" Column="1" />
+      <File FileName="Assets/Scripts/CsoundSenders/CsoundObjectSpeed.cs" Line="21" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8c695779-73f4-42f8-968d-3557cdb0c8b0" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="67b86569-35f8-4358-989c-e2ad0ccbabc5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
