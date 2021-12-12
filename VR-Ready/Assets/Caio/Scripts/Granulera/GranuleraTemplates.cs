@@ -8,14 +8,14 @@ public class GranuleraTemplates : MonoBehaviour
 
     private CsoundUnity csound;
     public GranuleraTemplate templateSelection;
-    public bool applyOnAwake = true;
+    public bool applyOnStart = true;
 
     // Start is called before the first frame update
     void Start()
     {
         csound = GetComponent<CsoundUnity>();
 
-        if (!applyOnAwake) { return; }
+        if (!applyOnStart) { return; }
 
         switch (templateSelection)
         {
@@ -569,11 +569,11 @@ public class GranuleraTemplates : MonoBehaviour
         csound.SetChannel("FrequencyVariationRange", 1);
         csound.SetChannel("FrequencyVariationRate", 0);
         csound.SetChannel("PitchVariation", 0);
-        csound.SetChannel("GrainDuration", 0.8f);
-        csound.SetChannel("DurationVariationRange", 0.4f);
+        csound.SetChannel("GrainDuration", 0.15f);
+        csound.SetChannel("DurationVariationRange", 0f);
         csound.SetChannel("DurationVariationRate", 3.6f);
         csound.SetChannel("GrainDensity", 14f);
-        csound.SetChannel("DensityVariationRange", 6f);
+        csound.SetChannel("DensityVariationRange", 0f);
         csound.SetChannel("DensityVariationRate", 4f);
         csound.SetChannel("PhaseVariation", 0f);
 

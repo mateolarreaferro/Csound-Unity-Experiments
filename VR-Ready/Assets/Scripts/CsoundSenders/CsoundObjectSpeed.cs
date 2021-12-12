@@ -12,11 +12,11 @@ public class CsoundObjectSpeed : MonoBehaviour
 
     [Header("VELOCITY")]
     [SerializeField] private VelocityMethod velocityMethod = VelocityMethod.Rigidbody;
-    public float maxVelocity;
+    public float maxSpeedValue;
     [SerializeField] private Rigidbody rb;
-    [SerializeField] private bool debugVelocity = false;
+    [SerializeField] private bool debugSpeed = false;
 
-    private float velocity;
+    private float speed;
     private Vector3 previousPos;
 
     private void Awake()
@@ -33,24 +33,33 @@ public class CsoundObjectSpeed : MonoBehaviour
     {
         if (velocityMethod == VelocityMethod.Rigidbody)
         {
-            velocity = rb.velocity.magnitude;
+            speed = rb.velocity.magnitude;
         }
         else if(velocityMethod == VelocityMethod.Transform)
         {
-            velocity = ((transform.position - previousPos).magnitude) / Time.deltaTime;
+            speed = ((transform.position - previousPos).magnitude) / Time.deltaTime;
             previousPos = transform.position;
         }
 
-        foreach (ChannelSpeedData data in channelData)
+        foreach(ChannelSpeedData data in channelData)
         {
             float value =
-                Mathf.Clamp(ScaleFloat.Scale(0, maxVelocity, data.minValue, data.maxValue, rb.velocity.magnitude), data.minValue, data.maxValue);
+                Mathf.Clamp(ScaleFloat(0, maxSpeedValue, data.minValue, data.maxValue, rb.velocity.magnitude), data.minValue, data.maxValue);
 
             csound.SetChannel(data.channelName, value);
         }
 
-        if (debugVelocity)
-            print(velocity);
+        if (debugSpeed)
+            print(speed);
+    }
+
+    private float ScaleFloat(float OldMin, float OldMax, float NewMin, float NewMax, float OldValue)
+    {
+        float OldRange = (OldMax - OldMin);
+        float NewRange = (NewMax - NewMin);
+        float NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin;
+
+        return (NewValue);
     }
 }
 
