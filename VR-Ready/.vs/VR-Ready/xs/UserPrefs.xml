@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{568DDEBF-9A88-25A8-49E2-F072C38C508D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CsoundSenders/CsoundSendValuesBasedOnObjectPosition.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs">
     <Files>
       <File FileName="Assets/Scripts/CsoundSenders/CsoundObjectSpeed.cs" Line="24" Column="25" />
       <File FileName="Assets/Scripts/CsoundSenders/CsoundObjectRotationSpeed.cs" Line="13" Column="43" />
       <File FileName="Assets/Scripts/CsoundSenders/CsoundSetChannels.cs" />
       <File FileName="Assets/Caio/Scripts/Granulera/GranuleraController.cs" Line="30" Column="1" />
-      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" Line="333" Column="45" />
-      <File FileName="Assets/Scripts/CsoundSenders/CsoundSendValuesBasedOnObjectPosition.cs" Line="28" Column="39" />
+      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" Line="544" Column="48" />
+      <File FileName="Assets/Scripts/CsoundSenders/CsoundSendValuesBasedOnObjectPosition.cs" Line="31" Column="1" />
+      <File FileName="Assets/Caio/Scripts/AddRandomForce.cs" Line="21" Column="50" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

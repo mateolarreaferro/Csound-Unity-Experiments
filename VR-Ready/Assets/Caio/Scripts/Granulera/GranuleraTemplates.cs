@@ -330,7 +330,7 @@ public class GranuleraTemplates : MonoBehaviour
         csound.SetChannel("FilterSelection", 1);
         csound.SetChannel("FilterFreq", 0.5f);
         csound.SetChannel("FilterRange", 0.0001f);
-        csound.SetChannel("FilterReson", 35f);
+        csound.SetChannel("FilterReson", 25f);
         csound.SetChannel("FilterBW", 1000);
         csound.SetChannel("FilterAttack", 0.01f);
         csound.SetChannel("FilterDecay", 1.63f);
@@ -339,12 +339,12 @@ public class GranuleraTemplates : MonoBehaviour
 
         //LFOs
         csound.SetChannel("LfoFilterFreq", 0.11f);
-        csound.SetChannel("LfoFilterRange", 0.25f);
+        csound.SetChannel("LfoFilterRange", 0.15f);
         csound.SetChannel("LfoModAmpFreq", 0f);
         csound.SetChannel("LfoModAmpRange", 0f);
 
         //MODULATION
-        csound.SetChannel("RMFreq", 612);
+        csound.SetChannel("RMFreq", 2400);
         csound.SetChannel("RMAmp", 0f);
         csound.SetChannel("FMFreq", 7989);
         csound.SetChannel("FMAmp", 0f);
