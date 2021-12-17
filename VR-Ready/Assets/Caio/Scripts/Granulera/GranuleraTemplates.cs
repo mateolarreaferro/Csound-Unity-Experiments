@@ -443,7 +443,7 @@ public class GranuleraTemplates : MonoBehaviour
         csound.SetChannel("AmpAttack", 2.15f);
         csound.SetChannel("AmpDecay", 5);
         csound.SetChannel("AmpSustain", 0.5f);
-        csound.SetChannel("AmpRelease", 6.55f);
+        csound.SetChannel("AmpRelease", 6f);
 
         //REVERB
         csound.SetChannel("ReverbBypass", 1);

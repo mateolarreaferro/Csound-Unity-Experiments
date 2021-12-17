@@ -1188,6 +1188,36 @@ MonoBehaviour:
   m_MatchOrientation: 0
   m_TeleportTrigger: 0
   m_TeleportAnchorTransform: {fileID: 931966965}
+--- !u!1 &953144842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 953144843}
+  m_Layer: 10
+  m_Name: Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &953144843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953144842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8725303003944011532}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1131613140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,7 +1274,7 @@ MonoBehaviour:
     minRandomValue: 0
     maxRandomValue: 0
   - channelName: AmpRelease
-    value: 0.5
+    value: 2.5
     setRandom: 0
     minRandomValue: 0
     maxRandomValue: 0
@@ -1291,7 +1321,7 @@ MonoBehaviour:
   loudVolumeWarning: 1
   loudWarningThreshold: 10
   csoundScore: 
-  _csoundFileGUID: 9909c13686901470aa954df91ea0529c
+  _csoundFileGUID: e1e5152db3b9d4e699c93a75fb928a28
   _csoundString: "<Cabbage>\r\n//CsoundUnity\r\nbutton bounds(24, 784, 80, 40) channel(\"OnOff\")
     text(\"Off\", \"On\")\r\nrslider bounds(246, 766, 60, 60) channel(\"MidiNote\")
     range(0, 127, 60, 1, 1) text(\"MidiNote\")\r\n\r\n//HEADER AND UTILITIES\r\nform
@@ -1539,31 +1569,30 @@ MonoBehaviour:
     kPhaseVar rand kPhaseVar\r\n\r\n    //Pitch\r\n        iFreqMIDI = p4\r\n       
     kPitchVar       chnget \"PitchVariation\"\r\n        \r\n        kFreqVarRange  
     chnget \"FrequencyVariationRange\"\r\n        kFreqVarRate    chnget \"FrequencyVariationRate\"\r\n       
-    kGlobalTuning   chnget \"GlobalTuning\"\r\n    \r\n        kLfoTuningRange chnget
+    gkGlobalTuning   chnget \"GlobalTuning\"\r\n    \r\n        kLfoTuningRange chnget
     \"LfoTuningRange\"\r\n        kLfoTuningFreq  chnget \"LfoTuningFreq\"\r\n       
     \r\n        kLfoTuning      lfo kLfoTuningRange, kLfoTuningFreq       \r\n               
-    \r\n        kPitchVar       rand kPitchVar\r\n        kGlobalTuning = cent(kGlobalTuning)\r\n   
+    \r\n        kPitchVar       rand kPitchVar\r\n        gkGlobalTuning = cent(gkGlobalTuning)\r\n   
     \r\n        kFreqVar jitter kFreqVarRange, .2 * kFreqVarRate, .5 * kFreqVarRate\r\n       
-    gkFreqTotal = ((iFreqMIDI + kFreqVar) * kGlobalTuning)\r\n        \r\n       
-    gkFreqTotal port gkFreqTotal, 0.02\r\n    \r\n    //Spatialization\r\n       
-    kGrainSpread    chnget \"GrainSpread\"\r\n        kRandomSpread   random 0, kGrainSpread\r\n       
-    kRandomSpread   portk kRandomSpread, 0.02\r\n    \r\n    //Filter\r\n       
-    iFilterFreq     chnget \"FilterFreq\"\r\n        iFilterRange    chnget \"FilterRange\"\r\n       
-    iFilterAttack   chnget \"FilterAttack\"\r\n        iFilterDecay    chnget \"FilterDecay\"\r\n       
-    iFilterSustain  chnget \"FilterSustain\"\r\n        iFilterRelease  chnget \"FilterRelease\"\r\n       
-    giFilterType    = chnget:i(\"FilterSelection\") - 1\r\n \r\n        gkFilterFreq   
-    chnget \"FilterFreq\"\r\n        gkFilterReson   chnget \"FilterReson\"\r\n       
-    gkFilterReson   port gkFilterReson, 0.02\r\n        gkFilterBW      chnget \"FilterBW\"\r\n       
-    gkFilterBW      port gkFilterBW, 0.02\r\n\r\n        gkFilterNoteTracking  =
-    1 ;chnget \"FilterNoteTrack\"\r\n            \r\n            //Filter Envelope:   
-    \r\n            if iFilterAttack > 0.01 then\r\n                kFilterEnv  expsegr
-    iFilterRange, iFilterAttack, iFilterFreq, iFilterDecay, iFilterSustain * iFilterFreq,
-    iFilterRelease, iFilterRange\r\n            else\r\n                kFilterEnv 
-    expsegr iFilterFreq, iFilterDecay, iFilterSustain * iFilterFreq, iFilterRelease,
-    iFilterRange\r\n            endif\r\n                \r\n            //Allows
-    filter frequency to be modulated in real time\r\n            kcc1Trig changed2
-    gkFilterFreq\r\n            kcc1Trig2 init 0\r\n        \r\n            if kcc1Trig
-    == 1 then\r\n                kcc1Trig2 = 1\r\n            endif\r\n\r\n           
+    gkFreqTotal = iFreqMIDI + kFreqVar\r\n        \r\n        gkFreqTotal port gkFreqTotal,
+    0.02\r\n    \r\n    //Spatialization\r\n        kGrainSpread    chnget \"GrainSpread\"\r\n       
+    kRandomSpread   random 0, kGrainSpread\r\n        kRandomSpread   portk kRandomSpread,
+    0.02\r\n    \r\n    //Filter\r\n        iFilterFreq     chnget \"FilterFreq\"\r\n       
+    iFilterRange    chnget \"FilterRange\"\r\n        iFilterAttack   chnget \"FilterAttack\"\r\n       
+    iFilterDecay    chnget \"FilterDecay\"\r\n        iFilterSustain  chnget \"FilterSustain\"\r\n       
+    iFilterRelease  chnget \"FilterRelease\"\r\n        giFilterType    = chnget:i(\"FilterSelection\")
+    - 1\r\n \r\n        gkFilterFreq    chnget \"FilterFreq\"\r\n        gkFilterReson  
+    chnget \"FilterReson\"\r\n        gkFilterReson   port gkFilterReson, 0.02\r\n       
+    gkFilterBW      chnget \"FilterBW\"\r\n        gkFilterBW      port gkFilterBW,
+    0.02\r\n\r\n        gkFilterNoteTracking  = 1 ;chnget \"FilterNoteTrack\"\r\n           
+    \r\n            //Filter Envelope:    \r\n            if iFilterAttack > 0.01
+    then\r\n                kFilterEnv  expsegr iFilterRange, iFilterAttack, iFilterFreq,
+    iFilterDecay, iFilterSustain * iFilterFreq, iFilterRelease, iFilterRange\r\n           
+    else\r\n                kFilterEnv  expsegr iFilterFreq, iFilterDecay, iFilterSustain
+    * iFilterFreq, iFilterRelease, iFilterRange\r\n            endif\r\n               
+    \r\n            //Allows filter frequency to be modulated in real time\r\n           
+    kcc1Trig changed2 gkFilterFreq\r\n            kcc1Trig2 init 0\r\n        \r\n           
+    if kcc1Trig == 1 then\r\n                kcc1Trig2 = 1\r\n            endif\r\n\r\n           
     if release() == 0 then\r\n                if kcc1Trig2 == 1 then\r\n                   
     kFilterFreqSum = gkFilterFreq\r\n                else\r\n                   
     kFilterFreqSum = kFilterEnv\r\n                endif  \r\n            else\r\n               
@@ -1616,14 +1645,15 @@ MonoBehaviour:
     MODULATION\r\n        iModAmpLfo = p12\r\n        iModFreqLfo = p13\r\n       
     iFMAmpInterpol ntrpol 0, 20000, iFMAmp\r\n        aFMOsc poscil iFMAmpInterpol
     * iModAmpLfo, iFMFreq + abs(iModFreqLfo * 2)\r\n\r\n    //OSCILLATORS   \r\n       
-    aGrain1 poscil aWindowEnv * iOsc1Vol, (p4 * iOsc1Semi * iOsc1Cent) + p8 + aFMOsc,
-    iFn1, p5\r\n        aGrain2 poscil aWindowEnv * iOsc2Vol, (p4 * iOsc2Semi * iOsc2Cent)
-    + p8 + aFMOsc, iFn2, p5\r\n        aGrain3 poscil aWindowEnv * iOsc3Vol, (p4
-    * iOsc3Semi * iOsc3Cent) + p8 + aFMOsc, iFn3, p5\r\n        \r\n        iAmpEnv
-    = p7\r\n        iAmpLfo = p11\r\n        aGrainSum = (aGrain1 + aGrain2 + aGrain3)
-    * iAmpEnv * iAmpLfo\r\n\r\n    //RING MODULATION\r\n        iRMFreq = cent(iRMFreq)\r\n       
-    aRMOsc poscil 1, (iRMFreq * gkFreqTotal) + iModFreqLfo\r\n    \r\n        aRingModSig
-    ntrpol aGrainSum, aRMOsc * aGrainSum, iRMAmp * iModAmpLfo * 2\r\n\r\n    //FILTERING:  
+    aGrain1 poscil aWindowEnv * iOsc1Vol, (p4 * iOsc1Semi * iOsc1Cent * gkGlobalTuning)
+    + p8 + aFMOsc, iFn1, p5\r\n        aGrain2 poscil aWindowEnv * iOsc2Vol, (p4
+    * iOsc2Semi * iOsc2Cent * gkGlobalTuning) + p8 + aFMOsc, iFn2, p5\r\n       
+    aGrain3 poscil aWindowEnv * iOsc3Vol, (p4 * iOsc3Semi * iOsc3Cent * gkGlobalTuning)
+    + p8 + aFMOsc, iFn3, p5\r\n        \r\n        iAmpEnv = p7\r\n        iAmpLfo
+    = p11\r\n        aGrainSum = (aGrain1 + aGrain2 + aGrain3) * iAmpEnv * iAmpLfo\r\n\r\n   
+    //RING MODULATION\r\n        iRMFreq = cent(iRMFreq)\r\n        aRMOsc poscil
+    1, (iRMFreq * gkFreqTotal) + iModFreqLfo\r\n    \r\n        aRingModSig ntrpol
+    aGrainSum, aRMOsc * aGrainSum, iRMAmp * iModAmpLfo * 2\r\n\r\n    //FILTERING:  
     \r\n        iFilterEnvTotal ntrpol 20, 20000, p9\r\n\r\n        //Frequency offset       
     \r\n        if gkFilterNoteTracking == 0 then\r\n            kFilterFreqTotal
     =  iFilterEnvTotal\r\n            if gkLfoFilterFreq > 0 then\r\n               
@@ -1677,8 +1707,8 @@ MonoBehaviour:
     \"SigR\" \r\nendin\r\n</CsInstruments>\r\n<CsScore>\r\nf0 z\r\ni \"OnOff\"  
     0 999999999999999999999\r\ni \"Delay\"   0 999999999999999999999\r\ni \"Reverb\" 
     0 999999999999999999999\r\n</CsScore>\r\n</CsoundSynthesizer>\r\n"
-  _csoundFileName: Granulera_CsoundUnity_01.csd
-  _csoundAsset: {fileID: 102900000, guid: 9909c13686901470aa954df91ea0529c, type: 3}
+  _csoundFileName: Granulera_CsoundUnity_02.csd
+  _csoundAsset: {fileID: 102900000, guid: e1e5152db3b9d4e699c93a75fb928a28, type: 3}
   _channels:
   - type: button
     channel: OnOff
@@ -3709,6 +3739,36 @@ MonoBehaviour:
   m_SnapThresholdDistance: 10
   m_Reticle: {fileID: 0}
   m_StopLineAtFirstRaycastHit: 1
+--- !u!1 &1867509695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1867509696}
+  m_Layer: 10
+  m_Name: Attach (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1867509696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867509695}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1788560184}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1943920286
 GameObject:
   m_ObjectHideFlags: 0
@@ -3899,7 +3959,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
-  m_AttachEaseInTime: 0.15
+  m_AttachEaseInTime: 0.5
   m_MovementType: 1
   m_VelocityDamping: 1
   m_VelocityScale: 1
@@ -5238,7 +5298,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -5303,7 +5363,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 1.1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -6639,7 +6699,7 @@ MonoBehaviour:
   _drawCsoundString: 0
   _drawTestScore: 0
   _drawSettings: 0
-  _drawChannels: 1
+  _drawChannels: 0
   _drawAudioChannels: 0
 --- !u!82 &2000828610
 AudioSource:
@@ -6766,7 +6826,7 @@ MonoBehaviour:
   csound: {fileID: 0}
   channelData:
   - channelName: AmpRelease
-    value: 0.5
+    value: 1.75
     setRandom: 0
     minRandomValue: 0
     maxRandomValue: 0
@@ -6776,7 +6836,7 @@ MonoBehaviour:
     minRandomValue: 60
     maxRandomValue: 75
   - channelName: GlobalVolume
-    value: 0.75
+    value: 0.55
     setRandom: 0
     minRandomValue: 0
     maxRandomValue: 0
@@ -7004,6 +7064,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8725303002601630113, guid: 422c8ea8c088748a0b0131bb8565df4f,
+        type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 1867509696}
     - target: {fileID: 8725303002601630113, guid: 422c8ea8c088748a0b0131bb8565df4f,
         type: 3}
       propertyPath: m_InteractionManager
@@ -7414,6 +7479,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8725303003389963315, guid: 422c8ea8c088748a0b0131bb8565df4f,
+        type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 953144843}
     - target: {fileID: 8725303003389963315, guid: 422c8ea8c088748a0b0131bb8565df4f,
         type: 3}
       propertyPath: m_InteractionManager
