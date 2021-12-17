@@ -25,7 +25,6 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
 
     //Position references
     private Transform camera;
-    private GameObject objectPostition;
     private Vector3 startPos;
     private Vector3 relativePos;
     private bool updatePosition = false;
@@ -33,7 +32,6 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
     private void Awake()
     {
         camera = Camera.main.transform;
-        objectPostition = gameObject;
 
         if (csound == null)
             csound = GetComponent<CsoundUnity>();
@@ -84,7 +82,7 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
         foreach (CsoundChannelValueBasedOnPosition data in csoundChannels)
         {
             float value =
-                Mathf.Clamp(ScaleFloat.Scale(minVectorRange, maxVectorRange, data.minValue, data.maxValue, transformAxis), data.minValue, data.maxValue);
+                Mathf.Clamp(ScaleFloat(minVectorRange, maxVectorRange, data.minValue, data.maxValue, transformAxis), data.minValue, data.maxValue);
 
             if (!data.returnAbsoluteValue)
             {
@@ -124,6 +122,15 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
             SetCsoundChannelBasedOnPosition(csoundChannelsZ, -vectorRanges.z, vectorRanges.z, relativePos.z);
     }
     #endregion
+
+    private float ScaleFloat(float OldMin, float OldMax, float NewMin, float NewMax, float OldValue)
+    {
+        float OldRange = (OldMax - OldMin);
+        float NewRange = (NewMax - NewMin);
+        float NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin;
+
+        return (NewValue);
+    }
 }
 
 [System.Serializable]

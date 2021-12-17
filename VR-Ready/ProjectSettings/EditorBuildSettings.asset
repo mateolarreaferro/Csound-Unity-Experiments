@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Caio/Scenes/SceneSetupTutorial.unity
-    guid: 77ee6778a7cab49b697b428ba4976039
+    path: Assets/Caio/Scenes/Demos/AngularSpeedToCsound.unity
+    guid: 369bf09c38f3b429285f91ca2ae9654c
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a9b9843d8423a401ab98a8931bf309a9,
       type: 2}
