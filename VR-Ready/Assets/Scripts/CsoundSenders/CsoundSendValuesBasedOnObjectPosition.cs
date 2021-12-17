@@ -25,7 +25,6 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
 
     //Position references
     private Transform camera;
-    private GameObject objectPostition;
     private Vector3 startPos;
     private Vector3 relativePos;
     private bool updatePosition = false;
@@ -33,7 +32,6 @@ public class CsoundSendValuesBasedOnObjectPosition : MonoBehaviour
     private void Awake()
     {
         camera = Camera.main.transform;
-        objectPostition = gameObject;
 
         if (csound == null)
             csound = GetComponent<CsoundUnity>();

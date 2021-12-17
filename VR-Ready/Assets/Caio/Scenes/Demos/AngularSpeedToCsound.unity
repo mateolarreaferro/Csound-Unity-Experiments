@@ -364,6 +364,7 @@ MonoBehaviour:
     maxValue: 20
   maxRotationSpeedValue: 20
   rb: {fileID: 0}
+  runOnStart: 1
   debugRotationSpeed: 1
 --- !u!1 &197456941
 GameObject:

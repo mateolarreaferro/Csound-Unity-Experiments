@@ -1,18 +1,17 @@
 ﻿<Properties StartupConfiguration="{568DDEBF-9A88-25A8-49E2-F072C38C508D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CsoundSenders/CsoundObjectSpeed.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CsoundSenders/CsoundSendValuesBasedOnObjectPosition.cs">
     <Files>
-      <File FileName="Assets/Scripts/Controllers/GetControllerButtonValues.cs" Line="16" Column="1" />
-      <File FileName="Assets/Scripts/CsoundSenders/CsoundSendValuesBasedOnObjectPosition.cs" Line="140" Column="2" />
-      <File FileName="Assets/Scripts/CsoundSenders/CsoundSetChannels.cs" Line="33" Column="1" />
-      <File FileName="Assets/Scripts/CsoundSenders/CsoundObjectSpeed.cs" Line="40" Column="83" />
-      <File FileName="Assets/Scripts/CsoundSenders/CsoundObjectRotationSpeed.cs" Line="7" Column="23" />
-      <File FileName="Assets/Caio/Scripts/Tutorials/Torque.cs" Line="10" Column="30" />
-      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" Line="565" Column="22" />
+      <File FileName="Assets/Scripts/CsoundSenders/CsoundObjectSpeed.cs" Line="24" Column="25" />
+      <File FileName="Assets/Scripts/CsoundSenders/CsoundObjectRotationSpeed.cs" Line="13" Column="43" />
+      <File FileName="Assets/Scripts/CsoundSenders/CsoundSetChannels.cs" />
+      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraController.cs" Line="30" Column="1" />
+      <File FileName="Assets/Caio/Scripts/Granulera/GranuleraTemplates.cs" Line="333" Column="45" />
+      <File FileName="Assets/Scripts/CsoundSenders/CsoundSendValuesBasedOnObjectPosition.cs" Line="28" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e87113cd-dc1b-4c3e-a959-48290b2af276" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="02c4ae24-125d-419a-8285-b97472c0c77e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

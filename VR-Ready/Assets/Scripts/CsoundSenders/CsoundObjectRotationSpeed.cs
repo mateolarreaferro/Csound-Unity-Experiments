@@ -11,10 +11,11 @@ public class CsoundObjectRotationSpeed : MonoBehaviour
     [Header("VELOCITY")]
     public float maxRotationSpeedValue;
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private bool runOnStart;
     [SerializeField] private bool debugRotationSpeed = false;
 
     private float rotationSpeed;
-    private Vector3 previousRotation;
+    private bool update = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -25,15 +26,28 @@ public class CsoundObjectRotationSpeed : MonoBehaviour
         if (csound == null)
             csound = GetComponent<CsoundUnity>();
 
+    }
+
+    private void Start()
+    {
         rb.maxAngularVelocity = maxRotationSpeedValue;
+
+        if (runOnStart)
+            Run();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!update) { return; }
+        SendCsoundDataBasedOnAngularSpeed();
+    }
+
+    private void SendCsoundDataBasedOnAngularSpeed()
+    {
         rotationSpeed = rb.angularVelocity.magnitude;
 
-        foreach(ChannelRotationSpeedData data in channelData)
+        foreach (ChannelRotationSpeedData data in channelData)
         {
             float value =
                 Mathf.Clamp(ScaleFloat(0, maxRotationSpeedValue, data.minValue, data.maxValue, rb.angularVelocity.magnitude), data.minValue, data.maxValue);
@@ -45,6 +59,16 @@ public class CsoundObjectRotationSpeed : MonoBehaviour
             print(rotationSpeed);
     }
 
+    public void Run()
+    {
+        update = true;
+    }
+
+    public void Stop()
+    {
+        update = false;
+    }
+
     private float ScaleFloat(float OldMin, float OldMax, float NewMin, float NewMax, float OldValue)
     {
         float OldRange = (OldMax - OldMin);
@@ -53,6 +77,8 @@ public class CsoundObjectRotationSpeed : MonoBehaviour
 
         return (NewValue);
     }
+
+
 }
 
 [System.Serializable]

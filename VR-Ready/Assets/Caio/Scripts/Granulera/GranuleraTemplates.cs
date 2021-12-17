@@ -296,17 +296,17 @@ public class GranuleraTemplates : MonoBehaviour
     {
         //OSCILLATORS
         csound.SetChannel("WaveformSelection1", 3);
-        csound.SetChannel("Oscillator1Volume", 0.5f);
+        csound.SetChannel("Oscillator1Volume", 1f);
         csound.SetChannel("Oscillator1Semitone", 0);
         csound.SetChannel("Oscillator1Cents", 0);
 
         csound.SetChannel("WaveformSelection2", 3);
-        csound.SetChannel("Oscillator2Volume", 0.5f);
+        csound.SetChannel("Oscillator2Volume", 1f);
         csound.SetChannel("Oscillator2Semitone", 12);
         csound.SetChannel("Oscillator2Cents", 0);
 
         csound.SetChannel("WaveformSelection3", 3);
-        csound.SetChannel("Oscillator3Volume", 0.5f);
+        csound.SetChannel("Oscillator3Volume", 1f);
         csound.SetChannel("Oscillator3Semitone", 19);
         csound.SetChannel("Oscillator3Cents", 0);
 
@@ -328,9 +328,9 @@ public class GranuleraTemplates : MonoBehaviour
         //FILTER
         csound.SetChannel("FilterNoteTrack", 1);
         csound.SetChannel("FilterSelection", 1);
-        csound.SetChannel("FilterFreq", 2.1f);
+        csound.SetChannel("FilterFreq", 0.5f);
         csound.SetChannel("FilterRange", 0.0001f);
-        csound.SetChannel("FilterReson", 1);
+        csound.SetChannel("FilterReson", 35f);
         csound.SetChannel("FilterBW", 1000);
         csound.SetChannel("FilterAttack", 0.01f);
         csound.SetChannel("FilterDecay", 1.63f);
@@ -350,7 +350,7 @@ public class GranuleraTemplates : MonoBehaviour
         csound.SetChannel("FMAmp", 0f);
 
         //GLOBALS
-        csound.SetChannel("GlobalVolume", 0.35f);
+        csound.SetChannel("GlobalVolume", 0.15f);
         csound.SetChannel("GlobalPan", 0.5f);
         csound.SetChannel("GlobalTuning", 0f);
 
@@ -611,7 +611,7 @@ public class GranuleraTemplates : MonoBehaviour
         csound.SetChannel("AmpAttack", 1f);
         csound.SetChannel("AmpDecay", 0.1f);
         csound.SetChannel("AmpSustain", 1f);
-        csound.SetChannel("AmpRelease", 4f);
+        csound.SetChannel("AmpRelease", 6f);
 
         //REVERB
         csound.SetChannel("ReverbBypass", 1);

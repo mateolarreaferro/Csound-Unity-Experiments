@@ -362,10 +362,11 @@ MonoBehaviour:
   - channelName: GlobalTuning
     minValue: 0
     maxValue: 2400
-  velocityMethod: 1
-  maxVelocity: 20
+  velocityMethod: 0
+  maxSpeedValue: 20
   rb: {fileID: 0}
-  debugVelocity: 1
+  runOnStart: 1
+  debugSpeed: 1
 --- !u!1 &197456941
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   templateSelection: 6
-  applyOnAwake: 1
+  applyOnStart: 1
 --- !u!114 &197456945
 MonoBehaviour:
   m_ObjectHideFlags: 0
