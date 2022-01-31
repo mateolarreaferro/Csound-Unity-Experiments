@@ -31,6 +31,9 @@ TagManager:
   - Blue
   - Purple
   - Pincel
+  - Torque
+  - LeftHand
+  - RightHand
   layers:
   - Default
   - TransparentFX
